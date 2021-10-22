@@ -1,0 +1,40 @@
+@import '../../../styles/theme.module.scss';
+
+.container {
+  background-color: $statsPink;
+  color: $textBlack;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 25px;
+  margin-top: 50px;
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 15px;
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $involvedBlue;
+        background-color: $lightenedBlue;
+        padding: 12px;
+        border-radius: 100%;
+    }
+
+    h4 {
+        padding: 10px 0;
+      font-family: $roboto;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: $quicksand;
+      font-size: .9rem;
+    }
+  }
+}

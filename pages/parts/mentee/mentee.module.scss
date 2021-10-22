@@ -1,0 +1,40 @@
+@import '../../../styles/theme.module.scss';
+
+.container {
+	background-color: $menteeBlue;
+	color: $textBlack;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 100px;
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 40%;
+			padding: 50px;
+
+			h2 {
+				text-align: justify;
+				font-family: $raleway;
+        font-weight: bold;
+				font-size: 2rem;
+        padding: 0 0 50px;
+			}
+
+			p {
+				text-align: justify;
+				font-family: $sourceSans;
+				color: $subTextBlack;
+				font-size: 1.2rem;
+			}
+	}
+
+	.image {
+    background-image: url('https://images.unsplash.com/photo-1521737451536-00a86f630f3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGRldmVsb3BlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-size: cover;
+    width: 40%;
+}
+}

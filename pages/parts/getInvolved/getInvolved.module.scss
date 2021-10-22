@@ -1,0 +1,72 @@
+@import '../../../styles/theme.module.scss';
+
+.container {
+	color: $textBlack;
+  background-color: $involvedBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 50px;
+
+  h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: $raleway;
+    padding-bottom: 20px;
+  }
+
+  p {
+    color: white;
+    font-family: $sourceSans;
+    font-size: 1rem;
+  }
+
+  .form {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 25px 0;
+
+    .icon {
+      color: $involvedBlue;
+      font-size: 1.2rem;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      padding: 0 10px;
+      font-family: $sourceSans;
+      font-size: 1rem;
+      color: $subTextBlack;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background-color: $involvedBlue;
+      padding: 5px 15px;
+      color: white;
+      font-family: $openSans;
+      border-radius: 5px;
+    }
+
+  }
+
+  a {
+    padding: 0 10px;
+    color: $textBlack;
+    font-weight: bold;
+    font-family: $sourceSans;
+  }
+
+  .donate { 
+    margin-top: 25px;
+  }
+
+}

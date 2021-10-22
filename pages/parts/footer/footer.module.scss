@@ -1,0 +1,79 @@
+@import '../../../styles/theme.module.scss';
+
+.container {
+    background-color: $udGrey;
+    color: $textBlack;
+    font-family: $openSans;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 75px 50px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: flex-start;
+
+  .logo {
+    padding-left: 15px;
+    height: 60px;
+    width: 60px;
+    align-self: flex-start;
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .icon {
+      background-color: $lightenedBlue;
+      color: $textBlack;
+      padding: 7px 17px 5px;
+      border-radius: 25px;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 65%;
+
+  .navSect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    a {
+        margin: 10px 0;
+    }
+
+  }
+}
+
+.copyright {
+    align-self: center;
+    padding-bottom: 10px;
+}
