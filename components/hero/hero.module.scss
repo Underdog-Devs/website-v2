@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../styles/theme.module.scss';
 
 .container {
     color: $textBlack;
@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 25px 25%;
+    max-width: 800px;
+    margin:0 auto;
 
     .story {
         font-size: 2rem;

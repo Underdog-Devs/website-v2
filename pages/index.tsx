@@ -6,13 +6,13 @@ import React from 'react';
 import styles from '../styles/Home.module.scss';
 // components
 import Header from './parts/header/Header';
-import Hero from './parts/hero/hero';
-import Stats from './parts/stats/Stats';
-import Mentor from './parts/mentor/Mentor';
+import Hero from '../components/hero/hero';
+import Stats from '../components/stats/Stats';
+import Mentor from '../components/mentor/Mentor';
 import Footer from './parts/footer/Footer';
-import Mentee from './parts/mentee/Mentee';
-import SocialMedia from './parts/socialMedia/SocialMedia';
-import GetInvolved from './parts/getInvolved/GetInvolved';
+import Mentee from '../components/mentee/Mentee';
+import SocialMedia from '../components/socialMedia/SocialMedia';
+import GetInvolved from '../components/getInvolved/GetInvolved';
 
 const Home: NextPage = () => (
 	<div className={styles.container}>
