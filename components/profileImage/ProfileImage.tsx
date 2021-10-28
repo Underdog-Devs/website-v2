@@ -1,15 +1,20 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import styles from './profileImage.module.scss';
 
 interface Props {
-
+  image: string;
+  imageType: string;
 }
 
-export default function ProfileImage({ }: Props): ReactElement {
+const ProfileImage: React.FC<Props> = (props) => {
+	const { image, imageType } = props;
+	console.log(imageType);
 	return (
 		<div className={styles.container}>
-			<div className={styles.border_type1} />
-			<div className={styles.image_type1} />
+			<div id={`border${imageType}`} />
+			<div id={`image${imageType}`} style={{ backgroundImage: `url(${image})` }} />
 		</div>
 	);
-}
+};
+
+export default ProfileImage;
