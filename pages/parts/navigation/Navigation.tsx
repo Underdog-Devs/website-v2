@@ -9,13 +9,15 @@ function Navigation({}: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<Link href="/" passHref>
-				<Image
-					className={styles.image}
-					src="/images/ud-logo.png" // Route of the image file
-					height={75} // Desired size with correct aspect ratio
-					width={75} // Desired size with correct aspect ratio
-					alt="Your Name"
-				/>
+				<div>
+					<Image
+						className={styles.image}
+						src="/images/ud-logo.png" // Route of the image file
+						height={75} // Desired size with correct aspect ratio
+						width={75} // Desired size with correct aspect ratio
+						alt="Your Name"
+					/>
+				</div>
 			</Link>
 			<nav className={styles.navigation}>
 				<div className={styles.navigationLinks}>
