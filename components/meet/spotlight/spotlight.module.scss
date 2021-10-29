@@ -1,0 +1,35 @@
+@import '../../../styles/theme.module.scss';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+	.individualContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 350px;
+		padding: 50px;
+
+		.image {
+			align-self: center;
+      margin: 0 auto;
+		}
+
+		h4 {
+			font-size: $f4;
+			font-family: $josefinSans;
+			color: $textBlack;
+			padding: 20px 30px 10px;
+		}
+
+		p {
+			align-self: center;
+			font-size: $p;
+			padding: 0 15px;
+			font-family: $sourceSans;
+			color: $subTextBlack;
+		}
+	}
+}

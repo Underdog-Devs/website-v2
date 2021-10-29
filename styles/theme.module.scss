@@ -14,4 +14,23 @@ $sourceSans: 'Source Sans Pro', sans-serif;
 $josefinSans: 'Josefin Sans', sans-serif;
 $quicksand: 'Quicksand', sans-serif;
 $roboto: 'Roboto', sans-serif;
- 
+
+// header sizes (map to h1 h2 h3 h4 p subtitle)
+$f1: 4rem;
+$f2: 3rem;
+$f3: 2.3rem;
+$f4: 1.6rem;
+$p: 1.1rem;
+$subtitle: .8rem;
+
+// breakpoint map
+
+$small: 480px;
+$medium: 600px;
+$large: 960px;
+
+$breakpoint-map: (
+  'small': $small,
+  'medium': $medium,
+  'large': $large,
+);

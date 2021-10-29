@@ -2,9 +2,9 @@ import React, { ReactElement } from 'react';
 import { MdEmail } from 'react-icons/md';
 import styles from './getInvolved.module.scss';
 
-interface Props {}
+interface Props { }
 
-function GetInvolved({}: Props): ReactElement {
+function GetInvolved({ }: Props): ReactElement {
 	return (
 		<div className={styles.container} id="involved">
 			<h2>Want to Get Involved?</h2>

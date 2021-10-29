@@ -1,0 +1,53 @@
+{
+	"extends": ["next/core-web-vitals", "airbnb"],
+	"rules": {
+		"react/prop-types": "off",
+		"no-plusplus": "off",
+		"react/no-array-index-key": "off",
+		"react/button-has-type": "off",
+		"react/jsx-boolean-value": "off",
+		"react/jsx-filename-extension": "off",
+		"no-console": "off",
+		"import/prefer-default-export": "off",
+		"space-infix-ops": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"jsx-a11y/no-noninteractive-element-interactions": "off",
+		"import/named": "off",
+		"import/no-named-as-default": "off",
+		"guard-for-in": "off",
+		"no-restricted-syntax": "off",
+		"consistent-return": "off",
+		"array-callback-return": "off",
+		"jsx-a11y/label-has-associated-control": "off",
+		"import/no-extraneous-dependencies": "off",
+		"no-await-in-loop": "off",
+		"radix": "off",
+		"semi": ["error", "always"],
+		"semi-style": ["error", "last"],
+		"quotes": ["error", "single"],
+		"jsx-quotes": ["error", "prefer-double"],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"no-use-before-define": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-props-no-spreading": "off",
+		"no-tabs": "off",
+		"no-empty-pattern": "off",
+		"indent": ["error", "tab"],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
+		"object-curly-newline": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"max-len": "off",
+		"arrow-body-style": "off"
+	}
+}
