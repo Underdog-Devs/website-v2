@@ -8,7 +8,7 @@ interface Props {
 
 const ProfileImage: React.FC<Props> = (props) => {
 	const { image, imageType } = props;
-	console.log(imageType);
+
 	return (
 		<div className={styles.container}>
 			<div id={`border${imageType}`} />

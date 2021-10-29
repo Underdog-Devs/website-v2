@@ -1,4 +1,6 @@
 import React, { ReactElement } from 'react';
+import Layout from '../../components/Layout';
+import { Header } from '../../components/meet/header/Header';
 import Spotlight from '../../components/meet/spotlight/Spotlight';
 
 interface Props {
@@ -7,15 +9,13 @@ interface Props {
 
 function Mentors({ }: Props): ReactElement {
 	return (
-		<div>
-			{[1, 2, 3, 4, 5, 6, 7, 8].map((profile, idx) => {
-				const imageType = `_type${Math.floor(Math.random() * 4) + 1}`;
-
-				return (
-					<Spotlight key={idx} imageType={imageType} />
-				);
-			})}
-		</div>
+		<Layout>
+			<div>
+				<Header />
+				{/* Spotlight is the contianer displaying the individual about mentors mentee components */}
+				<Spotlight />
+			</div>
+		</Layout>
 	);
 }
 

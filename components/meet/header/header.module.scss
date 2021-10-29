@@ -1,0 +1,20 @@
+@import '../../../styles/theme.module.scss';
+
+.container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 100px 50px 50px;
+
+
+    h3 {
+      font-size: $f3;
+      color: $textBlack;
+      font-family: $raleway;
+    }
+
+    .sortBy {
+      width: 50%;
+      border: 1px solid;
+    }
+  }

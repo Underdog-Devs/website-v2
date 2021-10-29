@@ -47,6 +47,7 @@
 		"react/jsx-indent-props": ["error", "tab"],
 		"object-curly-newline": "off",
 		"react/jsx-one-expression-per-line": "off",
-		"max-len": "off"
+		"max-len": "off",
+		"arrow-body-style": "off"
 	}
 }
