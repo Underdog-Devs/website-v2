@@ -11,14 +11,6 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en-US">
 				<Head>
-					<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon.png" />
-					<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-					<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-					<link rel="manifest" href="/site.webmanifest" />
-					<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#d4d4d4" />
-					<meta name="msapplication-TileColor" content="#d4d4d4" />
-					<meta name="theme-color" content="#d4d4d4" />
-					<link rel="icon" href="/favicon.ico" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
