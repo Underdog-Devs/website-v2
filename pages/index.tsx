@@ -18,7 +18,7 @@ const Home: NextPage = () => (
 		<div className={styles.container}>
 			<Head>
 				<title>Underdog Devs</title>
-				<meta name="description" content="Underdog Devs Information" />
+				<meta name="description" content="Underdog Devs Info" />
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
