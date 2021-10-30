@@ -10,7 +10,8 @@ jobs:
         run: |
           npm install
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: |
+          npm run lint
   lhci:
     name: Lighthouse
     runs-on: ubuntu-latest
