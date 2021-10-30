@@ -1,0 +1,14 @@
+{
+    "name": "Underdog Devs",
+    "short_name": "Underdog Devs",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#d4d4d4",
+    "background_color": "#d4d4d4",
+    "display": "standalone"
+}
