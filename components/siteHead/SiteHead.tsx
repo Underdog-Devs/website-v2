@@ -40,7 +40,6 @@ const SiteHead: React.FC<Props> = ({ title, description, urlPath }) => {
 			<meta property="og:url" content={`https://underdogdevs.org/${urlPath}`} key="ogurl" />
 			<meta property="og:image" content={siteImage} key="ogimage" />
 
-			<html lang="en" />
 		</Head>
 	);
 };
