@@ -1,9 +1,9 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
     background-color: $udGrey;
     color: $textBlack;
-    font-family: $openSans;
+    font-family: $linkFont;
     display: flex;
     flex-direction: column;
 }

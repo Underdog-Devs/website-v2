@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
   display: flex;
@@ -19,7 +19,7 @@
 
 		h4 {
 			font-size: $f4;
-			font-family: $josefinSans;
+			font-family: $secondaryHeaderFont;
 			color: $textBlack;
 			padding: 20px 30px 10px;
 		}
@@ -28,7 +28,7 @@
 			align-self: center;
 			font-size: $p;
 			padding: 0 15px;
-			font-family: $sourceSans;
+			font-family: $primaryTextFont;
 			color: $subTextBlack;
 		}
 	}

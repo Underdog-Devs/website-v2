@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
 	background-color: $udGrey;
@@ -27,7 +27,7 @@
 		width: 65%;
 
 		a {
-			font-family: $openSans;
+			font-family: $linkFont;
 			font-size: 1rem;
 			color: $textBlack;
 			text-decoration: none;
@@ -41,7 +41,7 @@
 		border-radius: 5px;
 		padding: 10px 25px;
 		font-size: 1rem;
-		font-family: $openSans;
+		font-family: $linkFont;
 		text-decoration: none;
 	}
 }

@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
   background-color: $statsPink;
@@ -27,13 +27,13 @@
 
     h4 {
         padding: 10px 0;
-      font-family: $roboto;
+      font-family: $secondaryHeaderFont;
       font-size: 1.5rem;
       font-weight: bold;
     }
 
     p {
-      font-family: $quicksand;
+      font-family: $secondaryTextFont;
       font-size: .9rem;
     }
   }

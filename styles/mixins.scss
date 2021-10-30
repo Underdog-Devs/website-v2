@@ -1,0 +1,25 @@
+@mixin for-phone-only {
+  @media (max-width: $sm) { @content; }
+}
+@mixin for-tablet-up {
+  @media (min-width: $md) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $lg) { @content; }
+}
+@mixin for-large-up {
+  @media (min-width: $xl) { @content; }
+}
+@mixin for-xlarge-up {
+  @media (min-width: $xxl) { @content; }
+}
+
+@mixin mediaq($propertyName, $defaultValue, $mediaQueries: ()) {
+  #{$propertyName}: #{$defaultValue};
+
+  @each $breakpoint, $value in $mediaQueries {
+    @media (min-width: #{$breakpoint}) {
+      #{$propertyName}: #{$value};
+    }
+  }
+}

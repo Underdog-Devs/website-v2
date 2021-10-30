@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container  {
     display: flex;
@@ -10,7 +10,7 @@
     h3 {
       font-size: $f3;
       color: $textBlack;
-      font-family: $raleway;
+      font-family: $primaryHeaderFont;
     }
 
     .sortBy {

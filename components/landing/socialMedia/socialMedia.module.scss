@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
 	color: $textBlack;
@@ -9,7 +9,7 @@
 
   h2 {
     font-size: 2rem;
-    font-family: $raleway;
+    font-family: $primaryHeaderFont;
     font-weight: bold;
   }
 

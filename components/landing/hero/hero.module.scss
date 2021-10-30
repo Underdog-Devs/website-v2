@@ -1,4 +1,4 @@
-@import '../../../styles/theme.module.scss';
+@import '../../../styles/globals.scss';
 
 .container {
 	color: $textBlack;
@@ -31,7 +31,7 @@
 		position: relative;
 	}
 	p {
-		font-family: $sourceSans;
+		font-family: $primaryTextFont;
 		color: $subTextBlack;
 		font-size: 1rem;
 		line-height: 2;
@@ -41,7 +41,7 @@
 
 	h2 {
 		align-self: flex-start;
-		font-family: $raleway;
+		font-family: $primaryHeaderFont;
 		font-weight: bold;
 		font-size: 1.5rem;
 		padding-top: 25px;
@@ -49,13 +49,13 @@
 
 	a {
 		color: $involvedBlue;
-		font-family: $openSans;
+		font-family: $linkFont;
 		align-self: flex-end;
 		margin-bottom: 10px;
 	}
 
 	ul {
-		font-family: $josefinSans;
+		font-family: $secondaryHeaderFont;
 		align-self: center;
 	}
 }
