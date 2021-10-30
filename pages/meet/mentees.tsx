@@ -11,7 +11,7 @@ function Mentees({ }: Props): ReactElement {
 	return (
 		<Layout>
 			<div>
-				<Header title={'Meet Our Mentees'}/>
+				<Header title="Meet Our Mentees" />
 				{/* Spotlight is the contianer displaying the individual about mentors mentee components */}
 				<Spotlight />
 			</div>

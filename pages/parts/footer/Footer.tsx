@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import Image from 'next/image';
 import { BsTwitter, BsFacebook, BsInstagram, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
 // styles
 import styles from './footer.module.scss';
@@ -12,7 +11,7 @@ function Footer({}: Props): ReactElement {
 			<div className={styles.content}>
 				<div className={styles.social}>
 					<div className={styles.logo}>
-						<Image
+						<img
 							src="/images/ud-logo.png" // Route of the image file
 							height={75} // Desired size with correct aspect ratio
 							width={75} // Desired size with correct aspect ratio

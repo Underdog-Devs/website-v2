@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './navigation.module.scss';
 
 interface Props {}
@@ -10,11 +9,11 @@ function Navigation({}: Props): ReactElement {
 		<div className={styles.container}>
 			<Link href="/" passHref>
 				<div>
-					<Image
+					<img
 						className={styles.image}
-						src="/images/ud-logo.png" // Route of the image file
-						height={75} // Desired size with correct aspect ratio
-						width={75} // Desired size with correct aspect ratio
+						src="/images/ud-logo.png"
+						height={75}
+						width={75}
 						alt="Your Name"
 					/>
 				</div>
