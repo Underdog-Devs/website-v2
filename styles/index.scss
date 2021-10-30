@@ -67,11 +67,12 @@ table {
 
 #border_type2 {
   position: absolute;
-  margin-left: 10px;
-  border: 1px solid dodgerblue;
+  margin-left: -10px;
+  border: 1px solid goldenrod;
   border-radius: 85% 55% 39% 81% / 60% 91% 44% 73%;
   height: 200px;
   width: 200px;
+  z-index: -1;
 }
 
 #image_type2 {
@@ -107,6 +108,7 @@ table {
   border-radius: 78% 63% 30% 98% / 18% 94% 26% 73%;
   height: 200px;
   width: 200px;
+  z-index: -1;
 }
 #image_type4 {
   background-image: url('https://images.unsplash.com/photo-1617037448248-6bd7b4a0d038?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGhlYWRzaG90fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
