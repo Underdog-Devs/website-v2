@@ -21,4 +21,3 @@ jobs:
         uses: wearerequired/lint-action@v1.10.0
         with:
           eslint: true
-          prettier: true
