@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import Image from 'next/image';
 import styles from './hero.module.scss';
 
 interface Props {}
@@ -14,11 +13,8 @@ function hero({}: Props): ReactElement {
 				currently depend on <strong>100% volunteer support</strong>.
 			</p>
 			<div className={styles.image}>
-				<Image
-					src="/images/collab.jpg" // Route of the image file
-					//   height={400} // Desired size with correct aspect ratio
-					//   width={600} // Desired size with correct aspect ratio
-					layout="fill"
+				<img
+					src="/images/collab.jpg"
 					alt="Your Name"
 				/>
 			</div>
