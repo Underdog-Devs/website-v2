@@ -3,7 +3,7 @@ import styles from './hero.module.scss';
 
 interface Props { }
 
-function hero({ }: Props): ReactElement {
+function Hero({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.story}>Our Story</h2>
@@ -72,4 +72,4 @@ function hero({ }: Props): ReactElement {
 	);
 }
 
-export default hero;
+export default Hero;

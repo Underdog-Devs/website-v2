@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import ProfileImage from '../../profileImage/ProfileImage';
+import ProfileImage from '../../profileImage';
 import styles from './spotlight.module.scss';
 
 interface Props {

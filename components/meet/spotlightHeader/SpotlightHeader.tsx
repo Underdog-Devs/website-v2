@@ -5,10 +5,12 @@ interface Props {
 	title: string;
 }
 
-export const Header: React.FC<Props> = ({ title }) => {
+const SpotlightHeader: React.FC<Props> = ({ title }) => {
 	return (
 		<div className={styles.container}>
 			<h3 className={styles.title}>{title}</h3>
 		</div>
 	);
 };
+
+export default SpotlightHeader;
