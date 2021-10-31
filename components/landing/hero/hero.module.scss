@@ -7,11 +7,11 @@
 	align-items: flex-start;
 	padding: $space-lg $space-xl;
 	max-width: 800px;
-	margin: 0 auto;
+	margin: $space-md auto;
 
-	.story {
-		font-size: 2rem;
+	h2 {
 		align-self: center;
+		font-family: $primaryHeaderFont;
 	}
 
 	.about {
@@ -33,17 +33,15 @@
 	p {
 		font-family: $primaryTextFont;
 		color: $subTextBlack;
-		font-size: 1rem;
-		line-height: 2;
+		line-height: 1.5;
 		text-align: justify;
 		padding: $space-sm 0;
 	}
 
-	h2 {
+	h3 {
 		align-self: flex-start;
 		font-family: $primaryHeaderFont;
 		font-weight: bold;
-		font-size: 1.5rem;
 		padding-top: $space-sm;
 	}
 

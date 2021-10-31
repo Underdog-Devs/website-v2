@@ -15,11 +15,10 @@
 			width: 40%;
 			padding: $space-md;
 
-			h2 {
+			h3 {
 				text-align: justify;
 				font-family: $primaryHeaderFont;
         font-weight: bold;
-				font-size: 2rem;
         padding: 0 0 $space-md;
 			}
 
@@ -28,6 +27,7 @@
 				font-family: $primaryTextFont;
 				color: $subTextBlack;
 				font-size: 1.2rem;
+				line-height: 1.2;
 			}
 	}
 

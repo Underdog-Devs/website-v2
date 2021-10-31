@@ -17,7 +17,7 @@ function Hero({ }: Props): ReactElement {
 				src="/images/collab.jpg"
 				alt="devs collaborating"
 			/>
-			<h2>Recidivism</h2>
+			<h3>Recidivism</h3>
 			<p>
 				According to data from the U.S. Bureau of Justice Statistics (BJS), 67.8% of released state prisoners
 				were arrested for a new crime within three years, and 76.7% were arrested within five years (Durose,
@@ -45,7 +45,7 @@ function Hero({ }: Props): ReactElement {
 			>
 				recidivism the ultimate guide on prisoninsight.com
 			</a>
-			<h2>Unemployment and Poverty</h2>
+			<h3>Unemployment and Poverty</h3>
 			<p>
 				Employment has long been recognized as having a negative correlation with crime (Uggen, 1999; Uggen et
 				al., 2005).

@@ -28,13 +28,11 @@
 		h4 {
 			padding: $space-xs 0;
 			font-family: $secondaryHeaderFont;
-			font-size: 1.5rem;
-			font-weight: bold;
 		}
 
-		p {
+		.subtitle {
 			font-family: $secondaryTextFont;
-			font-size: 0.9rem;
+			font-size: $subtitle;
 		}
 	}
 }

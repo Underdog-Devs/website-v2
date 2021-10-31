@@ -11,7 +11,7 @@ function Mentor({}: Props): ReactElement {
 				<div className={styles.bottomImage} />
 			</div>
 			<div className={styles.text}>
-				<h2>What is a Mentor?</h2>
+				<h3>What is a Mentor?</h3>
 				<p>
 					Our mentors are industry experts. They are experienced software engineers from all over the industry
 					who are committed to guiding the Underdog Devs. They have bi-weekly meetings with their mentees

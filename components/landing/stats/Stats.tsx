@@ -12,28 +12,28 @@ function Stats({}: Props): ReactElement {
 					<BsFillPersonCheckFill />
 				</div>
 				<h4>84</h4>
-				<p>Mentees</p>
+				<p className={styles.subtitle}>Mentees</p>
 			</div>
 			<div className={styles.stat}>
 				<div className={styles.icon}>
 					<BsFillPersonCheckFill />
 				</div>
 				<h4>168</h4>
-				<p>Mentors</p>
+				<p className={styles.subtitle}>Mentors</p>
 			</div>
 			<div className={styles.stat}>
 				<div className={styles.icon}>
 					<BsSlack />
 				</div>
 				<h4>23</h4>
-				<p>Slack Channels</p>
+				<p className={styles.subtitle}>Slack Channels</p>
 			</div>
 			<div className={styles.stat}>
 				<div className={styles.icon}>
 					<BsFillCalendarWeekFill />
 				</div>
 				<h4>14</h4>
-				<p>Monthly Events</p>
+				<p className={styles.subtitle}>Monthly Events</p>
 			</div>
 		</div>
 	);

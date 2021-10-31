@@ -7,7 +7,7 @@ interface Props {}
 function SocialMedia({}: Props): ReactElement {
 	return (
 		<div className={styles.container}>
-			<h2>Follow Us On Social Media</h2>
+			<h3>Follow Us On Social Media</h3>
 			<div className={styles.social}>
 				<div className={styles.icons}>
 					<a href="https://twitter.com/UnderdogDevs" target="_blank" rel="noreferrer" className={styles.icon}>
