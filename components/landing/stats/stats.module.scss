@@ -1,40 +1,40 @@
 @import '../../../styles/globals.scss';
 
 .container {
-  background-color: $statsPink;
-  color: $textBlack;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 25px;
-  margin-top: 50px;
+	background-color: $statsPink;
+	color: $textBlack;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: $space-lg;
+	margin-top: $space-xl;
 
-  .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0 15px;
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $space-sm 0;
 
-    .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $involvedBlue;
-        background-color: $lightenedBlue;
-        padding: 12px;
-        border-radius: 100%;
-    }
+		.icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $involvedBlue;
+			background-color: $lightenedBlue;
+			padding: $space-sm;
+			border-radius: 100%;
+		}
 
-    h4 {
-        padding: 10px 0;
-      font-family: $secondaryHeaderFont;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+		h4 {
+			padding: $space-xs 0;
+			font-family: $secondaryHeaderFont;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
 
-    p {
-      font-family: $secondaryTextFont;
-      font-size: .9rem;
-    }
-  }
+		p {
+			font-family: $secondaryTextFont;
+			font-size: 0.9rem;
+		}
+	}
 }

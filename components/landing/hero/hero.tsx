@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import styles from './hero.module.scss';
 
-interface Props {}
+interface Props { }
 
-function hero({}: Props): ReactElement {
+function hero({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.story}>Our Story</h2>
@@ -12,12 +12,11 @@ function hero({}: Props): ReactElement {
 				backgrounds or who are formerly incarcerated. <br /> We were founded in September of 2020 <br /> We
 				currently depend on <strong>100% volunteer support</strong>.
 			</p>
-			<div className={styles.image}>
-				<img
-					src="/images/collab.jpg"
-					alt="Your Name"
-				/>
-			</div>
+			<img
+				className={styles.image}
+				src="/images/collab.jpg"
+				alt="devs collaborating"
+			/>
 			<h2>Recidivism</h2>
 			<p>
 				According to data from the U.S. Bureau of Justice Statistics (BJS), 67.8% of released state prisoners

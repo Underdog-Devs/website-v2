@@ -13,29 +13,28 @@ $linkFont: 'Open Sans', sans-serif;
 $primaryTextFont: 'Source Sans Pro', sans-serif;
 $secondaryHeaderFont: 'Josefin Sans', sans-serif;
 $secondaryTextFont: 'Quicksand', sans-serif;
-$secondaryHeaderFont: 'Roboto', sans-serif;
 
 // header sizes (map to h1 h2 h3 h4 p subtitle)
 $f1: 4rem;
 $f2: 3rem;
 $f3: 2.3rem;
 $f4: 1.6rem;
-$p: 1.1rem;
+$f5: 1rem;
 $subtitle: .8rem;
 
 // spacing
 
 $space-unit: 1em;
 
-$space-xxxs: calc(0.25 * var($space-unit));
-$space-xxs:  calc(0.25 * var($space-unit));
-$space-xs:   calc(0.5 * var($space-unit));
-$space-sm:   calc(0.75 * var($space-unit));
-$space-md:   calc(1.25 * var($space-unit));
-$space-lg:   calc(2 * var($space-unit));
-$space-xl:   calc(3.25 * var($space-unit));
-$space-xxl:  calc(5.25 * var($space-unit));
-$space-xxxl: calc(8.5 * var($space-unit));
+$space-xxxs: calc(0.25 * $space-unit);
+$space-xxs:  calc(0.25 * $space-unit);
+$space-xs:   calc(0.5 * $space-unit);
+$space-sm:   calc(0.75 * $space-unit);
+$space-md:   calc(1.25 * $space-unit);
+$space-lg:   calc(2 * $space-unit);
+$space-xl:   calc(3.25 * $space-unit);
+$space-xxl:  calc(5.25 * $space-unit);
+$space-xxxl: calc(8.5 * $space-unit);
 
 
 // breakpoints

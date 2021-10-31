@@ -6,15 +6,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
-  margin-bottom: 50px;
+  padding: $space-xl;
+  margin-bottom: $space-xl;
 
   h2 {
     color: white;
     font-size: 2rem;
     font-weight: bold;
     font-family: $primaryHeaderFont;
-    padding-bottom: 20px;
+    padding-bottom: $space-sm;
   }
 
   p {
@@ -28,9 +28,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 5px;
+    padding: $space-xxs;
     border-radius: 5px;
-    margin: 25px 0;
+    margin: $space-lg 0;
 
     .icon {
       color: $involvedBlue;
@@ -40,7 +40,7 @@
     input {
       outline: none;
       border: none;
-      padding: 0 10px;
+      padding: 0 $space-sm;
       font-family: $primaryTextFont;
       font-size: 1rem;
       color: $subTextBlack;
@@ -50,7 +50,7 @@
       outline: none;
       border: none;
       background-color: $involvedBlue;
-      padding: 5px 15px;
+      padding: $space-xxs $space-sm;
       color: white;
       font-family: $linkFont;
       border-radius: 5px;
@@ -59,14 +59,14 @@
   }
 
   a {
-    padding: 0 10px;
+    padding: 0 $space-xs;
     color: $textBlack;
     font-weight: bold;
     font-family: $linkFont;
   }
 
   .donate { 
-    margin-top: 25px;
+    margin-top: $space-lg;
   }
 
 }

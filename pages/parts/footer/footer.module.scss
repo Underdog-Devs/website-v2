@@ -13,7 +13,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 75px 50px;
+  padding: $space-xxl $space-xl;
 }
 
 .social {
@@ -23,14 +23,14 @@
   align-items: flex-start;
 
   .logo {
-    padding-left: 15px;
+    padding-left: $space-xs;
     height: 60px;
     width: 60px;
     align-self: flex-start;
   }
 
   .icons {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,14 +38,14 @@
     .icon {
       background-color: $lightenedBlue;
       color: $textBlack;
-      padding: 7px 17px 5px;
+      padding: $space-xs $space-sm $space-xxxs;
       border-radius: 25px;
     }
   }
 
   p {
     font-size: 1.2rem;
-    margin: 15px 0;
+    margin: $space-sm 0;
   }
 }
 
@@ -63,11 +63,11 @@
     h3 {
         font-size: 1.2rem;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: $space-sm;
     }
 
     a {
-        margin: 10px 0;
+        margin: $space-xs 0;
         color: $textBlack;
         text-decoration: none;
     }
@@ -77,5 +77,5 @@
 
 .copyright {
     align-self: center;
-    padding-bottom: 10px;
+    padding-bottom: $space-lg;
 }

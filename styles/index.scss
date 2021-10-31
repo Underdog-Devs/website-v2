@@ -1,3 +1,5 @@
+@import './globals.scss';
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -51,11 +53,12 @@ table {
 
 #border_type1 {
   position: absolute;
-  margin-left: 10px;
+  margin-left: $space-sm;
   border: 1px solid crimson;
   border-radius: 45% 55% 62% 38% / 41% 44% 56% 60%;
   height: 200px;
   width: 200px;
+  z-index: -1;
 }
 
 #image_type1 {
@@ -69,12 +72,12 @@ table {
 
 #border_type2 {
   position: absolute;
-  margin-left: -10px;
+  margin-left: -$space-sm;
   border: 1px solid goldenrod;
   border-radius: 85% 55% 39% 81% / 60% 91% 44% 73%;
   height: 200px;
   width: 200px;
-  z-index: -1;
+  z-index: 1;
 }
 
 #image_type2 {
@@ -88,7 +91,7 @@ table {
 
 #border_type3 {
   position: absolute;
-  margin-left: 10px;
+  margin-left: $space-sm;
   border: 1px solid lawngreen;
   border-radius: 59% 41% 55% 45% / 48% 28% 72% 52%;
   height: 200px;
@@ -105,7 +108,7 @@ table {
 
 #border_type4 {
   position: absolute;
-  margin-left: 10px;
+  margin-left: $space-sm;
   border: 1px solid mediumslateblue;
   border-radius: 78% 63% 30% 98% / 18% 94% 26% 73%;
   height: 200px;

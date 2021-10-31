@@ -10,7 +10,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		width: 350px;
-		padding: 50px;
+		padding: $space-xl;
 
 		.image {
 			align-self: center;
@@ -21,13 +21,13 @@
 			font-size: $f4;
 			font-family: $secondaryHeaderFont;
 			color: $textBlack;
-			padding: 20px 30px 10px;
+			padding: $space-md $space-md $space-xs;
 		}
 
 		p {
 			align-self: center;
-			font-size: $p;
-			padding: 0 15px;
+			font-size: $f5;
+			padding: 0 $space-xs;
 			font-family: $primaryTextFont;
 			color: $subTextBlack;
 		}

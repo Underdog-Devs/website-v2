@@ -5,10 +5,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 5px 15px 5px 75px;
 
     .image {
         cursor: pointer;
+				margin-left: $space-xl;
     }
 
 	.navigation {
@@ -28,7 +28,7 @@
 
 		a {
 			font-family: $linkFont;
-			font-size: 1rem;
+			font-size: $f5;
 			color: $textBlack;
 			text-decoration: none;
 		}
@@ -39,8 +39,8 @@
 		color: $involvedBlue;
 		border: 1px solid $involvedBlue;
 		border-radius: 5px;
-		padding: 10px 25px;
-		font-size: 1rem;
+		padding: $space-sm $space-md;
+		font-size: $f5;
 		font-family: $linkFont;
 		text-decoration: none;
 	}

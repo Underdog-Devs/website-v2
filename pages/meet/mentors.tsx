@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import SiteHead from '../../components/siteHead';
-import { Header } from '../../components/meet/header/Header';
+import { Header } from '../../components/meet/header/SpotlightHeader';
 import Spotlight from '../../components/meet/spotlight/Spotlight';
 
 interface Props {

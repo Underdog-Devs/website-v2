@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 50px 25px;
+  padding: $space-xl $space-lg;
   
   .images {
       width: 50%;
@@ -45,14 +45,14 @@
     flex-direction: column;
     align-items: flex-start;
     width: 40%;
-    padding: 0 100px;
+    padding: 0 $space-lg;
 
     h2 {
       text-align: justify;
       font-family: $primaryHeaderFont;
       font-weight: bold;
       font-size: 2rem;
-      padding: 50px 0;
+      padding: $space-md 0;
     }
 
     p {
@@ -60,7 +60,7 @@
       font-family: $primaryTextFont;
       color: $subTextBlack;
       font-size: 1.2rem;
-      margin: 10px 0;
+      margin: $space-xs 0;
     }
   }
 }
