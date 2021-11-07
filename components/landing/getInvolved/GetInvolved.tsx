@@ -6,7 +6,7 @@ interface Props { }
 
 function GetInvolved({ }: Props): ReactElement {
 	return (
-		<div className={styles.container} id="involved">
+		<section className={styles.container} id="involved">
 			<h3>Want to Get Involved?</h3>
 			<p>Input your email into form below to have a member contact you with more information</p>
 			<div className={styles.form}>
@@ -28,7 +28,7 @@ function GetInvolved({ }: Props): ReactElement {
 					alt="Donate with PayPal button"
 				/>
 			</form>{' '}
-		</div>
+		</section>
 	);
 }
 

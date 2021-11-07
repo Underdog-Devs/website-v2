@@ -5,7 +5,7 @@ interface Props {}
 
 function Mentor({}: Props): ReactElement {
 	return (
-		<div className={styles.container} id="mentor">
+		<section className={styles.container} id="mentor">
 			<div className={styles.images}>
 				<div className={styles.topImage} />
 				<div className={styles.bottomImage} />
@@ -27,7 +27,7 @@ function Mentor({}: Props): ReactElement {
 					develops and becomes job ready.
 				</p>
 			</div>
-		</div>
+		</section>
 	);
 }
 

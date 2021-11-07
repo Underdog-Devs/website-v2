@@ -5,7 +5,7 @@ interface Props {}
 
 function Mentee({}: Props): ReactElement {
 	return (
-		<div className={styles.container} id="mentee">
+		<section className={styles.container} id="mentee">
 			<div className={styles.text}>
 				<h3>What is a Mentee?</h3>
 				<p>
@@ -15,7 +15,7 @@ function Mentee({}: Props): ReactElement {
 				</p>
 			</div>
 			<div className={styles.image} />
-		</div>
+		</section>
 	);
 }
 

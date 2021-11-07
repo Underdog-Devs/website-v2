@@ -6,7 +6,7 @@ interface Props {}
 
 function SocialMedia({}: Props): ReactElement {
 	return (
-		<div className={styles.container}>
+		<section className={styles.container}>
 			<h3>Follow Us On Social Media</h3>
 			<div className={styles.social}>
 				<div className={styles.icons}>
@@ -50,7 +50,7 @@ function SocialMedia({}: Props): ReactElement {
 					</a>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
