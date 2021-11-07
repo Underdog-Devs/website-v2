@@ -4,19 +4,20 @@ import type { NextPage } from 'next';
 import SiteHead from '../components/siteHead';
 
 // components
-import Hero from '../components/landing/hero';
-import Stats from '../components/landing/stats';
+// import Hero from '../components/landing/hero';
 import Mentor from '../components/landing/mentor';
+import Recidivism from '../components/landing/recidivism';
 import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
+import Hero from '../components/landing/hero/Hero';
 
 const Home: NextPage = () => (
 	<>
 		<SiteHead title="Underdogs Devs" description="We are a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers" />
 		<div>
 			<Hero />
-			<Stats />
+			<Recidivism />
 			<Mentor />
 			<Mentee />
 			<SocialMedia />

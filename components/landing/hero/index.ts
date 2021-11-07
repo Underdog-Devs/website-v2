@@ -1,3 +1,3 @@
-import Hero from './Hero';
+import NewHero from './Hero';
 
-export default Hero;
+export default NewHero;

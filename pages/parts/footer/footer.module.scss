@@ -1,8 +1,8 @@
 @import '../../../styles/globals.scss';
 
 .container {
-    background-color: $udGrey;
-    color: $textBlack;
+    background-color: $udDarkGrey;
+    color: $udOrange;
     font-family: $linkFont;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,7 @@
     height: 60px;
     width: 60px;
     align-self: flex-start;
+    margin-bottom: $space-lg;
   }
 
   .icons {
@@ -36,7 +37,7 @@
     justify-content: space-between;
 
     .icon {
-      background-color: $lightenedBlue;
+      background-color: $udSecondaryOrange;
       color: $textBlack;
       padding: $space-xs $space-sm $space-xxxs;
       border-radius: 25px;
@@ -67,7 +68,7 @@
 
     a {
         margin: $space-xs 0;
-        color: $textBlack;
+        color: $udSecondaryOrange;
         text-decoration: none;
     }
 

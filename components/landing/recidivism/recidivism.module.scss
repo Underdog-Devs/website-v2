@@ -1,0 +1,63 @@
+@import '../../../styles/globals.scss';
+
+.container {
+	color: $textBlack;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: $space-lg $space-xl;
+	margin: $space-md auto;
+
+	article {
+		width: 550px;
+	}
+
+	h2 {
+		align-self: center;
+		font-family: $primaryHeaderFont;
+	}
+
+	.about {
+		font-size: 1.2rem;
+		text-align: justify;
+		width: 600px;
+		align-self: center;
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
+	.image {
+		width: 600px;
+		align-self: center;
+		margin: $space-lg;
+	}
+	p {
+		font-family: $primaryTextFont;
+		color: $subTextBlack;
+		line-height: 1.5;
+		text-align: justify;
+		padding: $space-sm 0;
+	}
+
+	h3 {
+		align-self: flex-start;
+		font-family: $primaryHeaderFont;
+		font-weight: bold;
+		padding-top: $space-sm;
+	}
+
+	a {
+		color: $involvedBlue;
+		font-family: $linkFont;
+		align-self: flex-end;
+		margin-bottom: $space-xxs;
+	}
+
+	ul {
+		font-family: $secondaryHeaderFont;
+		align-self: center;
+	}
+}
