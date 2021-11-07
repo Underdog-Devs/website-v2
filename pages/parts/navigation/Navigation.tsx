@@ -2,9 +2,9 @@ import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import styles from './navigation.module.scss';
 
-interface Props {}
+interface Props { }
 
-function Navigation({}: Props): ReactElement {
+function Navigation({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<Link href="/" passHref>
@@ -20,10 +20,10 @@ function Navigation({}: Props): ReactElement {
 			</Link>
 			<nav className={styles.navigation}>
 				<div className={styles.navigationLinks}>
-					<Link href="/meet/mentees">
+					<Link href="/#mentees">
 						Mentees
 					</Link>
-					<Link href="/meet/mentors">Mentors</Link>
+					<Link href="/#mentors">Mentors</Link>
 					<a href="link">Project Underdog</a>
 				</div>
 				<a href="#involved" className={styles.getInvolvedButton}>

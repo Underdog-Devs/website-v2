@@ -10,7 +10,7 @@ import Recidivism from '../components/landing/recidivism';
 import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
-import Hero from '../components/landing/hero/Hero';
+import Hero from '../components/landing/hero';
 
 const Home: NextPage = () => (
 	<>
