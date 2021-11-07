@@ -4,13 +4,13 @@
 	background-color: $udDarkGrey;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	max-height: 100px;
 
     .image {
         cursor: pointer;
-				margin-left: $space-xl;
+				margin-right: $space-xxl;
     }
 
 	.navigation {

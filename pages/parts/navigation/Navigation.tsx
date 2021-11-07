@@ -18,18 +18,18 @@ function Navigation({ }: Props): ReactElement {
 					/>
 				</div>
 			</Link>
-			<nav className={styles.navigation}>
+			{/* <nav className={styles.navigation}>
 				<div className={styles.navigationLinks}>
-					<Link href="/#mentees">
+					<a href="#mentees">
 						Mentees
-					</Link>
-					<Link href="/#mentors">Mentors</Link>
+					</a>
+					<a href="#mentors">Mentors</a>
 					<a href="link">Project Underdog</a>
 				</div>
 				<a href="#involved" className={styles.getInvolvedButton}>
 					Get Involved
 				</a>
-			</nav>
+			</nav> */}
 		</div>
 	);
 }
