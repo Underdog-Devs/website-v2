@@ -11,9 +11,9 @@ function Navigation({}: Props): ReactElement {
 				<div>
 					<img
 						className={styles.image}
-						src="/images/ud-logo.png"
-						height={75}
-						width={75}
+						src="/images/underdogdevs-01.png"
+						height={175}
+						width={175}
 						alt="Your Name"
 					/>
 				</div>

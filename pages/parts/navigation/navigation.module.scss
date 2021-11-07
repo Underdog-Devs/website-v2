@@ -1,10 +1,12 @@
 @import '../../../styles/globals.scss';
 
 .container {
-	background-color: $udGrey;
+	background-color: $udDarkGrey;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	max-height: 100px;
 
     .image {
         cursor: pointer;
@@ -28,15 +30,15 @@
 
 		a {
 			font-family: $linkFont;
-			color: $textBlack;
+			color: $udOrange;
 			text-decoration: none;
 		}
 	}
 
 	.getInvolvedButton {
-		background-color: $udGrey;
-		color: $involvedBlue;
-		border: 1px solid $involvedBlue;
+		background-color: $udDarkGrey;
+		color: $udOrange;
+		border: 1px solid $udSecondaryOrange;
 		border-radius: 5px;
 		padding: $space-sm $space-md;
 		font-family: $linkFont;

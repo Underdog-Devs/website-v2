@@ -8,8 +8,7 @@ function Hero({ }: Props): ReactElement {
 		<div className={styles.container}>
 			<h2 className={styles.story}>Our Story</h2>
 			<p className={styles.about}>
-				We are a community of software engineers supporting aspiring developers who come from disadvantaged
-				backgrounds or who are formerly incarcerated. <br /> We were founded in September of 2020 <br /> We
+				We are a group of software engineers helping aspiring developers who are either formerly incarcerated or from an economically disadvantaged background. <br /> We are creatting opportunities in tech for people who might not otherwise get an opportunity <br /> We were founded in September of 2020 <br /> We
 				currently depend on <strong>100% volunteer support</strong>.
 			</p>
 			<img
