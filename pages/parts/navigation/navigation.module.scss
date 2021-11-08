@@ -1,52 +1,130 @@
-@import '../../../styles/globals.scss';
+@import "../../../styles/globals.scss";
 
 .container {
-	background-color: $udDarkGrey;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	max-height: 100px;
+  background-color: $udDarkGrey;
+  display: flex;
+  max-height: 100px;
 
-    .image {
-        cursor: pointer;
-				margin-left: $space-xl;
-				height: 175px;
-				width: 175px;
+  .desktopNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .image {
+    cursor: pointer;
+    margin-left: $space-xl;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+  }
+
+  .navigationLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+
+    a {
+      font-family: $linkFont;
+      font-size: min(max(14px, 1.5vw), 16px);
+      color: $udOrange;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .getInvolvedButton {
+    background-color: $udDarkGrey;
+    color: $udOrange;
+    border: 1px solid $udSecondaryOrange;
+    border-radius: 5px;
+    padding: $space-sm $space-md;
+    font-family: $linkFont;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .container {
+    .desktopNav {
+      display: none;
     }
 
-	.navigation {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		align-items: center;
-		width: 40%;
-	}
+    .mobileNav {
+      display: block;
+      width: 100%;
+    }
 
-	.navigationLinks {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		align-items: center;
-		width: 65%;
+    .navHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.125em 1em;
+      position: relative;
+      .image {
+        margin: 0;
+      }
+    }
 
-		a {
-			font-family: $linkFont;
-			color: $udOrange;
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+    .navToggle {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.5rem;
+      color: $udOrange;
+      background: transparent;
+      border-color: transparent;
+      transition: $nav-transition;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        color: $udSecondaryOrange;
+        transform: rotate(90deg);
+      }
+    }
 
-	.getInvolvedButton {
-		background-color: $udDarkGrey;
-		color: $udOrange;
-		border: 1px solid $udSecondaryOrange;
-		border-radius: 5px;
-		padding: $space-sm $space-md;
-		font-family: $linkFont;
-		text-decoration: none;
-	}
+    .mobileNavigation {
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: $udDarkGrey;
+      transition: $nav-transition;
+      a {
+        font-family: $linkFont;
+        color: $udOrange;
+        text-decoration: none;
+        margin: 0.35rem 0;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
