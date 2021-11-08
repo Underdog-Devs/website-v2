@@ -12,7 +12,7 @@ function Footer({}: Props): ReactElement {
 				<div className={styles.social}>
 					<div className={styles.logo}>
 						<img
-							src="/images/underdogdevs-01.png" // Route of the image file
+							src="/images/underdogdevs-03.png" // Route of the image file
 							height={150} // Desired size with correct aspect ratio
 							width={150} // Desired size with correct aspect ratio
 							alt="Your Name"
