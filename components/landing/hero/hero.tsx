@@ -15,6 +15,8 @@ const Hero: React.FC<Props> = ({ }) => {
 							className={styles.logo}
 							src="/images/icon-03.png"
 							alt="Your Name"
+							height={75}
+							width={75}
 						/>
 					</div>
 					<h3>About</h3>
@@ -29,11 +31,6 @@ const Hero: React.FC<Props> = ({ }) => {
 			</div>
 			<div
 				className={styles.aboutImage}
-				style={{
-					// backgroundImage: `url(${'/images/collab.jpg'})`,
-					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'cover',
-				}}
 			>
 				<img
 					className={styles.imageLogo}

@@ -28,6 +28,11 @@
     width: 60px;
     align-self: flex-start;
     margin-bottom: $space-lg;
+
+    img {
+      height: 150px;
+      width: 150px;
+    }
   }
 
   .icons {
