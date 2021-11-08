@@ -15,6 +15,7 @@ function Navigation({ }: Props): ReactElement {
 						height={175}
 						width={175}
 						alt="Your Name"
+						loading="lazy"
 					/>
 				</div>
 			</Link>

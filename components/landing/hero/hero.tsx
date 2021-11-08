@@ -17,6 +17,7 @@ const Hero: React.FC<Props> = ({ }) => {
 							alt="Your Name"
 							height={75}
 							width={75}
+							loading="lazy"
 						/>
 					</div>
 					<h3>About</h3>
@@ -38,6 +39,7 @@ const Hero: React.FC<Props> = ({ }) => {
 					alt="Your Name"
 					height={300}
 					width={300}
+					loading="lazy"
 				/>
 			</div>
 

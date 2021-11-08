@@ -16,6 +16,7 @@ function Footer({}: Props): ReactElement {
 							height={150} // Desired size with correct aspect ratio
 							width={150} // Desired size with correct aspect ratio
 							alt="Your Name"
+							loading="lazy"
 						/>
 					</div>
 					<p>Connect with us on social media</p>
