@@ -1,21 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FaChevronLeft } from 'react-icons/fa';
+import styles from './signup.module.scss';
 
 export default function Signup() {
+	const Back = () => (<button className={styles.back}><FaChevronLeft /> Back </button>);
 	const { register, handleSubmit, formState: { errors } } = useForm();
 	const onSubmit = (data) => console.log(data);
 	console.log(errors);
 
 	return (
-		<div>
-			<i>back icon</i>
-			<button> Back </button>
-			<p>Sign Up To Recieve More Information</p>
+		<div className={styles.container}>
+			<Back />
+			<h3>Sign Up To Recieve More Information</h3>
 			<p>Someone from the intake team will reach out.</p>
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<label htmlFor="">email address</label>
 				<input type="text" placeholder="enter email address" {...register('Email', { required: true, pattern: /^\S+@\S+$/i })} />
-				<input type="submit" />
+				<input className={styles.submit} type="submit" />
 			</form>
 		</div>
 	);

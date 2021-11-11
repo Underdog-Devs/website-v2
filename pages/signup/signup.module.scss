@@ -1,0 +1,80 @@
+@import '../../styles/globals.scss';
+
+.container {
+	color: $textBlack;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $space-xl;
+	margin-bottom: $space-xl;
+
+  h3 {
+    color: #183B56;
+    font-weight: bold;
+    font-family: $primaryHeaderFont;
+    padding-bottom: $space-sm;
+  }
+
+  p {
+    color: #8692A6;
+    font-family: $primaryTextFont;
+  }
+
+  .back{
+	  background-color: #fff;
+  }
+
+  .form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-xxs;
+    border-radius: 5px;
+    margin: $space-lg 0;
+
+    .icon {
+      color: $involvedBlue;
+      font-size: 1.4rem;
+    }
+
+    input {
+      outline: none;
+      border: 1px solid #8692A6;
+      padding: 0 $space-sm;
+      font-family: $primaryTextFont;
+      font-size: 1rem;
+      color: $subTextBlack;
+	  border-radius: 6px;
+    }
+
+	input::placeholder{
+		color: #8692A6;
+		font-family:Source Sans Pro;
+	}
+
+    .submit {
+      outline: none;
+      border: none;
+      background-color: #1565D8;
+      padding: $space-xxs $space-sm;
+      color: #fff;
+      font-family: $linkFont;
+      border-radius: 5px;
+    }
+
+  }
+
+  a {
+    padding: 0 $space-xs;
+    color: $textBlack;
+    font-weight: bold;
+    font-family: $linkFont;
+  }
+
+  .donate { 
+    margin-top: $space-lg;
+  }
+
+}
