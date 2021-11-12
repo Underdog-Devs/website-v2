@@ -5,7 +5,7 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: space-around;
 	padding: $space-xl;
 	margin-bottom: $space-xl;
 
@@ -15,45 +15,62 @@
     font-family: $primaryHeaderFont;
     padding-bottom: $space-sm;
   }
-
   p {
     color: #8692A6;
     font-family: $primaryTextFont;
+    font-size: 22px;
   }
-
+  .information{
+    margin-top: 10vw;
+  }
   .back{
-	  background-color: #fff;
+    margin-top: 69px;
+    outline: none;
+    background-color: #fff;
+    border: none;
+    color: #8692A6;
+    align-self: flex-start;
   }
-
   .form {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: $space-xxs;
     border-radius: 5px;
-    margin: $space-lg 0;
+    margin: 0 auto;
+    margin-top: 10vw;
+    width: 70%;
 
     .icon {
       color: $involvedBlue;
       font-size: 1.4rem;
     }
-
-    input {
+    .input {
       outline: none;
       border: 1px solid #8692A6;
       padding: 0 $space-sm;
       font-family: $primaryTextFont;
       font-size: 1rem;
-      color: $subTextBlack;
-	  border-radius: 6px;
+      color: #696F79;
+      border-radius: 6px;
+      align-self: flex-start;
+      width: 100%;
+      padding: 2.5%;
     }
-
 	input::placeholder{
 		color: #8692A6;
 		font-family:Source Sans Pro;
+    padding: 2.5%;
+    font-size: 22px;
 	}
-
+  label{
+    align-self: flex-start;
+    font-size: 22px;
+    color:#696F79;
+    padding: 2.5% 0;
+  }
     .submit {
       outline: none;
       border: none;
@@ -62,8 +79,10 @@
       color: #fff;
       font-family: $linkFont;
       border-radius: 5px;
+      width: 100%;
+      margin-top: 20vw;
+      padding: 2.5%;
     }
-
   }
 
   a {
@@ -76,5 +95,4 @@
   .donate { 
     margin-top: $space-lg;
   }
-
 }

@@ -12,11 +12,13 @@ export default function Signup() {
 	return (
 		<div className={styles.container}>
 			<Back />
-			<h3>Sign Up To Recieve More Information</h3>
-			<p>Someone from the intake team will reach out.</p>
+			<div className={styles.information}>
+				<h3>Sign Up To Recieve More Information</h3>
+				<p>Someone from the intake team will reach out.</p>
+			</div>
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<label htmlFor="">email address</label>
-				<input type="text" placeholder="enter email address" {...register('Email', { required: true, pattern: /^\S+@\S+$/i })} />
+				<input className={styles.input} type="text" placeholder="enter email address" {...register('Email', { required: true, pattern: /^\S+@\S+$/i })} />
 				<input className={styles.submit} type="submit" />
 			</form>
 		</div>
