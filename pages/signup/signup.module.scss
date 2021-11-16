@@ -10,7 +10,7 @@
 	margin-bottom: $space-xl;
 
   h3 {
-    color: #183B56;
+    color: $udBlack;
     font-weight: bold;
     font-family: $primaryHeaderFont;
     padding-bottom: $space-sm;
@@ -19,18 +19,12 @@
     color: #8692A6;
     font-family: $primaryTextFont;
     font-size: 22px;
+    padding-bottom: $space-xxl;
   }
   .information{
     margin-top: 10vw;
   }
-  .back{
-    margin-top: 69px;
-    outline: none;
-    background-color: #fff;
-    border: none;
-    color: #8692A6;
-    align-self: flex-start;
-  }
+  
   .form {
     background-color: white;
     display: flex;
@@ -40,7 +34,7 @@
     padding: $space-xxs;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 10vw;
+    margin-top: $space-sm;
     width: 70%;
 
     .icon {
@@ -49,39 +43,39 @@
     }
     .input {
       outline: none;
-      border: 1px solid #8692A6;
+      border: 1px solid $subTextBlack;
       padding: 0 $space-sm;
       font-family: $primaryTextFont;
       font-size: 1rem;
-      color: #696F79;
+      color: $subTextBlack;
       border-radius: 6px;
       align-self: flex-start;
       width: 100%;
-      padding: 2.5%;
+      padding: $space-sm;
     }
 	input::placeholder{
-		color: #8692A6;
-		font-family:Source Sans Pro;
-    padding: 2.5%;
-    font-size: 22px;
+		color: $subTextBlack;
+		font-family: $primaryTextFont;
+    padding: $space-sm;
+    font-size: $f4;
 	}
   label{
     align-self: flex-start;
-    font-size: 22px;
-    color:#696F79;
-    padding: 2.5% 0;
+    font-size: $f4;
+    color: $subTextBlack;
+    padding: $space-xxs $space-sm;
+    font-family: $primaryTextFont;
   }
     .submit {
       outline: none;
       border: none;
       background-color: #1565D8;
-      padding: $space-xxs $space-sm;
+      padding: $space-md;
       color: #fff;
       font-family: $linkFont;
       border-radius: 5px;
       width: 100%;
-      margin-top: 20vw;
-      padding: 2.5%;
+      margin-top: $space-xxl;
     }
   }
 

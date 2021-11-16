@@ -1,0 +1,10 @@
+@import '../../../styles/globals.scss';
+
+.backButton{
+	font-family: $linkFont;
+	background: #ffff;
+	color: $subTextBlack;
+	border: none;
+	font-weight: 600;
+	font-size: $f4;
+}
