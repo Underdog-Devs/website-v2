@@ -64,7 +64,7 @@
     align-self: flex-start;
     font-size: $f4;
     color: $subTextBlack;
-    padding: $space-xxs $space-sm;
+    padding: $space-sm 0;
     font-family: $primaryTextFont;
   }
     .submit {
@@ -77,6 +77,8 @@
       border-radius: 5px;
       width: 100%;
       margin-top: $space-xxl;
+      font-size: $f5;
+      font-weight: 600;
     }
   }
 
