@@ -1,0 +1,83 @@
+@import '../../styles/globals.scss';
+
+.container{
+    background: url('https://images.unsplash.com/photo-1569437061241-a848be43cc82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80'), rgba(21, 101, 216, 0.7);
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-size: 225%;
+    background-position: bottom 100% left 71%;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+
+    @include for-tablet-up{
+        background-size: 150%;
+        background-position: bottom 90% left 80%;
+    }
+    @include for-desktop-up{
+        width: 50%;
+        background-position: bottom 100% left 40%;
+    }
+    @include for-large-up{
+        background-size: 170%;
+        background-position: bottom 100% left 60%;
+    }
+    @include for-xlarge-up{
+        background-size: 100%;
+        background-position: bottom 80% left 60%; 
+    }
+
+    .innerContainer{
+        @include for-tablet-up{
+            margin: $space-xl;
+        }
+        @include for-large-up{
+            margin: $space-xxl  ;
+        }
+
+        .quoteIcon{
+            padding: $space-md $space-md;
+        }
+    
+        .quote{
+            font-size: $f5;
+            font-family: $secondaryTextFont;
+            padding: 0 $space-md;
+            color: white;
+
+            @include for-tablet-up{
+                font-size: $f3;
+            }
+            @include for-desktop-up{
+                font-size: $f4;
+            }
+        }
+    
+        .author{
+            font-size: $f5;
+            font-family: $secondaryTextFont;
+            padding: $space-md;
+            color: white;
+
+            @include for-tablet-up{
+                font-size: $f3;
+            }
+            @include for-desktop-up{
+                font-size: $f4;
+            }
+        }
+    
+        .angle{
+            transform: rotateZ(45deg);
+            color: white;
+            position: absolute;
+            right: 0;
+            padding-right: $space-md;
+
+            @include for-desktop-up{
+                right: calc(100vw - 40%)
+            }
+        }
+    }   
+}

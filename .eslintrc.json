@@ -49,6 +49,8 @@
 		"react/jsx-one-expression-per-line": "off",
 		"max-len": "off",
 		"arrow-body-style": "off",
-		"@next/next/no-img-element": "off"
+		"@next/next/no-img-element": "off",
+		"linebreak-style": "off",
+		"@next/next/no-document-import-in-page": "off"
 	}
 }
