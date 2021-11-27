@@ -6,6 +6,19 @@
     font-family: $linkFont;
     display: flex;
     flex-direction: column;
+    padding: 0 $space-xl;
+
+			@include for-phone-only {
+        padding: 0 $space-xxxs;
+			}
+
+			@include for-tablet-up {
+        padding: 0 $space-xxs;
+			}
+
+			@include for-desktop-up {
+        padding: 0 $space-sm;
+			}
 }
 
 .content {
@@ -14,6 +27,25 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: $space-xxl $space-xl;
+
+  @include for-phone-only {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: $space-xxl 0;
+  }
+
+  @include for-tablet-up {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: $space-xxl 0;
+    }
+  @include for-desktop-up {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: $space-xxl 0;
+    }
 }
 
 .social {
@@ -21,6 +53,21 @@
   flex-direction: column;
   width: 40%;
   align-items: flex-start;
+  
+  @include for-phone-only {
+    width: 100%;
+    align-items: center;
+  }
+  
+  @include for-tablet-up {
+    width: 100%;
+    align-items: center;
+  }
+  
+  @include for-desktop-up {
+    width: 40%;
+    align-items: flex-start;
+  }
 
   .logo {
     padding-left: $space-xs;
@@ -28,6 +75,23 @@
     width: 60px;
     align-self: flex-start;
     margin-bottom: $space-lg;
+    
+    @include for-phone-only {
+      align-self: center;
+      margin-left: -50px;
+    }
+    
+    @include for-tablet-up {
+      align-self: center;
+      margin-left: -50px;
+    }
+    
+    @include for-desktop-up {
+      margin: $space-lg;
+      align-self: flex-start;
+    }
+  
+  
 
     img {
       height: 150px;
@@ -58,12 +122,29 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 65%;
+  width: 60%;
 
   .navSect {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include for-phone-only {
+      width: 100%;
+      align-items: center;
+    }
+    
+    @include for-tablet-up {
+      width: 100%;
+      align-items: center;
+    }
+    
+    @include for-desktop-up {
+      width: 40%;
+      align-items: flex-start;
+    }
+  
+  
 
     h4 {
         font-size: 1.2rem;
