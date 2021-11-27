@@ -1,5 +1,5 @@
 @mixin for-phone-only {
-  @media (max-width: $sm) { @content; }
+  @media (max-width: $md) { @content; }
 }
 @mixin for-tablet-up {
   @media (min-width: $md) { @content; }

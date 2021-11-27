@@ -11,6 +11,10 @@
 
 	article {
 		width: 550px;
+
+  @include for-desktop-up {
+    width: 48%;
+  }
 	}
 
 	h2 {
@@ -29,11 +33,6 @@
 		}
 	}
 
-	.image {
-		width: 600px;
-		align-self: center;
-		margin: $space-lg;
-	}
 	p {
 		font-family: $primaryTextFont;
 		color: $subTextBlack;
