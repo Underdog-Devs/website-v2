@@ -78,12 +78,12 @@
     
     @include for-phone-only {
       align-self: center;
-      margin-left: -50px;
+      margin-left: -80px;
     }
     
     @include for-tablet-up {
       align-self: center;
-      margin-left: -50px;
+      margin-left: -60px;
     }
     
     @include for-desktop-up {

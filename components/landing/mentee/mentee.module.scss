@@ -11,6 +11,7 @@
 	@include for-phone-only {
 		flex-direction: column;
 		align-items: center;
+    padding: $space-lg;
 	}
 
   @include for-tablet-up {
@@ -34,7 +35,8 @@
 		padding: $space-md;
 
 		@include for-phone-only {
-			width: 100%;
+			width: 90%;
+      padding: $space-xxs;
 		}
 
     @include for-tablet-up {
@@ -64,6 +66,7 @@
 			color: $subTextBlack;
 			font-size: 1.2rem;
 			line-height: 1.2;
+      text-align: center;
 		}
 	}
 

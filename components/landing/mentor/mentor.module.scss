@@ -100,9 +100,10 @@
 		align-items: flex-start;
 		width: 40%;
 		padding: 0 $space-lg;
+    
 
     @include for-phone-only {
-      width: 100%;
+      width: 90%;
     }
 
 			@include for-tablet-up {
@@ -114,6 +115,7 @@
 			font-family: $primaryHeaderFont;
 			font-weight: bold;
 			padding: $space-md 0;
+      text-align: center;
 		}
 
 		p {
@@ -123,6 +125,7 @@
 			font-size: 1.2rem;
 			line-height: 1.2;
 			margin: $space-xs 0;
+      text-align: center;
 		}
 	}
 }
