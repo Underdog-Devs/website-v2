@@ -89,7 +89,7 @@ function Footer({}: Props): ReactElement {
 					</div> */}
 				</div>
 			</div>
-			<p className={styles.copyright}>Copyright © 2020. Underdog Devs</p>
+			<p className={styles.copyright}>Copyright © 2021. Underdog Devs</p>
 		</div>
 	);
 }
