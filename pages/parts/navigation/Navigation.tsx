@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from './navigation.module.scss';
 
 interface Props { }
@@ -63,8 +63,12 @@ function Navigation({ }: Props): ReactElement {
 							alt="Underdog devs"
 						/>
 					</Link>
-					<button className={styles.navToggle} onClick={toggleLinks}>
-						<FaBars />
+					<button
+						className={styles.navToggle}
+						onClick={toggleLinks}
+						onBlur={toggleLinks}
+					>
+						{showLinks ? <FaTimes /> : <FaBars />}
 					</button>
 				</div>
 				<nav className={styles.mobileNavigation} ref={linksContainerRef}>
