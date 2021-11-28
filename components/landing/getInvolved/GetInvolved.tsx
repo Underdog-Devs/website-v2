@@ -16,8 +16,8 @@ function GetInvolved({ }: Props): ReactElement {
 			</div>
 			<p>
 				You can reach the team directly at{'  '}
-				<a href="mailto:underdogdevsteam@gmail.com" target="_blank" rel="noreferrer">underdogdevsteam@gmail.com</a>
-			</p>{' '}
+			</p>
+			<a href="mailto:underdogdevsteam@gmail.com" target="_blank" rel="noreferrer">underdogdevsteam@gmail.com</a>
 			<form className={styles.donate} action="https://www.paypal.com/donate" method="post" target="_blank">
 				<input type="hidden" name="hosted_button_id" value="2R2AP79YGLEXJ" />
 				<input

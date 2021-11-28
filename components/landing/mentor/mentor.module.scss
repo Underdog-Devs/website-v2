@@ -1,66 +1,131 @@
 @import '../../../styles/globals.scss';
 
 .container {
-  color: $textBlack;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: $space-xl $space-lg;
-  
-  .images {
-      width: 50%;
-      position: relative;
-      
-      .topImage {
-        border: 10px solid #ffffff;
-        border-radius: 8px;
-        position: absolute;
-        background-image: url('https://images.unsplash.com/photo-1622675273018-0d0bbb4a7d99?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGRldmVsb3BlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
-        background-position: center;
-        background-size: cover;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        width: 60%;
-        height: 60%;
+	color: $textBlack;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: $space-xl $space-lg;
 
-    }
-    
-    .bottomImage {
-      position: absolute;
-      background-image: url('https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
-      background-position: center;
-      background-size: cover;
-      bottom: 0;
-      right: 0;
-      width: 60%;
-      height: 60%;
-
-
-    }
-  }
-
-  .text {
-    display: flex;
+  @include for-phone-only {
     flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    padding: 0 $space-lg;
+    align-items: center;
+  }  
 
-    h3 {
-      text-align: justify;
-      font-family: $primaryHeaderFont;
-      font-weight: bold;
-      padding: $space-md 0;
-    }
-
-    p {
-      text-align: justify;
-      font-family: $primaryTextFont;
-      color: $subTextBlack;
-      font-size: 1.2rem;
-      line-height: 1.2;
-      margin: $space-xs 0;
-    }
+  @include for-desktop-up {
+    height: 650px;
   }
+
+  @include for-large-up {
+    height: 650px;
+  }
+
+	.images {
+		width: 50%;
+		position: relative;
+
+    @include for-phone-only {
+      visibility: hidden;
+    }
+
+		.topImage {
+			border: 10px solid #ffffff;
+			border-radius: 8px;
+			position: absolute;
+			background-image: url('https://images.unsplash.com/photo-1622675273018-0d0bbb4a7d99?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGRldmVsb3BlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+			background-position: center;
+			background-size: cover;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			width: 60%;
+			height: 60%;
+
+      @include for-phone-only {
+				visibility: hidden;
+      }
+			@include for-tablet-up {
+				visibility: hidden;
+			}
+			@include for-desktop-up {
+				width: 65%;
+        height: 40%;
+        visibility: visible;
+			}
+			@include for-large-up {
+				width: 60%;
+        height: 40%;
+			}
+			@include for-xlarge-up {
+				width: 70%;
+        height: 40%;
+			}
+		}
+
+		.bottomImage {
+			position: absolute;
+			background-image: url('https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+			background-position: center;
+			background-size: cover;
+			bottom: 0;
+			right: 0;
+			width: 60%;
+			height: 60%;
+
+			@include for-tablet-up {
+				width: 100%;
+        height: 200px;
+        position: center;
+        margin-bottom: 200px;
+			}
+
+			@include for-desktop-up {
+				width: 90%;
+        height: 40%;
+			}
+      @include for-large-up {
+				width: 80%;
+        height: 50%;
+			}
+      @include for-xlarge-up {
+				width: 70%;
+        height: 50%;
+			}
+		}
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 40%;
+		padding: 0 $space-lg;
+    
+
+    @include for-phone-only {
+      width: 90%;
+    }
+
+			@include for-tablet-up {
+				width: 60%;
+			}
+
+		h3 {
+			text-align: justify;
+			font-family: $primaryHeaderFont;
+			font-weight: bold;
+			padding: $space-md 0;
+      text-align: center;
+		}
+
+		p {
+			text-align: justify;
+			font-family: $primaryTextFont;
+			color: $subTextBlack;
+			font-size: 1.2rem;
+			line-height: 1.2;
+			margin: $space-xs 0;
+      text-align: center;
+		}
+	}
 }

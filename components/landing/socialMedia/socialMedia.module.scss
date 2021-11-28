@@ -2,36 +2,58 @@
 
 .container {
 	color: $textBlack;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: $space-xxl 0 $space-lg;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $space-xxl 0 $space-lg;
 
-  h3 {
-    font-family: $primaryHeaderFont;
-    font-weight: bold;
-  }
+	h3 {
+		font-family: $primaryHeaderFont;
+		font-weight: bold;
 
-  .social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-    .icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: $textBlack;
-      font-size: 1.5rem;
-  
-      .icon {
-        background-color: $udSecondaryOrange;
-        color: $udDarkGrey;
-        padding: $space-xs $space-sm $space-xxxs;
-        border-radius: 25px;
-        margin: $space-lg $space-xs;
-      }
+    @include for-phone-only {
+      text-align: center;
     }
-  }
-  
+    
+    @include for-tablet-up {
+    }
+    
+    @include for-desktop-up {
+    }
+
+	}
+
+	.social {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.icons {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			color: $textBlack;
+			font-size: 1.5rem;
+
+			@include for-phone-only {
+				font-size: 1rem;
+			}
+
+			@include for-tablet-up {
+				font-size: 1.2rem;
+			}
+
+			@include for-desktop-up {
+				font-size: 1.5rem;
+			}
+
+			.icon {
+				background-color: $udSecondaryOrange;
+				color: $udDarkGrey;
+				padding: $space-xs $space-sm $space-xxxs;
+				border-radius: 25px;
+				margin: $space-lg $space-xs;
+			}
+		}
+	}
 }

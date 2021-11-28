@@ -8,33 +8,88 @@
 	justify-content: space-between;
 	padding: $space-xxl;
 
-		.text {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			width: 40%;
-			padding: $space-md;
+	@include for-phone-only {
+		flex-direction: column;
+		align-items: center;
+    padding: $space-lg;
+	}
 
-			h3 {
-				text-align: justify;
-				font-family: $primaryHeaderFont;
-        font-weight: bold;
-        padding: 0 0 $space-md;
-			}
+  @include for-tablet-up {
+    padding: $space-lg;
+  }
 
-			p {
-				text-align: justify;
-				font-family: $primaryTextFont;
-				color: $subTextBlack;
-				font-size: 1.2rem;
-				line-height: 1.2;
-			}
+	@include for-desktop-up {
+    padding: $space-xxl;
+	}
+
+	@include for-large-up {
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 40%;
+		padding: $space-md;
+
+		@include for-phone-only {
+			width: 90%;
+      padding: $space-xxs;
+		}
+
+    @include for-tablet-up {
+      width: 70%;
+      padding: $space-lg;
+    }
+
+		@include for-desktop-up {
+      width: 60%;
+      padding: $space-xl;
+		}
+
+		@include for-large-up {
+      width: 50%;
+		}
+
+		h3 {
+			text-align: justify;
+			font-family: $primaryHeaderFont;
+			font-weight: bold;
+			padding: 0 0 $space-md;
+		}
+
+		p {
+			text-align: justify;
+			font-family: $primaryTextFont;
+			color: $subTextBlack;
+			font-size: 1.2rem;
+			line-height: 1.2;
+      text-align: center;
+		}
 	}
 
 	.image {
-    background-image: url('https://images.unsplash.com/photo-1521737451536-00a86f630f3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGRldmVsb3BlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
-    background-position: center;
-    background-size: cover;
-    width: 40%;
-}
+		background-image: url('https://images.unsplash.com/photo-1521737451536-00a86f630f3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGRldmVsb3BlcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+		background-position: center;
+		background-size: cover;
+		width: 40%;
+
+		@include for-phone-only {
+			visibility: hidden;
+		}
+
+    @include for-tablet-up {
+      width: 30%;
+      height: 200px;
+    }
+
+		@include for-desktop-up {
+      width: 40%;
+      height: 300px;
+		}
+
+		@include for-large-up {
+      width: 50%;
+		}
+	}
 }

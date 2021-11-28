@@ -1,11 +1,31 @@
 @import '../../../styles/globals.scss';
 
 .container {
-  color: $textBlack;
+	color: $textBlack;
 	display: flex;
 	justify-content: space-between;
+
+	@include for-phone-only {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@include for-tablet-up {
+		flex-direction: row;
+		justify-content: center;
+	}
+
 	.aboutText {
 		width: 50%;
+
+		@include for-phone-only {
+			width: 100%;
+		}
+
+		@include for-tablet-up {
+			width: 50%;
+		}
+
 		.heading {
 			display: flex;
 			.logoContainer {
@@ -44,33 +64,33 @@
 			}
 			h3 {
 				font-family: $primaryHeaderFont;
-        font-weight: bold;
-        margin: $space-md 0px 0px $space-md;
+				font-weight: bold;
+				margin: $space-md 0px 0px $space-md;
 			}
 		}
-    .about {
-      padding: $space-lg;
-      display:flex;
-      flex-direction: column;
+		.about {
+			padding: $space-lg;
+			display: flex;
+			flex-direction: column;
 			color: $subTextBlack;
 
-      h2 {
-        color: $udSecondaryOrange;
-        font-family: $primaryHeaderFont;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
+			h2 {
+				color: $udSecondaryOrange;
+				font-family: $primaryHeaderFont;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 
-      p {
-        font-size: $f5;
-        font-family: $primaryTextFont;
-        line-height: 1.5;
-        padding: $space-md 0;
-        strong {
-          font-weight: bold;
-        }
-      }
-    }
+			p {
+				font-size: $f5;
+				font-family: $primaryTextFont;
+				line-height: 1.5;
+				padding: $space-md 0;
+				strong {
+					font-weight: bold;
+				}
+			}
+		}
 	}
 	.aboutImage {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('/images/collab.jpg');
@@ -81,6 +101,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@include for-phone-only {
+      width: 100%;
+		}
+
+		@include for-tablet-up {
+      width: 600px;
+		}
 
 		.imageLogo {
 			margin-top: -100px;

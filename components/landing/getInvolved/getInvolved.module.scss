@@ -2,69 +2,79 @@
 
 .container {
 	color: $textBlack;
-  background-color: $involvedBlue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: $space-xl;
-  margin-bottom: $space-xl;
+	background-color: $involvedBlue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $space-xl;
+	margin-bottom: $space-xl;
 
-  h3 {
-    color: white;
-    font-weight: bold;
-    font-family: $primaryHeaderFont;
-    padding-bottom: $space-sm;
-  }
+	@include for-phone-only {
+		text-align: center;
+	}
 
-  p {
-    color: white;
-    font-family: $primaryTextFont;
-  }
+	@include for-tablet-up {
+		text-align: center;
+	}
 
-  .form {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: $space-xxs;
-    border-radius: 5px;
-    margin: $space-lg 0;
+	@include for-desktop-up {
+		text-align: justify;
+	}
 
-    .icon {
-      color: $involvedBlue;
-      font-size: 1.4rem;
-    }
+	h3 {
+		color: white;
+		font-weight: bold;
+		font-family: $primaryHeaderFont;
+		padding-bottom: $space-sm;
+	}
 
-    input {
-      outline: none;
-      border: none;
-      padding: 0 $space-sm;
-      font-family: $primaryTextFont;
-      font-size: 1rem;
-      color: $subTextBlack;
-    }
+	p {
+		color: white;
+		font-family: $primaryTextFont;
+	}
 
-    button {
-      outline: none;
-      border: none;
-      background-color: $involvedBlue;
-      padding: $space-xxs $space-sm;
-      color: white;
-      font-family: $linkFont;
-      border-radius: 5px;
-    }
+	.form {
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: $space-xxs;
+		border-radius: 5px;
+		margin: $space-lg 0;
 
-  }
+		.icon {
+			color: $involvedBlue;
+			font-size: 1.4rem;
+		}
 
-  a {
-    padding: 0 $space-xs;
-    color: $textBlack;
-    font-weight: bold;
-    font-family: $linkFont;
-  }
+		input {
+			outline: none;
+			border: none;
+			padding: 0 $space-sm;
+			font-family: $primaryTextFont;
+			font-size: 1rem;
+			color: $subTextBlack;
+		}
 
-  .donate { 
-    margin-top: $space-lg;
-  }
+		button {
+			outline: none;
+			border: none;
+			background-color: $involvedBlue;
+			padding: $space-xxs $space-sm;
+			color: white;
+			font-family: $linkFont;
+			border-radius: 5px;
+		}
+	}
 
+	a {
+		padding: $space-sm $space-xs;
+		color: $textBlack;
+		font-weight: bold;
+		font-family: $linkFont;
+	}
+
+	.donate {
+		margin-top: $space-lg;
+	}
 }

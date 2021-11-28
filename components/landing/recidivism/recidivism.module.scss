@@ -9,8 +9,46 @@
 	padding: $space-lg $space-xl;
 	margin: $space-md auto;
 
+	@include for-phone-only {
+    flex-direction: column;
+    align-items: center;
+    padding: $space-lg;
+    margin: 0;
+	}
+
+	@include for-tablet-up {
+    padding: $space-lg;
+    margin: $space-md auto;  
+	}
+
+	@include for-desktop-up {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: $space-lg;
+    margin: $space-md auto;  
+	}
+
+	@include for-large-up {
+	}
+
 	article {
 		width: 550px;
+
+		@include for-phone-only {
+			width: 100%;
+		}
+
+
+	@include for-tablet-up {
+    padding: $space-sm;
+    margin: $space-xs auto;  
+	}
+
+		@include for-desktop-up {
+      padding: $space-lg;
+      margin: $space-md auto;    
+		}
 	}
 
 	h2 {
@@ -29,11 +67,6 @@
 		}
 	}
 
-	.image {
-		width: 600px;
-		align-self: center;
-		margin: $space-lg;
-	}
 	p {
 		font-family: $primaryTextFont;
 		color: $subTextBlack;
