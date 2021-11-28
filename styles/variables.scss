@@ -1,23 +1,23 @@
 // colors
-$udGrey: #D4D4D4;
-$udDarkGrey: #58555A;
-$udOrange: #F05138;
-$udSecondaryOrange: #F6931D;
-$udBlack: #23211E;
-$involvedBlue: #1565D8;
+$udGrey: #d4d4d4;
+$udDarkGrey: #58555a;
+$udOrange: #f05138;
+$udSecondaryOrange: #f6931d;
+$udBlack: #23211e;
+$involvedBlue: #1565d8;
 $lightenedBlue: rgba(45, 117, 220, 0.3);
-$textBlack: #183B56;
-$subTextBlack: #5A7184;
+$textBlack: #183b56;
+$subTextBlack: #5a7184;
 $statsPink: rgba(248, 157, 99, 0.4);
-$menteeBlue:  rgba(45, 117, 220, 0.3);
+$menteeBlue: rgba(45, 117, 220, 0.3);
 
 // fonts
-$udRoboto: 'Roboto Mono', monospace;
-$primaryHeaderFont: 'Raleway', sans-serif;
-$linkFont: 'Open Sans', sans-serif;
-$primaryTextFont: 'Source Sans Pro', sans-serif;
-$secondaryHeaderFont: 'Josefin Sans', sans-serif;
-$secondaryTextFont: 'Quicksand', sans-serif;
+$udRoboto: "Roboto Mono", monospace;
+$primaryHeaderFont: "Raleway", sans-serif;
+$linkFont: "Open Sans", sans-serif;
+$primaryTextFont: "Source Sans Pro", sans-serif;
+$secondaryHeaderFont: "Josefin Sans", sans-serif;
+$secondaryTextFont: "Quicksand", sans-serif;
 
 // header sizes (map to h1 h2 h3 h4 p subtitle)
 $f1: 4rem;
@@ -25,22 +25,21 @@ $f2: 3rem;
 $f3: 2rem;
 $f4: 1.6rem;
 $f5: 1rem;
-$subtitle: .9rem;
+$subtitle: 0.9rem;
 
 // spacing
 
 $space-unit: 1em;
 
 $space-xxxs: calc(0.25 * $space-unit);
-$space-xxs:  calc(0.25 * $space-unit);
-$space-xs:   calc(0.5 * $space-unit);
-$space-sm:   calc(0.75 * $space-unit);
-$space-md:   calc(1.25 * $space-unit);
-$space-lg:   calc(2 * $space-unit);
-$space-xl:   calc(3.25 * $space-unit);
-$space-xxl:  calc(5.25 * $space-unit);
+$space-xxs: calc(0.25 * $space-unit);
+$space-xs: calc(0.5 * $space-unit);
+$space-sm: calc(0.75 * $space-unit);
+$space-md: calc(1.25 * $space-unit);
+$space-lg: calc(2 * $space-unit);
+$space-xl: calc(3.25 * $space-unit);
+$space-xxl: calc(5.25 * $space-unit);
 $space-xxxl: calc(8.5 * $space-unit);
-
 
 // breakpoints
 
@@ -49,3 +48,7 @@ $md: 768px; //for tablets.
 $lg: 992px; //for laptops.
 $xl: 1200px;
 $xxl: 1400px; //for large devices.
+
+// Transitions
+
+$nav-transition: all 0.3s linear;
