@@ -19,12 +19,10 @@
   }
 
 	@include for-desktop-up {
-		height: 650px;
     padding: $space-xxl;
 	}
 
 	@include for-large-up {
-		height: 650px;
 	}
 
 	.text {
