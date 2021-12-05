@@ -8,6 +8,10 @@
 		flex-direction: column-reverse;
 	}
 
+	@include for-tablet-up {
+		flex-direction: column-reverse;
+	}
+
 	@include for-desktop-up {
 		flex-direction: row;
 	}
@@ -24,6 +28,12 @@
 
   
 	@include for-phone-only {
+		width: 100%;
+    padding: $space-xl 0;
+	}
+
+  
+	@include for-tablet-up {
 		width: 100%;
     padding: $space-xl 0;
 	}
