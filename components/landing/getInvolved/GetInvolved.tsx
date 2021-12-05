@@ -12,7 +12,7 @@ function GetInvolved({ }: Props): ReactElement {
 			<div className={styles.form}>
 				<MdEmail className={styles.icon} />
 				<input placeholder="Your Email" />
-				<button>Submit</button>
+				<button aria-label="submit-button">Submit</button>
 			</div>
 			<p>
 				You can reach the team directly at{'  '}

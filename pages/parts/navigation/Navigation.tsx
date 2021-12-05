@@ -64,6 +64,7 @@ function Navigation({ }: Props): ReactElement {
 						/>
 					</Link>
 					<button
+						aria-label="navigation-menu"
 						className={styles.navToggle}
 						onClick={toggleLinks}
 						onBlur={toggleLinks}
