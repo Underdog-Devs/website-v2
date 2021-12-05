@@ -1,0 +1,114 @@
+@import '../../styles/globals.scss';
+
+.container {
+	display: flex;
+	flex-direction: row;
+
+	@include for-phone-only {
+		flex-direction: column-reverse;
+	}
+
+	@include for-desktop-up {
+		flex-direction: row;
+	}
+
+	.signupContainer {
+		color: $textBlack;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: $space-xl;
+		margin-bottom: $space-xl;
+
+		h3 {
+			color: $udBlack;
+			font-weight: bold;
+			font-family: $primaryHeaderFont;
+			padding-bottom: $space-sm;
+			font-size: $f3;
+		}
+		p {
+			color: #8692a6;
+			font-family: $primaryTextFont;
+			font-size: 22px;
+			padding-bottom: $space-lg;
+		}
+		.information {
+			margin-top: 10vw;
+		}
+
+		.form {
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			padding: $space-xxs;
+			border-radius: 5px;
+			margin: 0 auto;
+			margin-top: $space-sm;
+			width: 70%;
+
+			.icon {
+				color: $involvedBlue;
+				font-size: 1.4rem;
+			}
+
+			.inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+				.input {
+					outline: none;
+					border: 1px solid $subTextBlack;
+					font-family: $primaryTextFont;
+					font-size: 1rem;
+					color: $subTextBlack;
+					border-radius: 5px;
+					width: 300px;
+					padding: $space-sm 0;
+				}
+
+				input::placeholder {
+					color: $subTextBlack;
+					font-family: $primaryTextFont;
+					font-size: $f5;
+          padding: $space-xs;
+				}
+				label {
+					align-self: flex-start;
+					font-size: $f4;
+					color: $subTextBlack;
+					padding: $space-xxs 0;
+					font-family: $primaryTextFont;
+				}
+			}
+			.submit {
+				outline: none;
+				border: none;
+				background-color: #1565d8;
+				padding: $space-xxs;
+				color: #fff;
+				font-family: $linkFont;
+				border-radius: 5px;
+				width: 300px;
+				margin-top: $space-lg;
+				font-size: $f4;
+				font-weight: 600;
+			}
+		}
+
+		a {
+			padding: 0 $space-xs;
+			color: $textBlack;
+			font-weight: bold;
+			font-family: $linkFont;
+		}
+
+		.donate {
+			margin-top: $space-lg;
+		}
+	}
+}
