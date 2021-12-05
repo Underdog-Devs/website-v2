@@ -13,6 +13,7 @@
 	}
 
 	.signupContainer {
+    width: 50%;
 		color: $textBlack;
 		background-color: #fff;
 		display: flex;
@@ -21,14 +22,27 @@
 		padding: $space-xl;
 		margin-bottom: $space-xl;
 
+  
+	@include for-phone-only {
+		width: 100%;
+	}
+
+	@include for-desktop-up {
+		width: 50%;
+	}
+
+
 		h3 {
+      align-self: center;
 			color: $udBlack;
 			font-weight: bold;
 			font-family: $primaryHeaderFont;
 			padding-bottom: $space-sm;
 			font-size: $f3;
+      text-align: center;
 		}
 		p {
+      text-align: center;
 			color: #8692a6;
 			font-family: $primaryTextFont;
 			font-size: 22px;
