@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import { MdEmail } from 'react-icons/md';
 import styles from './getInvolved.module.scss';
 
 interface Props { }
@@ -8,12 +7,6 @@ function GetInvolved({ }: Props): ReactElement {
 	return (
 		<section className={styles.container} id="involved">
 			<h3>Want to Get Involved?</h3>
-			<p>Input your email into form below to have a member contact you with more information</p>
-			<div className={styles.form}>
-				<MdEmail className={styles.icon} />
-				<input placeholder="Your Email" />
-				<button aria-label="submit-button">Submit</button>
-			</div>
 			<p>
 				You can reach the team directly at{'  '}
 			</p>
