@@ -25,6 +25,7 @@
   
 	@include for-phone-only {
 		width: 100%;
+    padding: $space-xl 0;
 	}
 
 	@include for-desktop-up {
@@ -49,7 +50,7 @@
 			padding-bottom: $space-sm;
 		}
 		.information {
-			margin-top: 10vw;
+			margin-top: $space-xxl;
 		}
 
 		.form {
