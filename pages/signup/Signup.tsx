@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import BackButton from '../../components/landing/BackButton/BackButton';
 import Quote from '../../components/quote';
 import styles from './signup.module.scss';
 
 export default function Signup() {
-	const onSubmit = (data: any) => console.log(data);
+	const [email, setEmail] = useState('');
+	// eslint-disable-next-line no-unused-vars
+	const [errors, setErrors] = useState('');
+
+	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { value } = e.target;
+		setEmail(value);
+	};
+
+	console.log(process.env.NEXT_PUBLIC_USER_ID);
+
+	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const emailValid = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i.test(email);
+		if (emailValid) {
+			emailjs
+				.sendForm(
+					process.env.NEXT_PUBLIC_SERVICE_ID || '',
+					process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
+					e.currentTarget,
+					process.env.NEXT_PUBLIC_USER_ID,
+				)
+				.then(
+					(result) => {
+						console.log(result.text);
+					},
+					(error) => {
+						console.log(error.text);
+					},
+				);
+		}
+		setEmail('');
+		setErrors('');
+	};
 
 	return (
 		<div className={styles.container}>
@@ -15,10 +49,16 @@ export default function Signup() {
 					<h3>Sign Up To Recieve More Information</h3>
 					<p>Someone from the intake team will reach out.</p>
 				</div>
-				<form className={styles.form} onSubmit={onSubmit}>
+				<form className={styles.form} onSubmit={sendEmail}>
 					<div className={styles.inputContainer}>
 						<label htmlFor="">Email Address</label>
-						<input className={styles.input} type="text" placeholder="Enter email address" />
+						<input
+							className={styles.input}
+							type="email"
+							placeholder="Enter email address"
+							value={email}
+							onChange={handleEmailChange}
+						/>
 					</div>
 					<input className={styles.submit} type="submit" />
 				</form>
