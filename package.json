@@ -13,6 +13,13 @@
     "pre-commit": "npm run lint"
   },
   "dependencies": {
+    "@fontsource/josefin-sans": "^4.5.1",
+    "@fontsource/open-sans": "^4.5.2",
+    "@fontsource/quicksand": "^4.5.1",
+    "@fontsource/raleway": "^4.5.0",
+    "@fontsource/roboto": "^4.5.1",
+    "@fontsource/roboto-mono": "^4.5.0",
+    "@fontsource/source-sans-pro": "^4.5.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "next": "11.1.2",
