@@ -14,6 +14,8 @@ export default function Signup() {
 		setEmail(value);
 	};
 
+	console.log(process.env.NEXT_PUBLIC_USER_ID);
+
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const emailValid = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i.test(email);
