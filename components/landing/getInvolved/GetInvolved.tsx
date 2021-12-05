@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import Link from 'next/link';
 import styles from './getInvolved.module.scss';
 
 interface Props { }
@@ -7,6 +8,15 @@ function GetInvolved({ }: Props): ReactElement {
 	return (
 		<section className={styles.container} id="involved">
 			<h3>Want to Get Involved?</h3>
+			<p>Request more information
+				<Link href="/signup" passHref>
+					<a href="https://forms.gle/uS1m9wMeC75reYte7" rel="noreferrer">
+						here
+					</a>
+				</Link>
+			</p>
+			<p> - OR - </p>
+
 			<p>
 				You can reach the team directly at{'  '}
 			</p>
