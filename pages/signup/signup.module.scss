@@ -4,9 +4,9 @@
 	display: flex;
 	flex-direction: row;
 
-  @include for-phone-only {
-    flex-direction: column-reverse
-  }
+	@include for-phone-only {
+		flex-direction: column-reverse;
+	}
 
 	@include for-desktop-up {
 		flex-direction: row;
@@ -54,42 +54,48 @@
 				color: $involvedBlue;
 				font-size: 1.4rem;
 			}
-			.input {
-				outline: none;
-				border: 1px solid $subTextBlack;
-				padding: 0 $space-sm;
-				font-family: $primaryTextFont;
-				font-size: 1rem;
-				color: $subTextBlack;
-				border-radius: 5px;
-				align-self: flex-start;
-				width: 100%;
-				padding: $space-sm;
-			}
-			input::placeholder {
-				color: $subTextBlack;
-				font-family: $primaryTextFont;
-				padding: $space-sm;
-				font-size: $f4;
-			}
-			label {
-				align-self: flex-start;
-				font-size: $f4;
-				color: $subTextBlack;
-				padding: $space-sm 0;
-				font-family: $primaryTextFont;
+
+			.inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+				.input {
+					outline: none;
+					border: 1px solid $subTextBlack;
+					font-family: $primaryTextFont;
+					font-size: 1rem;
+					color: $subTextBlack;
+					border-radius: 5px;
+					width: 300px;
+					padding: $space-sm 0;
+				}
+
+				input::placeholder {
+					color: $subTextBlack;
+					font-family: $primaryTextFont;
+					font-size: $f5;
+          padding: $space-xs;
+				}
+				label {
+					align-self: flex-start;
+					font-size: $f4;
+					color: $subTextBlack;
+					padding: $space-xxs 0;
+					font-family: $primaryTextFont;
+				}
 			}
 			.submit {
 				outline: none;
 				border: none;
 				background-color: #1565d8;
-				padding: $space-md;
+				padding: $space-xxs;
 				color: #fff;
 				font-family: $linkFont;
 				border-radius: 5px;
-				width: 100%;
+				width: 300px;
 				margin-top: $space-lg;
-				font-size: $f5;
+				font-size: $f4;
 				font-weight: 600;
 			}
 		}
