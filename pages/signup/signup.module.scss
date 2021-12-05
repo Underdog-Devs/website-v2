@@ -32,7 +32,7 @@
 			color: #8692a6;
 			font-family: $primaryTextFont;
 			font-size: 22px;
-			padding-bottom: $space-xxl;
+			padding-bottom: $space-lg;
 		}
 		.information {
 			margin-top: 10vw;
@@ -61,7 +61,7 @@
 				font-family: $primaryTextFont;
 				font-size: 1rem;
 				color: $subTextBlack;
-				border-radius: 6px;
+				border-radius: 5px;
 				align-self: flex-start;
 				width: 100%;
 				padding: $space-sm;
@@ -88,7 +88,7 @@
 				font-family: $linkFont;
 				border-radius: 5px;
 				width: 100%;
-				margin-top: $space-xxl;
+				margin-top: $space-lg;
 				font-size: $f5;
 				font-weight: 600;
 			}
