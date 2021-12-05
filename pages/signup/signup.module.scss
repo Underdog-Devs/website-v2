@@ -1,95 +1,108 @@
 @import '../../styles/globals.scss';
 
 .container {
-	color: $textBlack;
-	background-color: #fff;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: $space-xl;
-	margin-bottom: $space-xl;
+	flex-direction: row;
 
-  h3 {
-    color: $udBlack;
-    font-weight: bold;
-    font-family: $primaryHeaderFont;
-    padding-bottom: $space-sm;
-    font-size: $f3;
+  @include for-phone-only {
+    flex-direction: column
   }
-  p {
-    color: #8692A6;
-    font-family: $primaryTextFont;
-    font-size: 22px;
-    padding-bottom: $space-xxl;
-  }
-  .information{
-    margin-top: 10vw;
-  }
-  
-  .form {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: $space-xxs;
-    border-radius: 5px;
-    margin: 0 auto;
-    margin-top: $space-sm;
-    width: 70%;
 
-    .icon {
-      color: $involvedBlue;
-      font-size: 1.4rem;
-    }
-    .input {
-      outline: none;
-      border: 1px solid $subTextBlack;
-      padding: 0 $space-sm;
-      font-family: $primaryTextFont;
-      font-size: 1rem;
-      color: $subTextBlack;
-      border-radius: 6px;
-      align-self: flex-start;
-      width: 100%;
-      padding: $space-sm;
-    }
-	input::placeholder{
-		color: $subTextBlack;
-		font-family: $primaryTextFont;
-    padding: $space-sm;
-    font-size: $f4;
+	@include for-desktop-up {
+		flex-direction: row;
 	}
-  label{
-    align-self: flex-start;
-    font-size: $f4;
-    color: $subTextBlack;
-    padding: $space-sm 0;
-    font-family: $primaryTextFont;
-  }
-    .submit {
-      outline: none;
-      border: none;
-      background-color: #1565D8;
-      padding: $space-md;
-      color: #fff;
-      font-family: $linkFont;
-      border-radius: 5px;
-      width: 100%;
-      margin-top: $space-xxl;
-      font-size: $f5;
-      font-weight: 600;
-    }
-  }
 
-  a {
-    padding: 0 $space-xs;
-    color: $textBlack;
-    font-weight: bold;
-    font-family: $linkFont;
-  }
+	.signupContainer {
+		color: $textBlack;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: $space-xl;
+		margin-bottom: $space-xl;
 
-  .donate { 
-    margin-top: $space-lg;
-  }
+		h3 {
+			color: $udBlack;
+			font-weight: bold;
+			font-family: $primaryHeaderFont;
+			padding-bottom: $space-sm;
+			font-size: $f3;
+		}
+		p {
+			color: #8692a6;
+			font-family: $primaryTextFont;
+			font-size: 22px;
+			padding-bottom: $space-xxl;
+		}
+		.information {
+			margin-top: 10vw;
+		}
+
+		.form {
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			padding: $space-xxs;
+			border-radius: 5px;
+			margin: 0 auto;
+			margin-top: $space-sm;
+			width: 70%;
+
+			.icon {
+				color: $involvedBlue;
+				font-size: 1.4rem;
+			}
+			.input {
+				outline: none;
+				border: 1px solid $subTextBlack;
+				padding: 0 $space-sm;
+				font-family: $primaryTextFont;
+				font-size: 1rem;
+				color: $subTextBlack;
+				border-radius: 6px;
+				align-self: flex-start;
+				width: 100%;
+				padding: $space-sm;
+			}
+			input::placeholder {
+				color: $subTextBlack;
+				font-family: $primaryTextFont;
+				padding: $space-sm;
+				font-size: $f4;
+			}
+			label {
+				align-self: flex-start;
+				font-size: $f4;
+				color: $subTextBlack;
+				padding: $space-sm 0;
+				font-family: $primaryTextFont;
+			}
+			.submit {
+				outline: none;
+				border: none;
+				background-color: #1565d8;
+				padding: $space-md;
+				color: #fff;
+				font-family: $linkFont;
+				border-radius: 5px;
+				width: 100%;
+				margin-top: $space-xxl;
+				font-size: $f5;
+				font-weight: 600;
+			}
+		}
+
+		a {
+			padding: 0 $space-xs;
+			color: $textBlack;
+			font-weight: bold;
+			font-family: $linkFont;
+		}
+
+		.donate {
+			margin-top: $space-lg;
+		}
+	}
 }
