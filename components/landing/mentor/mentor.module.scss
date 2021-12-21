@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: $space-xl $space-lg;
+	padding: 0 $space-lg;
 
   @include for-phone-only {
     flex-direction: column;
@@ -101,11 +101,12 @@
 		flex-direction: column;
 		align-items: flex-start;
 		width: 40%;
-		padding: 0 $space-lg;
+		padding: $space-xl $space-lg 0;
     
 
     @include for-phone-only {
       width: 90%;
+			padding: 0;
     }
 
 			@include for-tablet-up {
