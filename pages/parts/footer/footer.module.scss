@@ -6,7 +6,6 @@
     font-family: $linkFont;
     display: flex;
     flex-direction: column;
-    padding: 0 $space-xl;
 
 			@include for-phone-only {
         padding: 0 $space-xxxs;
@@ -17,7 +16,7 @@
 			}
 
 			@include for-desktop-up {
-        padding: 0 $space-sm;
+        padding: 0 $space-xl;
 			}
 }
 
