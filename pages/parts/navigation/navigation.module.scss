@@ -42,7 +42,7 @@
     align-items: center;
     width: 65%;
 
-    a {
+    a, button {
       font-family: $linkFont;
       font-size: min(max(14px, 1.5vw), 16px);
       color: $udOrange;
@@ -63,6 +63,10 @@
     padding: $space-sm $space-md;
     font-family: $linkFont;
     text-decoration: none;
+		cursor: pointer;
+		&:active {
+			background-color: $udGrey;
+		}
   }
 }
 
@@ -116,7 +120,7 @@
       align-items: center;
       background-color: $udDarkGrey;
       transition: $nav-transition;
-      a {
+      a, p {
         font-family: $linkFont;
         color: $udOrange;
         text-decoration: none;

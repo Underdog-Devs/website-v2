@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import Link from 'next/link';
+import { FaCcPaypal } from 'react-icons/fa'
 import styles from './getInvolved.module.scss';
 
 interface Props { }
@@ -21,6 +22,10 @@ function GetInvolved({ }: Props): ReactElement {
 				You can reach the team directly at{'  '}
 			</p>
 			<a href="mailto:underdogdevsteam@gmail.com" target="_blank" rel="noreferrer">underdogdevsteam@gmail.com</a>
+			<div className={styles.paypalContainer}>
+				<h3 className={styles.donateText}>Donate with </h3>
+				<FaCcPaypal className={styles.paypalIcon} />
+			</div>
 			<form className={styles.donate} action="https://www.paypal.com/donate" method="post" target="_blank">
 				<input type="hidden" name="hosted_button_id" value="2R2AP79YGLEXJ" />
 				<input

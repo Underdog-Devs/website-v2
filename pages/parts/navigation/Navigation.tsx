@@ -47,9 +47,10 @@ function Navigation({ }: Props): ReactElement {
 						<a href="https://forms.gle/UKw3cQKmmmAEZREu6" target="_blank" rel="noreferrer">Become a Mentor</a>
 						{/* <a href="link">Project Underdog</a> */}
 					</div>
-					<a href="mailto:underdogdevsteam@gmail.com" target="_blank" className={styles.getInvolvedButton} rel="noreferrer">
-						Contact Us
-					</a>
+					<Link href="/signup" passHref>
+						<button className={styles.getInvolvedButton}>Contact Us</button>
+					</Link>
+
 				</nav>
 			</div>
 			<div className={styles.mobileNav}>
@@ -77,7 +78,9 @@ function Navigation({ }: Props): ReactElement {
 						Become a Mentee
 					</a>
 					<a href="https://forms.gle/UKw3cQKmmmAEZREu6" target="_blank" rel="noreferrer">Become a Mentor</a>
-					<a href="mailto:underdogdevsteam@gmail.com" target="_blank" rel="noreferrer">Contact Us</a>
+					<Link href="/signup" passHref>
+						<p>Contact Us</p>
+					</Link>
 				</nav>
 			</div>
 		</div>

@@ -10,8 +10,8 @@ function Quote({}: Props): ReactElement {
 		<div className={styles.container}>
 			<div className={styles.innerContainer}>
 				<ImQuotesLeft size={25} color="#00DAF7" className={styles.quoteIcon} />
-				<p className={styles.quote}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sit nihil distinctio nostrum error vel recusandae omnis quas deleniti consequatur. Placeat assumenda quas molestiae debitis labore, magnam harum vero quaerat!</p>
-				<p className={styles.author}>Hideo Kojima</p>
+				<p className={styles.quote}>Incarceration and recidivism rates high? Providing people an incentive to stay out of jail while also providing them some level of economic security while they get back on their feet - both accomplished by a UBI - sounds like a great way to solve that problem.</p>
+				<p className={styles.author}>Andrew Yang</p>
 				<FaAngleRight size={40} className={styles.angle} />
 			</div>
 		</div>
