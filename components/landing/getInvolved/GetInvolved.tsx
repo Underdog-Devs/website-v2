@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Link from 'next/link';
-import { FaCcPaypal } from 'react-icons/fa'
+import { FaCcPaypal } from 'react-icons/fa';
 import styles from './getInvolved.module.scss';
 
 interface Props { }
