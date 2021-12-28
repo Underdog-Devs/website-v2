@@ -15,6 +15,24 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+		
+		@include for-phone-only {
+			flex-direction: column;
+		}
+
+		@include for-tablet-up {
+			flex-direction: column;
+		}
+
+		@include for-desktop-up {
+			flex-direction: column;
+		}
+
+		@include for-large-up {
+			flex-direction: row;
+		}
+
 
 		.aboutText {
 			display: flex;
