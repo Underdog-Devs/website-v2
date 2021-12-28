@@ -60,7 +60,9 @@ const Donate = () => {
 							width={40}
 							alt="Underdog devs logo"
 						/>
-						<p className={styles.donateSubText}> Send your donations to: <br />
+						<p className={styles.donateSubText}> Coming Soon! </p>
+
+						{/* <p className={styles.donateSubText}> Send your donations to: <br />
 							EIN: 86-3938144
 							<br />
 							Underdog Devs Inc.
@@ -69,7 +71,7 @@ const Donate = () => {
 							<br />
 							Orlando FL 32801
 							<br />
-						</p>
+						</p> */}
 					</div>
 				</div>
 			</div>
