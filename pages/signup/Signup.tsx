@@ -46,6 +46,13 @@ export default function Signup() {
 				<div className={styles.information}>
 					<h3>Sign Up To Recieve More Information</h3>
 					<p>Someone from the intake team will reach out.</p>
+					<p> - OR - </p>
+
+					<p>
+						You can reach the team directly at <br />
+						<a href="mailto:underdogdevsteam@gmail.com" target="_blank" rel="noreferrer">underdogdevsteam@gmail.com</a>
+					</p>
+
 				</div>
 				<form className={styles.form} onSubmit={sendEmail}>
 					<div className={styles.inputContainer}>

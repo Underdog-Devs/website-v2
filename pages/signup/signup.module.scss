@@ -3,6 +3,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
+	color: $textBlack;
 
 	@include for-phone-only {
 		flex-direction: column-reverse;
@@ -19,7 +20,7 @@
 	.signupContainer {
     width: 50%;
 		color: $textBlack;
-		background-color: #fff;
+		background-color: white;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -45,7 +46,7 @@
 
 		h3 {
       align-self: center;
-			color: $udBlack;
+			color: $textBlack;
 			font-weight: bold;
 			font-family: $primaryHeaderFont;
 			padding-bottom: $space-sm;
@@ -54,10 +55,11 @@
 		}
 		p {
       text-align: center;
-			color: #8692a6;
+			color: $subTextBlack;
 			font-family: $primaryTextFont;
 			font-size: 22px;
 			padding-bottom: $space-sm;
+			line-height: 1.5;
 		}
 		.information {
 			margin-top: $space-xxl;
@@ -113,9 +115,9 @@
 			.submit {
 				outline: none;
 				border: none;
-				background-color: #1565d8;
+				background-color: $involvedBlue;
 				padding: $space-xxs;
-				color: #fff;
+				color: white;
 				font-family: $linkFont;
 				border-radius: 5px;
 				width: 80%;

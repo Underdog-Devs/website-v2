@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 40%;
+    width: 60%;
   }
 
   .navigationLinks {
@@ -40,9 +40,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 65%;
+    width: 100%;
 
-    a, button {
+    a {
       font-family: $linkFont;
       font-size: min(max(14px, 1.5vw), 16px);
       color: $udOrange;
@@ -58,7 +58,7 @@
   .getInvolvedButton {
     background-color: $udDarkGrey;
     color: $udOrange;
-    border: 1px solid $udSecondaryOrange;
+    border: none;
     border-radius: 5px;
     padding: $space-sm $space-md;
     font-family: $linkFont;
@@ -66,6 +66,10 @@
 		cursor: pointer;
 		&:active {
 			background-color: $udGrey;
+		}
+		&:hover,
+		&:focus {
+			text-decoration: underline;
 		}
   }
 }
