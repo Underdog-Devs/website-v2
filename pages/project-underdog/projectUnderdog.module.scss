@@ -1,0 +1,48 @@
+@import '../../styles/globals.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: $space-xl;
+	color: $textBlack;
+
+	h2 {
+		font-family: $primaryHeaderFont;
+		font-weight: bold;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.aboutText {
+			display: flex;
+			flex-direction: column;
+			padding: $space-md;
+
+			.mainList {
+				list-style-type: disc;
+				
+				li {
+					font-size: $listItem;
+					font-family: $secondaryTextFont;
+					padding: $space-xs 0;
+				}
+				
+				.subList {
+					padding: $space-xxs $space-lg;
+					list-style-type: square;
+					
+					li {
+						padding: $space-xxs;
+					}
+				}
+			}
+		}
+
+		.aboutImage {
+			padding: $space-xl;
+		}
+	}
+}
