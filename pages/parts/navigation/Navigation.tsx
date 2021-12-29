@@ -79,18 +79,38 @@ function Navigation({ }: Props): ReactElement {
 					</button>
 				</div>
 				<nav className={styles.mobileNavigation} ref={linksContainerRef}>
-					<a href="https://forms.gle/uS1m9wMeC75reYte7" target="_blank" rel="noreferrer">
+					<a
+						onClick={() => setShowLinks(false)}
+						href="https://forms.gle/uS1m9wMeC75reYte7"
+						target="_blank"
+						rel="noreferrer"
+					>
 						Become a Mentee
 					</a>
-					<a href="https://forms.gle/UKw3cQKmmmAEZREu6" target="_blank" rel="noreferrer">Become a Mentor</a>
-					<Link href="/project-underdog" passHref>
-						<p>Project Underdog</p>
+					<a
+						onClick={() => setShowLinks(false)}
+						href="https://forms.gle/UKw3cQKmmmAEZREu6"
+						target="_blank"
+						rel="noreferrer"
+					>Become a Mentor
+					</a>
+					<Link
+						href="/project-underdog"
+						passHref
+					>
+						<p onClick={() => setShowLinks(false)}>Project Underdog</p>
 					</Link>
-					<Link href="/donate" passHref>
-						<p>Donate</p>
+					<Link
+						href="/donate"
+						passHref
+					>
+						<p onClick={() => setShowLinks(false)}>Donate</p>
 					</Link>
-					<Link href="/signup" passHref>
-						<p>Contact Us</p>
+					<Link
+						href="/signup"
+						passHref
+					>
+						<p onClick={() => setShowLinks(false)}>Contact Us</p>
 					</Link>
 				</nav>
 			</div>
