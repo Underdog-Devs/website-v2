@@ -31,6 +31,7 @@ function Navigation({ }: Props): ReactElement {
 				<Link href="/" passHref>
 					<div>
 						<img
+							onClick={() => setShowLinks(false)}
 							className={styles.image}
 							src="/images/underdogdevs-01.png"
 							height={175}
@@ -62,6 +63,7 @@ function Navigation({ }: Props): ReactElement {
 				<div className={styles.navHeader}>
 					<Link href="/" passHref>
 						<img
+							onClick={() => setShowLinks(false)}
 							className={styles.image}
 							src="/images/icon-01.png"
 							height={75}
