@@ -6,6 +6,22 @@
 	padding: $space-xl;
 	color: $textBlack;
 
+	@include for-phone-only {
+		padding: $space-md;
+		}
+
+		@include for-tablet-up {
+			padding: $space-lg;
+		}
+
+		@include for-desktop-up {
+			padding: $space-xl;
+		}
+
+		@include for-large-up {
+			padding: $space-xl;
+		}
+
 	h2 {
 		font-family: $primaryHeaderFont;
 		font-weight: bold;
@@ -61,6 +77,47 @@
 
 		.aboutImage {
 			padding: $space-xl;
+			display: flex;
+			justify-content: center;
+
+			@include for-phone-only {
+			padding: 0;
+			}
+	
+			@include for-tablet-up {
+				padding: 0;
+			}
+	
+			@include for-desktop-up {
+				padding: $space-lg;
+			}
+	
+			@include for-large-up {
+				padding: $space-xl;
+			}
+
+			img {
+
+				@include for-phone-only {
+					height: auto;
+					width: 80%;
+					margin: 0 auto;
+					}
+			
+					@include for-tablet-up {
+						padding: $space-lg;
+					}
+			
+					@include for-desktop-up {
+						padding: $space-xl;
+					}
+			
+					@include for-large-up {
+						padding: $space-xl;
+					}
+		
+			}
+	
 		}
 	}
 }
