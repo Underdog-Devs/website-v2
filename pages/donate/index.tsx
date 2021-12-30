@@ -52,7 +52,7 @@ const Donate = () => {
 
 					</div>
 					<div className={styles.option}>
-						<p className={styles.donateText}> Donate directly to our organization</p>
+						<p className={styles.donateText}> Donate Directly</p>
 						<img
 							className={styles.icon}
 							src="/images/icon-01.png"
@@ -60,18 +60,14 @@ const Donate = () => {
 							width={40}
 							alt="Underdog devs logo"
 						/>
-						<p className={styles.donateSubText}> Coming Soon! </p>
-
-						{/* <p className={styles.donateSubText}> Send your donations to: <br />
-							EIN: 86-3938144
-							<br />
-							Underdog Devs Inc.
-							<br />
-							390 N Orange avenue suite 2300
-							<br />
-							Orlando FL 32801
-							<br />
-						</p> */}
+						<p className={styles.donateSubText}> Send your donations to: <br />
+							<b>Account owner:</b> Underdog Devs, Inc. <br />
+							<b>Bank:</b> Evolve Bank & Trust,  <br />
+							6070 Poplar Ave, Suite 200, <br />
+							Memphis, TN 38119 <br />
+							<b>Account number:</b> 9800363760 <br />
+							<b>Routing number:</b> 084106768
+						</p>
 					</div>
 				</div>
 			</div>

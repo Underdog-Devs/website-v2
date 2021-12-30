@@ -134,6 +134,9 @@
 					font-family: $secondaryTextFont;
 					font-size: $f5;
 					line-height: 1.2;
+					b {
+						font-weight: bold;
+					}
 				}
 
 				.icon {
