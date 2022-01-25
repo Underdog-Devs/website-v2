@@ -11,7 +11,7 @@ interface Props {
 const Mentors: NextPage = ({ }: Props) => {
 	return (
 		<div>
-			<SiteHead title="Underdogs Devs: Meet Our Mentors" description="A showcase of a select few of the mentors we have teaching our mentees" urlPath="meet/mentors" />
+			<SiteHead title="Underdog Devs: Meet Our Mentors" description="A showcase of a select few of the mentors we have teaching our mentees" urlPath="meet/mentors" />
 			<SpotlightHeader title="Meet Our Mentors" />
 			{/* Spotlight is the contianer displaying the individual about mentors mentee components */}
 			<Spotlight />

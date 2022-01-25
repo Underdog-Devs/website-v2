@@ -14,7 +14,7 @@ import Hero from '../components/landing/hero';
 
 const Home: NextPage = () => (
 	<>
-		<SiteHead title="Underdogs Devs" description="We are a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers" />
+		<SiteHead title="Underdog Devs" description="We are a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers" />
 		<div>
 			<Hero />
 			<Recidivism />
