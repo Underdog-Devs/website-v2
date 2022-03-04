@@ -1,42 +1,42 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import BackButton from '../../components/landing/BackButton/BackButton';
 import Quote from '../../components/quote';
 import styles from './signup.module.scss';
 
 export default function Signup() {
-	const [email, setEmail] = useState('');
+	// const [email, setEmail] = useState('');
 	// eslint-disable-next-line no-unused-vars
 	const [errors, setErrors] = useState('');
 
-	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const { value } = e.target;
-		setEmail(value);
-	};
+	// const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	// 	const { value } = e.target;
+	// 	setEmail(value);
+	// };
 
-	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		const emailValid = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i.test(email);
-		if (emailValid) {
-			emailjs
-				.sendForm(
-					process.env.NEXT_PUBLIC_SERVICE_ID || '',
-					process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
-					e.currentTarget,
-					process.env.NEXT_PUBLIC_USER_ID,
-				)
-				.then(
-					(result) => {
-						console.log(result.text);
-					},
-					(error) => {
-						console.log(error.text);
-					},
-				);
-		}
-		setEmail('');
-		setErrors('');
-	};
+	// const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+	// 	e.preventDefault();
+	// 	const emailValid = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i.test(email);
+	// 	if (emailValid) {
+	// 		emailjs
+	// 			.sendForm(
+	// 				process.env.NEXT_PUBLIC_SERVICE_ID || '',
+	// 				process.env.NEXT_PUBLIC_TEMPLATE_ID || '',
+	// 				e.currentTarget,
+	// 				process.env.NEXT_PUBLIC_USER_ID,
+	// 			)
+	// 			.then(
+	// 				(result) => {
+	// 					console.log(result.text);
+	// 				},
+	// 				(error) => {
+	// 					console.log(error.text);
+	// 				},
+	// 			);
+	// 	}
+	// 	setEmail('');
+	// 	setErrors('');
+	// };
 
 	return (
 		<div className={styles.container}>
@@ -44,9 +44,9 @@ export default function Signup() {
 			<div className={styles.signupContainer}>
 				<BackButton />
 				<div className={styles.information}>
-					<h3>Sign Up To Recieve More Information</h3>
+					<h3>Send us an email to receive more information</h3>
 					<p>Someone from the intake team will reach out.</p>
-					<p> - OR - </p>
+					{/* <p> - OR - </p> */}
 
 					<p>
 						You can reach the team directly at <br />
@@ -54,7 +54,7 @@ export default function Signup() {
 					</p>
 
 				</div>
-				<form className={styles.form} onSubmit={sendEmail}>
+				{/* <form className={styles.form} onSubmit={sendEmail}>
 					<div className={styles.inputContainer}>
 						<label htmlFor="">Email Address</label>
 						<input
@@ -66,7 +66,7 @@ export default function Signup() {
 						/>
 					</div>
 					<input className={styles.submit} type="submit" />
-				</form>
+				</form> */}
 			</div>
 		</div>
 	);
