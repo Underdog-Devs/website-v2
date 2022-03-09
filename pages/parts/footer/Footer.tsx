@@ -74,11 +74,11 @@ function Footer({}: Props): ReactElement {
 				<div className={styles.navigation}>
 					<div className={styles.navSect}>
 						<h4>Mentees</h4>
-						<a href="https://forms.gle/7PWZd7cfp9jve7Yu5" target="_blank" rel="noreferrer">Become a Mentee</a>
+						<a href="https://forms.gle/YdE9SBfJGXc3XW928" target="_blank" rel="noreferrer">Become a Mentee</a>
 					</div>
 					<div className={styles.navSect}>
 						<h4>Mentors</h4>
-						<a href="https://forms.gle/UKw3cQKmmmAEZREu6" target="_blank" rel="noreferrer">Become a Mentor</a>
+						<a href="https://forms.gle/qsusfwyTA8H2vj6z5" target="_blank" rel="noreferrer">Become a Mentor</a>
 					</div>
 					{/* <div className={styles.navSect}>
 						<h4>Organization</h4>

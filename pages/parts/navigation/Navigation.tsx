@@ -42,10 +42,10 @@ function Navigation({ }: Props): ReactElement {
 				</Link>
 				<nav className={styles.navigation}>
 					<div className={styles.navigationLinks}>
-						<a href="https://forms.gle/uS1m9wMeC75reYte7" target="_blank" rel="noreferrer">
+						<a href="https://forms.gle/YdE9SBfJGXc3XW928" target="_blank" rel="noreferrer">
 							Become a Mentee
 						</a>
-						<a href="https://forms.gle/UKw3cQKmmmAEZREu6" target="_blank" rel="noreferrer">Become a Mentor</a>
+						<a href="https://forms.gle/qsusfwyTA8H2vj6z5" target="_blank" rel="noreferrer">Become a Mentor</a>
 						<Link href="/project-underdog" passHref>
 							<p className={styles.getInvolvedButton}>Project Underdog</p>
 						</Link>
