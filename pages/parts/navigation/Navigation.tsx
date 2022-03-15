@@ -83,7 +83,7 @@ function Navigation({ }: Props): ReactElement {
 				<nav className={styles.mobileNavigation} ref={linksContainerRef}>
 					<a
 						onClick={() => setShowLinks(false)}
-						href="https://forms.gle/uS1m9wMeC75reYte7"
+						href="https://forms.gle/YdE9SBfJGXc3XW928"
 						target="_blank"
 						rel="noreferrer"
 					>
@@ -91,7 +91,7 @@ function Navigation({ }: Props): ReactElement {
 					</a>
 					<a
 						onClick={() => setShowLinks(false)}
-						href="https://forms.gle/UKw3cQKmmmAEZREu6"
+						href="https://forms.gle/qsusfwyTA8H2vj6z5"
 						target="_blank"
 						rel="noreferrer"
 					>Become a Mentor
