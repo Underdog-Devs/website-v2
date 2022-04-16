@@ -133,8 +133,11 @@
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  width: 40%;
+  justify-content: space-evenly;
+  width: 60%;
+  // height & align properties should be removed when more footer links are added
+  align-items: flex-end;
+  height: 150px;
 
   @include for-phone-only {
     width: 90%;
