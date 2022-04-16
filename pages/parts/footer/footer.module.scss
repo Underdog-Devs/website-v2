@@ -131,11 +131,14 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 60%;
-
+  // height & align properties should be removed when more footer links are added
+  align-items: flex-end;
+  height: 150px;
 
   @include for-phone-only {
     width: 90%;
     justify-content: space-between;
+    height: 60px;
   }
       
   @include for-tablet-up {
