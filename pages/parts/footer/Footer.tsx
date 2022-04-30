@@ -1,9 +1,8 @@
 import React, { ReactElement } from 'react';
-import { BsTwitter, BsFacebook, BsInstagram, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsTwitter, BsFacebook, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
-
 
 interface Props { }
 
