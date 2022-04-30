@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 import { BsTwitter, BsFacebook, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { ImInstagram } from 'react-icons/im';
@@ -74,18 +75,30 @@ function Footer({ }: Props): ReactElement {
 				</div>
 				<div className={styles.navigation}>
 					<div className={styles.navSect}>
-						<h4>Mentees</h4>
+						<h4>Community</h4>
 						<a href="https://forms.gle/YdE9SBfJGXc3XW928" target="_blank" rel="noreferrer">Become a Mentee</a>
-					</div>
-					<div className={styles.navSect}>
-						<h4>Mentors</h4>
 						<a href="https://forms.gle/qsusfwyTA8H2vj6z5" target="_blank" rel="noreferrer">Become a Mentor</a>
 					</div>
 					<div className={styles.navSect}>
 						<h4>Organization</h4>
-						<a href="link">Project Underdog</a>
-						<a href="link">Donate</a>
-						<a href="link">Contact Us</a>
+						<Link
+							href="/project-underdog"
+							passHref
+						>
+							Project Underdog
+						</Link>
+						<Link
+							href="/donate"
+							passHref
+						>
+							Donate
+						</Link>
+						<Link
+							href="/signup"
+							passHref
+						>
+							Contact Us
+						</Link>
 					</div>
 				</div>
 			</div>
