@@ -1,12 +1,22 @@
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
+<<<<<<< HEAD:components/parts/footer/Footer.tsx
 import { BsTwitter, BsFacebook, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
+=======
+import { BsTwitter, BsFacebook, BsInstagram, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
+>>>>>>> 4490001 (fixed instagram icon added right year & added links):pages/parts/footer/Footer.tsx
 import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
 
+<<<<<<< HEAD:components/parts/footer/Footer.tsx
 interface Props { }
 
+=======
+
+interface Props { }
+
+>>>>>>> 4490001 (fixed instagram icon added right year & added links):pages/parts/footer/Footer.tsx
 function Footer({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
@@ -81,6 +91,7 @@ function Footer({ }: Props): ReactElement {
 					</div>
 					<div className={styles.navSect}>
 						<h4>Organization</h4>
+<<<<<<< HEAD:components/parts/footer/Footer.tsx
 						<Link
 							href="/project-underdog"
 							passHref
@@ -106,6 +117,11 @@ function Footer({ }: Props): ReactElement {
 						>
 							Contact Us
 						</Link>
+=======
+						<a href="link">Project Underdog</a>
+						<a href="link">Donate</a>
+						<a href="link">Contact Us</a>
+>>>>>>> 4490001 (fixed instagram icon added right year & added links):pages/parts/footer/Footer.tsx
 					</div>
 				</div>
 			</div>

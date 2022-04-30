@@ -140,9 +140,14 @@
   justify-content: space-evenly;
   width: 60%;
   // height & align properties should be removed when more footer links are added
+<<<<<<< HEAD:components/parts/footer/footer.module.scss
   align-items: flex-end;
   height: 150px;
 >>>>>>> cfbb39f (minor footer changes):pages/parts/footer/footer.module.scss
+=======
+  // align-items: flex-end;
+  // height: 150px;
+>>>>>>> 4490001 (fixed instagram icon added right year & added links):pages/parts/footer/footer.module.scss
 
   @include for-phone-only {
     width: 90%;
