@@ -1,11 +1,13 @@
 import React, { ReactElement } from 'react';
 import { BsTwitter, BsFacebook, BsInstagram, BsYoutube, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
 
-interface Props {}
 
-function Footer({}: Props): ReactElement {
+interface Props { }
+
+function Footer({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
@@ -43,7 +45,7 @@ function Footer({}: Props): ReactElement {
 							href="https://www.instagram.com/underdog_devs/"
 							className={styles.icon}
 						>
-							<BsInstagram />
+							<ImInstagram />
 						</a>
 						<a
 							target="_blank"
@@ -80,16 +82,15 @@ function Footer({}: Props): ReactElement {
 						<h4>Mentors</h4>
 						<a href="https://forms.gle/qsusfwyTA8H2vj6z5" target="_blank" rel="noreferrer">Become a Mentor</a>
 					</div>
-					{/* <div className={styles.navSect}>
+					<div className={styles.navSect}>
 						<h4>Organization</h4>
-						<a href="link">About</a>
-						<a href="link">Terms</a>
-						<a href="link">Get Involved</a>
-						<a href="link">Privacy Policy</a>
-					</div> */}
+						<a href="link">Project Underdog</a>
+						<a href="link">Donate</a>
+						<a href="link">Contact Us</a>
+					</div>
 				</div>
 			</div>
-			<p className={styles.copyright}>Copyright © 2021. Underdog Devs</p>
+			<p className={styles.copyright}>Copyright © {new Date().getFullYear()} Underdog Devs</p>
 		</div>
 	);
 }
