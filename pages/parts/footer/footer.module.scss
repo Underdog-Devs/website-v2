@@ -55,7 +55,6 @@
   flex-direction: column;
   width: 40%;
   align-items: flex-start;
-	margin-left: $space-xxl;
   
   @include for-phone-only {
     width: 100%;
@@ -136,7 +135,6 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 40%;
-	margin-top: $space-xl;
 
   @include for-phone-only {
     width: 90%;
