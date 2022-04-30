@@ -4,11 +4,11 @@ import styles from './login.module.scss';
 const Login = () => {
 	return (
 		<div className={styles.container}>
-			
+
 			<div className={styles.donate}>
 				<div className={styles.options}>
 					<div className={styles.option}>
-					<img
+						<img
 							className={styles.icon}
 							src="/images/icon-01.png"
 							height={40}
@@ -21,16 +21,13 @@ const Login = () => {
 							<label htmlFor="">Username</label>
 							<input type="password" />
 							<label htmlFor="">Password</label>
-							<a href='#'>Forgot Password</a>
+							<button>Forgot Password</button>
 							<button>Submit</button>
 							<button>Reset</button>
-							<a href='#'>Contact Us</a>
+							<button>Contact Us</button>
 						</form>
 					</div>
-					<div className={styles.option}>
-						
-						
-					</div>
+					<div className={styles.option} />
 				</div>
 			</div>
 		</div>
