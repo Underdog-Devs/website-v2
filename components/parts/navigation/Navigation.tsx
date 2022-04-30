@@ -40,6 +40,9 @@ function Navigation({ }: Props): ReactElement {
 				</Link>
 				<nav className={styles.navigation}>
 					<div className={styles.navigationLinks}>
+					<Link href="/login" passHref>
+							<p className={styles.getInvolvedButton}>Login</p>
+						</Link>
 						<a href="https://forms.gle/YdE9SBfJGXc3XW928" target="_blank" rel="noreferrer">
 							Become a Mentee
 						</a>

@@ -23,7 +23,11 @@
     "emailjs-com": "^3.2.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
+<<<<<<< HEAD
     "next": "^12.1.6",
+=======
+    "next": "^11.1.2",
+>>>>>>> 55956b1 (tsxThis is the Login page progress made by William and Caleb on Thursday April 28th)
     "next-optimized-images": "^2.6.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
