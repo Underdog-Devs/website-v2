@@ -11,7 +11,6 @@ import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
 
-
 interface Props { }
 
 function Footer({ }: Props): ReactElement {
