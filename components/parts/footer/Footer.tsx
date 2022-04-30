@@ -11,9 +11,10 @@ import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
 
-interface Props {}
 
-function Footer({}: Props): ReactElement {
+interface Props { }
+
+function Footer({ }: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
