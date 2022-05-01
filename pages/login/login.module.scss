@@ -1,157 +1,59 @@
 @import '../../styles/globals.scss';
-
-.container {
-	display: flex;
-	flex-direction: column;
-	margin: $space-xl 0;
-	color: $textBlack;
-
-	.callToAction {
-		background-color: $lightenedBlue;
-		padding: $space-md;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-
-
-		@include for-phone-only {
-			flex-direction: column;
-		}
-
-		@include for-tablet-up {
-			flex-direction: column;
-		}
-
-		@include for-desktop-up {
-			flex-direction: row;
-		}
-
-		.actionText {
-			width: 50%;
-			line-height: 1.3;
-
-			@include for-phone-only {
-				width: 100%;
-			}
-			@include for-tablet-up {
-				width: 80%;
-			}
-			@include for-desktop-up {
-				width: 50%;
-			}
-
-			h3 {
-				font-family: $primaryHeaderFont;
-			}
-			p {
-				font-size: $f4;
-				margin: $space-lg 0;
-				font-family: $primaryTextFont;
-			}
-		}
-
-		img {
-			@include for-phone-only {
-				display: none;
-			}
-			@include for-tablet-up {
-				display: none;
-			}
-			@include for-desktop-up {
-				display: inline;
-			}
-		}
-	}
-
-	.donate {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: $space-xl $space-md;
-
-		h2 {
-			font-family: $secondaryHeaderFont;
-		}
-
-		.options {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			padding: $space-xl $space-md;
-			width: 100%;
-
-            .form {
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $space-xl 0;
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 34px;
+        background-color: $udSecondaryOrange;
+        padding-bottom: $space-lg;
+        .title{
+            font-family: $primaryHeaderFont;
+            color: white;
+            padding: $space-lg 0;
+        }
+        .form{
+            display:flex;
+            flex-direction: column;
+            padding: 0 $space-xxl;
+            gap: $space-md;
+            .formField{
                 display: flex;
                 flex-direction: column;
-                margin: $space-xl 0;
-                color: $textBlack;
+                justify-content: center;
+                align-items: flex-start;
+                font-family: $secondaryTextFont;
+                .formInput{
+                    border-radius: 5px;
+                    border: none;
+                    font-size: $f5;
+                    padding: $space-xs;
+                }
+                .formLabel{
+                    padding: $space-xxs 0;
+                    font-size: $subtitle;
+                    color: white;
+                }
             }
-
-			@include for-phone-only {
-				flex-direction: column;
-			}
-
-			@include for-tablet-up {
-				flex-direction: column;
-			}
-
-			@include for-desktop-up {
-				flex-direction: row;
-			}
-
-			.option {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;
-				padding: $space-lg;
-
-				@include for-phone-only {
-					border-bottom: 1px solid $subTextBlack;
-					width: 70%;
-					height: auto;
-				}
-
-				@include for-tablet-up {
-					border-bottom: 1px solid $subTextBlack;
-					width: 70%;
-					height: auto;
-				}
-
-				@include for-desktop-up {
-					border-bottom: none;
-					width: auto;
-					height: 200px;
-
-				}
-
-				.paypalContainer {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				}
-
-				.donateText {
-					font-family: $primaryTextFont;
-					font-size: $f4;
-				}
-
-				.donateSubText {
-					font-family: $secondaryTextFont;
-					font-size: $f5;
-					line-height: 1.2;
-					b {
-						font-weight: bold;
-					}
-				}
-
-				.icon {
-					margin: $space-sm;
-					font-size: $f3;
-				}
-			}
-		}
-	}
+            .formActions{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $space-lg 0;
+                .formButton{
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-family: $linkFont;
+                    font-size: $f5;
+                }
+            }
+        }
+    }
 }
