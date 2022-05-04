@@ -9,6 +9,7 @@
     }
 
     .testimonialContainer {
+        width: 100%;
         border: $udSecondaryOrange 3px solid;
         border-radius: 10px;
         display: flex;
@@ -22,5 +23,12 @@
             border: black 3px solid;
             border-radius: 10px;
         }
+    }
+}
+
+
+@media screen and (max-width: $md) {
+    .testimonialContainer {
+        flex-wrap: wrap;
     }
 }
