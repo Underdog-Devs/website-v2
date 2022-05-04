@@ -10,6 +10,7 @@ import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
 import Hero from '../components/landing/hero';
+import Testimonial from '../components/testimonial/Testimonial';
 
 const Home: NextPage = () => (
 	<>
@@ -20,6 +21,7 @@ const Home: NextPage = () => (
 			<Mentee />
 			<SocialMedia />
 			<GetInvolved />
+			<Testimonial />
 		</div>
 	</>
 );
