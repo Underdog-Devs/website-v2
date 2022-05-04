@@ -1,0 +1,24 @@
+@import '../../styles/globals.scss';
+
+.container {
+    padding: $space-md;
+    width: 30%;
+
+    .quotation {
+        margin: 0;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 $space-lg 0;
+    }
+    .author {
+        display: flex;
+        &Info {
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+}
