@@ -1,0 +1,26 @@
+@import '../../styles/globals.scss';
+
+.container {
+
+
+    .title {
+        color: green;
+        text-align: center;
+    }
+
+    .testimonialContainer {
+        border: $udSecondaryOrange 3px solid;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: $space-xl;
+
+        p {
+            padding: $space-xl;
+            justify-content: space-between;
+            border: black 3px solid;
+            border-radius: 10px;
+        }
+    }
+}
