@@ -1,24 +1,30 @@
 @import '../../styles/globals.scss';
 
 .container {
-    padding: $space-md;
-    width: 30%;
+	padding: $space-md;
+	width: 30%;
 
-    .quotation {
-        margin: 0;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 $space-lg 0;
-    }
-    .author {
-        display: flex;
-        &Info {
+	.quotation_mark {
+		max-width: 15%;
+	}
 
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 0 $space-lg 0;
+	}
+
+	.author {
+		display: flex;
+
+		&Image {
+			object-fit: cover;
+		}
+
+		&Info {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 }
