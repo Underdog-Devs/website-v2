@@ -29,7 +29,7 @@ DESCRIBE YOUR PULL REQUEST'S CHANGES.  **REPLACE THIS TEXT**.
 
 ## Organization ##
 
-- [ ] Have you linked this pull request to a [project ticket](https://trello.com/b/S4lzXPSs/ud-website-v2)? 
+- [ ] Have you linked this pull request to a [project ticket](https://trello.com/b/Sdadc2L9/ud-website-v3)? 
 
 ## Review ##
 
