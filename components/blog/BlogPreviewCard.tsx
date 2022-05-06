@@ -1,4 +1,4 @@
-import styles from './card.module.scss';
+import styles from './blogPreviewCard.module.scss';
 
 type Props = {
 	img: string;
@@ -8,7 +8,7 @@ type Props = {
 	date: string;
 };
 
-export function Card(props: Props) {
+export function BlogPreviewCard(props: Props) {
 	const { img = '/images/collab.jpg', title = 'Future of Work', author = 'Johanna Murry', text = 'Majority of peole will work in jobs that don’t exist today.', date = '02 May' } = props;
 	return (
 		<div className={styles.container}>
