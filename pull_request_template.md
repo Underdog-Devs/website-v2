@@ -29,7 +29,7 @@ DESCRIBE YOUR PULL REQUEST'S CHANGES.  **REPLACE THIS TEXT**.
 
 ## Organization ##
 
-- [ ] Have you linked this pull request to a [project ticket](https://github.com/Underdog-Devs/website/projects/2)? 
+- [ ] Have you linked this pull request to a [project ticket](https://trello.com/b/S4lzXPSs/ud-website-v2)? 
 
 ## Review ##
 
