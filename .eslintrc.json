@@ -27,6 +27,7 @@
 		"semi-style": ["error", "last"],
 		"quotes": ["error", "single"],
 		"jsx-quotes": ["error", "prefer-double"],
+		"import/export": 0,
 		"import/extensions": [
 			"error",
 			"ignorePackages",

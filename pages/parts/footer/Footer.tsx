@@ -66,7 +66,7 @@ function Footer({ }: Props): ReactElement {
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.linkedin.com/in/underdog-devs-6b9482205/"
+							href="https://www.linkedin.com/company/underdog-devs-org/"
 							className={styles.icon}
 						>
 							<BsLinkedin />
