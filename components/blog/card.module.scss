@@ -6,36 +6,39 @@
     gap: $space-md;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+    height: 400px;
+    width: 300px;
 
+    .cardTextContainer{
+        padding: 0 $space-md;
 
-    .image{
-        width: 100%;
-        height: auto;
-    }
-    .title{
-        font-family: $primaryHeaderFont;
-        color: $textBlack;
-        padding: 0 20px; 
-        font-weight: bold;
-    }
-    .text{
-        font-family: $primaryTextFont;
-        color: $subTextBlack;
-        padding: 0 20px; 
-        line-height: 30px;
-    }
-    .info{
-        display: flex;
-        justify-content: space-between;
-        font-family: $primaryTextFont;
-        color: $textBlack;
-        padding: 0 20px 25px 20px; 
-        margin: $space-md 0;
-        .author{
+        .title{
+            font-family: $primaryHeaderFont;
+            color: $textBlack;
             font-weight: bold;
+            margin-bottom: $space-xs;
         }
-        .date{
+
+        .text{
+            font-family: $primaryTextFont;
             color: $subTextBlack;
+            line-height: 30px;
         }
-    }        
+
+        .info{
+            display: flex;
+            justify-content: space-between;
+            font-family: $primaryTextFont;
+            color: $textBlack;
+            margin: $space-md 0;
+
+            .author{
+                font-weight: bold;
+            }
+            
+            .date{
+                color: $subTextBlack;
+            }
+        }        
+    }
 }
