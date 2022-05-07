@@ -10,13 +10,14 @@ function Testimonial() {
 					src="/images/quotation-mark.svg"
 					alt="Large quotation mark"
 				/>
-				<h1>Testimonial</h1>
+				<h4>Testimonial</h4>
 			</div>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, neque
 				aspernatur. Quis voluptas numquam sequi iste qui hic rerum, quod optio
 				eum at repellendus esse, similique, illum fuga tempore repudiandae.
 			</p>
+
 			<div className={styles.author}>
 				<img
 					className={styles.authorImage}
