@@ -3,28 +3,62 @@
 .container {
 	padding: $space-md;
 	width: 30%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.248358718487395) 0%,
+		rgba(255, 255, 255, 0.4) 92%
+	);
+	border-radius: 4%;
+	box-shadow: 1px 1px 5px 0.25px #fff;
 
 	.quotation_mark {
-		max-width: 15%;
+		margin-left: -$space-sm;
+		max-width: 20%;
+		opacity: 15%;
+	}
+
+	p {
+		font-family: $primaryTextFont;
+		color: $subTextBlack;
+		line-height: 1.25rem;
 	}
 
 	.header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 0 0 $space-lg 0;
+		align-items: center;
+		padding-right: $space-sm;
+		// margin: 0 0 $space-lg 0;
+
+		h4 {
+			font-family: $primaryHeaderFont;
+			font-size: $f4;
+			color: $subTextBlack;
+			margin-bottom: $space-xs;
+			font-weight: 500;
+		}
 	}
 
 	.author {
 		display: flex;
+		margin-top: $space-xl;
 
 		&Image {
 			object-fit: cover;
+			width: 3em;
+			border-radius: 50%;
 		}
 
 		&Info {
 			display: flex;
 			flex-direction: column;
+			margin-left: $space-sm;
+
+			p {
+				font-family: $primaryTextFont;
+			}
 		}
 	}
 }
