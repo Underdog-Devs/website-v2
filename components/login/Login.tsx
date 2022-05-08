@@ -32,7 +32,7 @@ const Login = () => {
 							type="password"
 							name="password"
 							id="password"
-							value=" "
+							value=""
 							placeholder="Password"
 						/>
 						<label className={styles.formLabel} htmlFor="password">Password</label>
