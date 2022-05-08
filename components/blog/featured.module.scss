@@ -1,0 +1,44 @@
+@import '../../styles/globals.scss';
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  font-family: $primaryTextFont;
+  color: $textBlack;
+  height:250px;
+  .post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    padding-right: 30px;
+
+    .info{
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      .right{
+        display: flex;
+        gap: $space-lg;
+        
+      }
+      .right>:last-child{
+        font-weight: 400;
+        color: $subTextBlack;
+      }
+      padding-right: $space-xl;
+    }
+  }
+  .post>h3{
+    font-family: $primaryHeaderFont;
+    font-weight: bold;
+  }
+  .post>p{
+    color: $subTextBlack;
+    line-height: $space-lg;
+  }
+  .image{
+    height: 250px;
+    width: 300px;
+  }
+}
