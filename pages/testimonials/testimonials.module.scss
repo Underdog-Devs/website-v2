@@ -4,23 +4,18 @@
 
 
     .title {
-        color: green;
+        color: $udOrange;
         text-align: center;
     }
 
     .testimonialContainer {
-        border: $udSecondaryOrange 3px solid;
-        border-radius: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         padding: $space-xl;
 
-        p {
+        .testimonial {
             padding: $space-xl;
-            justify-content: space-between;
-            border: black 3px solid;
-            border-radius: 10px;
         }
     }
 }

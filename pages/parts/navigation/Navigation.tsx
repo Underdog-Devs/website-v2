@@ -55,7 +55,7 @@ function Navigation({ }: Props): ReactElement {
 						<Link href="/signup" passHref>
 							<p className={styles.getInvolvedButton}>Contact Us</p>
 						</Link>
-						<Link href="../testimonials" passHref>
+						<Link href="testimonials" passHref>
 							<p className={styles.getInvolvedButton}>Testimonials</p>
 						</Link>
 					</div>
@@ -118,7 +118,7 @@ function Navigation({ }: Props): ReactElement {
 						<p onClick={() => setShowLinks(false)}>Contact Us</p>
 					</Link>
 					<Link
-						href="../testimonials"
+						href="testimonials"
 						passHref
 					>
 						<p onClick={() => setShowLinks(false)}>Testimonials</p>

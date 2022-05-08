@@ -6,9 +6,9 @@ const Testimonials = () => {
 		<div className={styles.container}>
 			<h1 className={styles.title}>This is the Testimonials Page</h1>
 			<div className={styles.testimonialContainer}>
-				<p>This is where the testimonial boxes will go</p>
-				<p>This is where the testimonial boxes will go</p>
-				<p>This is where the testimonial boxes will go</p>
+				<div className={styles.testimonial}>This is where the testimonial boxes will go</div>
+				<div className={styles.testimonial}>This is where the testimonial boxes will go</div>
+				<div className={styles.testimonial}>This is where the testimonial boxes will go</div>
 			</div>
 		</div>
 
