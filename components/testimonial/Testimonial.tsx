@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Testimonial.module.scss';
 
-function Testimonial() {
+export const Testimonial = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -31,6 +31,6 @@ function Testimonial() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Testimonial;

@@ -20,7 +20,7 @@
 
 	p {
 		font-family: $primaryTextFont;
-		color: $subTextBlack;
+		color: white;
 		line-height: 1.25rem;
 	}
 
@@ -30,12 +30,11 @@
 		justify-content: space-between;
 		align-items: center;
 		padding-right: $space-sm;
-		// margin: 0 0 $space-lg 0;
 
 		h4 {
 			font-family: $primaryHeaderFont;
 			font-size: $f4;
-			color: $subTextBlack;
+			color: white;
 			margin-bottom: $space-xs;
 			font-weight: 500;
 		}
@@ -47,7 +46,7 @@
 
 		&Image {
 			object-fit: cover;
-			width: 3em;
+			width: 48px;
 			border-radius: 50%;
 		}
 
