@@ -3,14 +3,20 @@
 .container {
 	padding: $space-md;
 	width: 30%;
-	background: rgb(0, 0, 0);
 	background: linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 0.248358718487395) 0%,
-		rgba(255, 255, 255, 0.4) 92%
+		180deg,
+		rgba(255, 255, 255, 0.45) 11%,
+		rgba(0, 0, 0, 0.45) 91%
 	);
-	border-radius: 4%;
-	box-shadow: 1px 1px 5px 0.25px #fff;
+
+	border-radius: 3%;
+	backdrop-filter: blur(6px);
+
+	-webkit-box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+	-moz-box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+
+	background-color: rgba(255, 255, 255, 0.09);
 
 	.quotation_mark {
 		margin-left: -$space-sm;
