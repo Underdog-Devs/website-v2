@@ -26,7 +26,7 @@ export const Testimonial = () => {
 				/>
 				<div className={styles.authorInfo}>
 					<p>name</p>
-					<p>title</p>
+					<p>Mentee</p>
 				</div>
 			</div>
 		</div>
