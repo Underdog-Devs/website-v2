@@ -21,7 +21,7 @@ export const Testimonial = () => {
 			<div className={styles.author}>
 				<img
 					className={styles.authorImage}
-					src="/images/mentee-profile 1.png"
+					src="/images/pair.jpg"
 					alt="Profile of mentee"
 				/>
 				<div className={styles.authorInfo}>
