@@ -1,0 +1,30 @@
+@import  '../../styles/globals.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: $space-sm 0;
+
+    .leftCol {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        padding: 0 $space-xl;
+        background-color: $involvedBlue;
+
+        .instruction {
+            font-size: $f5;
+            color: $udGrey;
+        }
+    }
+    .rightCol {
+        width: 60%;
+        padding: $space-sm;
+
+        .backButton {
+            text-decoration: none;
+        }
+    }
+    
+}
