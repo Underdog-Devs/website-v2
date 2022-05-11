@@ -2,7 +2,7 @@ import React from 'react';
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import styles from './blog.module.scss';
 
-const Blog = () => {
+export const Blog = () => {
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
