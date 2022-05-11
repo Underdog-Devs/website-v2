@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './testimonials.module.scss';
 
-import Testimonial from '../../testimonial/Testimonial';
+import { Testimonial } from '../../testimonial';
 
 const Testimonials = () => {
 	return (
