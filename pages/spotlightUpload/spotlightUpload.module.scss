@@ -11,19 +11,74 @@
         display: flex;
         align-items: center;
         padding: 0 $space-xl;
-        background-color: $involvedBlue;
+        background-color: $menteeBlue;
+
+        
 
         .instruction {
-            font-size: $f5;
-            color: $udGrey;
+            font-size: $f4;
+            color: white;
         }
     }
     .rightCol {
         width: 60%;
         padding: $space-sm;
 
+        .topInput {
+            margin-bottom: $space-lg;
+
         .backButton {
             text-decoration: none;
+        }
+
+        input {
+            padding: $space-sm;
+            margin: $space-sm 0;
+        }
+
+        .uploadButton {
+            background-color: $involvedBlue;
+            color: $udGrey;
+            padding: $space-sm;
+            margin-left: $space-sm;
+            border-radius: $space-xxs;
+        }
+    }
+
+        .inputRow{
+            display: flex;
+            flex-direction: row;
+
+            .inputColumn1{
+
+                input {
+                    padding: $space-sm;
+                    margin: $space-sm 0;
+                    margin-right: $space-sm;
+                }
+            }
+
+            .inputColumn2{
+                input {
+                    padding: $space-sm;
+                    margin: $space-sm 0;
+                }
+
+            }
+        }
+
+        .menteeBlurb {
+            width: 250px;
+            padding: $space-xs $space-xxxl $space-xxxl $space-xs;
+            margin: $space-sm 0;
+        }
+
+        .sendBtnDiv input {
+            background-color: $involvedBlue;
+            color: $udGrey;
+            padding: $space-sm $space-xxxl;
+            margin-left: $space-xl;
+            border-radius: $space-xxs;
         }
     }
     
