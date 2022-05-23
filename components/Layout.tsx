@@ -1,14 +1,12 @@
 import React, { ReactNode } from 'react';
-import Footer from '../pages/parts/footer';
-import Navigation from '../pages/parts/navigation';
+import Footer from './parts/footer';
+import Navigation from './parts/navigation';
 
 type Props = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
-const Layout = ({
-	children,
-}: Props) => (
+const Layout = ({ children }: Props) => (
 	<main>
 		<Navigation />
 		{children}
