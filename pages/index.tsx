@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import React from 'react';
 import type { NextPage } from 'next';
-import SiteHead from '../components/siteHead';
 
 // components
 // import Hero from '../components/landing/hero';
@@ -14,7 +13,6 @@ import Hero from '../components/landing/hero';
 
 const Home: NextPage = () => (
 	<>
-		<SiteHead title="Underdog Devs" description="We are a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers" />
 		<div>
 			<Hero />
 			<Recidivism />

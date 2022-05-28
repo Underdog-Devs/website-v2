@@ -1,4 +1,11 @@
-import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+	DocumentContext,
+	Html,
+	Head,
+	Main,
+	NextScript,
+} from 'next/document';
+import SiteHead from '../components/siteHead';
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -11,7 +18,15 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en-US">
 				<Head>
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					<SiteHead
+						title="Underdog Devs"
+						description="We are a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers"
+					/>
+					<link
+						rel="preconnect"
+						href="https://fonts.gstatic.com"
+						crossOrigin="true"
+					/>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
@@ -19,8 +34,15 @@ class MyDocument extends Document {
 						rel="stylesheet"
 					/>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-					<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+					<link
+						rel="preconnect"
+						href="https://fonts.gstatic.com"
+						crossOrigin="true"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap"
+						rel="stylesheet"
+					/>
 				</Head>
 				<body>
 					<Main />
