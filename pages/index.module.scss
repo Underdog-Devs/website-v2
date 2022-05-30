@@ -6,4 +6,9 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@include for-phone-only {
+		padding: $space_lg 0;
+		text-align: center;
+	}
 }
