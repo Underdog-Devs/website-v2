@@ -1,6 +1,15 @@
 @import '../../../styles/globals.scss';
 
 .container {
-	background-color: $menteeBlue;
-	padding: $space-lg;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	gap: $space-xl;
+	background-image: url("/images/testimonial-background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	padding: $space-xl;
+	// height: 400px;
 }

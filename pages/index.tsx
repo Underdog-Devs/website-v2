@@ -10,14 +10,17 @@ import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
 import Hero from '../components/landing/hero';
+// import Testimonials from '../components/landing/testimonials/Testimonials';
 
 const Home: NextPage = () => (
 	<>
 		<div>
 			<Hero />
 			<Recidivism />
-			<Mentor />
 			<Mentee />
+			<Mentor />
+			{/* commented out until we have testimonials to display */}
+			{/* <Testimonials content={3} /> */}
 			<SocialMedia />
 			<GetInvolved />
 		</div>

@@ -2,14 +2,9 @@
 
 .container {
 	padding: $space-md;
-	width: 30%;
-	background: linear-gradient(
-		180deg,
-		rgba(255, 255, 255, 0.45) 11%,
-		rgba(0, 0, 0, 0.45) 91%
-	);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0.55%, rgba(255, 255, 255, 0) 100%);
 
-	border-radius: 3%;
+	border-radius: 25px;
 	backdrop-filter: blur(6px);
 
 	-webkit-box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
@@ -17,6 +12,10 @@
 	box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
 
 	background-color: rgba(255, 255, 255, 0.09);
+
+	* {
+		background: transparent;
+	}
 
 	.quotation_mark {
 		margin-left: -$space-sm;
@@ -26,7 +25,7 @@
 
 	p {
 		font-family: $primaryTextFont;
-		color: white;
+		color: $udGrey;
 		line-height: 1.25rem;
 	}
 
