@@ -11,15 +11,39 @@
 		padding: $space_xl $space_xl $space-lg $space_xxl;
 		color: $udGrey;
 
+		@include for-phone-only {
+			padding: $space_lg 0;
+			text-align: center;
+		}
+		
+		@include for-tablet-up {
+			text-align: center;
+		}
+		
+		@include for-desktop-up {
+			text-align: justify;
+	}
+	
+
 		h1 {
 			margin: 0;
 			font-family: $primaryHeaderFont;
-		}
 
+			@include for-phone-only {
+				font-size: $f2;
+			}
+			
+		}
+		
 		p {
 			padding: $space_md 0 0 $space-xxs;
 			font-family: $secondaryTextFont;
 			font-size: $f4;
+
+			@include for-phone-only {
+				font-size: $f4;
+			}
+			
 		}
 	}
 }

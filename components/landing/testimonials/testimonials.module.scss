@@ -7,7 +7,7 @@
 	
 	@include for-phone-only {
 		grid-template-columns: repeat(1, 1fr);
-		padding: $space-xxl 100px;
+		padding: $space-md;
 	}
 	
 	@include for-tablet-up {
