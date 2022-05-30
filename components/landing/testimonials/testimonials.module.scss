@@ -2,14 +2,21 @@
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
 	gap: $space-xl;
-	// background-image: url("/images/testimonial-background.jpg");
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-	padding: $space-xl;
-	// height: 400px;
+	
+	@include for-phone-only {
+		grid-template-columns: repeat(1, 1fr);
+		padding: $space-xxl 100px;
+	}
+	
+	@include for-tablet-up {
+		grid-template-columns: repeat(1, 1fr);
+		padding: $space-xxl 200px;
+	}
+	
+	@include for-desktop-up {
+		grid-template-columns: repeat(3, 1fr);
+		padding: $space-xl;
+	}
 }
