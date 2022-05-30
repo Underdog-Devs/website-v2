@@ -18,10 +18,8 @@ function Navigation({ }: Props): ReactElement {
 			if (linksContainerRef.current) {
 				linksContainerRef.current.style.height = 'auto';
 			}
-		} else {
-			if (linksContainerRef.current) {
-				linksContainerRef.current.style.height = '0px';
-			}
+		} else if (linksContainerRef.current) {
+			linksContainerRef.current.style.height = '0px';
 		}
 	}, [showLinks]);
 
