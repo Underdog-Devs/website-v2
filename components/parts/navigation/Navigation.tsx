@@ -77,7 +77,6 @@ function Navigation({ }: Props): ReactElement {
 						aria-label="navigation-menu"
 						className={styles.navToggle}
 						onClick={toggleLinks}
-						onBlur={toggleLinks}
 					>
 						{showLinks ? <FaTimes /> : <FaBars />}
 					</button>
