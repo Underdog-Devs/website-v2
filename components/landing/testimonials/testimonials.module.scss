@@ -1,0 +1,22 @@
+@import '../../../styles/globals.scss';
+
+.container {
+	display: grid;
+	align-items: center;
+	gap: $space-xl;
+	
+	@include for-phone-only {
+		grid-template-columns: repeat(1, 1fr);
+		padding: $space-md;
+	}
+	
+	@include for-tablet-up {
+		grid-template-columns: repeat(1, 1fr);
+		padding: $space-xxl 200px;
+	}
+	
+	@include for-desktop-up {
+		grid-template-columns: repeat(3, 1fr);
+		padding: $space-xl;
+	}
+}

@@ -53,6 +53,6 @@
 		"@next/next/no-img-element": "off",
 		"linebreak-style": "off",
 		"@next/next/no-document-import-in-page": "off",
-		"no-lonely-if": "off"
+		"import/export": 0
 	}
 }

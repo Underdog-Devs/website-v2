@@ -87,6 +87,13 @@ function Footer({ }: Props): ReactElement {
 						>
 							Project Underdog
 						</Link>
+						{/* commented out until we have testimonial data to display */}
+						{/* <Link
+							href="/testimonials"
+							passHref
+						>
+							Testimonials
+						</Link> */}
 						<Link
 							href="/donate"
 							passHref

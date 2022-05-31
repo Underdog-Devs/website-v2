@@ -1,0 +1,14 @@
+@import '../styles/globals.scss';
+
+.testimonialsBanner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/images/testimonial-background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include for-phone-only {
+		padding: $space_lg 0;
+		text-align: center;
+	}
+}

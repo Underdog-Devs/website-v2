@@ -18,10 +18,8 @@ function Navigation({ }: Props): ReactElement {
 			if (linksContainerRef.current) {
 				linksContainerRef.current.style.height = 'auto';
 			}
-		} else {
-			if (linksContainerRef.current) {
-				linksContainerRef.current.style.height = '0px';
-			}
+		} else if (linksContainerRef.current) {
+			linksContainerRef.current.style.height = '0px';
 		}
 	}, [showLinks]);
 
@@ -49,6 +47,10 @@ function Navigation({ }: Props): ReactElement {
 						<Link href="/project-underdog" passHref>
 							<p className={styles.getInvolvedButton}>Project Underdog</p>
 						</Link>
+						{/* commented out until we have testimonial data to display */}
+						{/* <Link href="/testimonials" passHref>
+							<p className={styles.getInvolvedButton}>Testimonials</p>
+						</Link> */}
 						<Link href="/donate" passHref>
 							<p className={styles.getInvolvedButton}>Donate</p>
 						</Link>
@@ -102,6 +104,13 @@ function Navigation({ }: Props): ReactElement {
 					>
 						<p onClick={() => setShowLinks(false)}>Project Underdog</p>
 					</Link>
+					{/* commented out until we have testimonial data to display */}
+					{/* <Link
+						href="/testimonials"
+						passHref
+					>
+						<p onClick={() => setShowLinks(false)}>Testimonials</p>
+					</Link> */}
 					<Link
 						href="/donate"
 						passHref

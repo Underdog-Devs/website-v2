@@ -1,0 +1,64 @@
+@import '../../styles/globals.scss';
+
+.container {
+	padding: $space-md;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0.55%, rgba(255, 255, 255, 0) 100%);
+
+	border-radius: 25px;
+	backdrop-filter: blur(6px);
+
+	-webkit-box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+	-moz-box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0px 11px 24px -12px rgba(255, 255, 255, 0.5);
+
+	border: 1px solid $udGrey;
+
+	.quotation_mark {
+		margin-left: -$space-sm;
+		max-width: 20%;
+		opacity: 15%;
+	}
+
+	p {
+		font-family: $primaryTextFont;
+		color: $udGrey;
+		line-height: 1.25rem;
+	}
+
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: $space-sm;
+
+		h4 {
+			font-family: $primaryHeaderFont;
+			font-size: $f4;
+			color: white;
+			margin-bottom: $space-xs;
+			font-weight: 500;
+		}
+	}
+
+	.author {
+		display: flex;
+		margin-top: $space-xl;
+
+		&Image {
+			object-fit: cover;
+			width: 48px;
+			border-radius: 50%;
+		}
+
+		&Info {
+			display: flex;
+			flex-direction: column;
+			margin-left: $space-sm;
+
+			p {
+				font-family: $primaryTextFont;
+			}
+		}
+	}
+}
