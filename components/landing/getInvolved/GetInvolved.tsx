@@ -10,14 +10,14 @@ function GetInvolved({ }: Props): ReactElement {
 			<h3>Want to Get Involved?</h3>
 			<p>Request more information
 				<Link href="/signup" passHref>
-					<a href="https://forms.gle/uS1m9wMeC75reYte7" rel="noreferrer">
+					<a>
 						here
 					</a>
 				</Link>
 			</p>
 			<p>Donate
 				<Link href="/donate" passHref>
-					<a href="https://forms.gle/uS1m9wMeC75reYte7" rel="noreferrer">
+					<a>
 						here
 					</a>
 				</Link>

@@ -45,17 +45,17 @@ function Navigation({ }: Props): ReactElement {
 						</a>
 						<a href="https://forms.gle/qsusfwyTA8H2vj6z5" target="_blank" rel="noreferrer">Become a Mentor</a>
 						<Link href="/project-underdog" passHref>
-							<p className={styles.getInvolvedButton}>Project Underdog</p>
+							<a>Project Underdog</a>
 						</Link>
 						{/* commented out until we have testimonial data to display */}
 						{/* <Link href="/testimonials" passHref>
 							<p className={styles.getInvolvedButton}>Testimonials</p>
 						</Link> */}
 						<Link href="/donate" passHref>
-							<p className={styles.getInvolvedButton}>Donate</p>
+							<a>Donate</a>
 						</Link>
 						<Link href="/signup" passHref>
-							<p className={styles.getInvolvedButton}>Contact Us</p>
+							<a>Contact Us</a>
 						</Link>
 					</div>
 
@@ -77,7 +77,6 @@ function Navigation({ }: Props): ReactElement {
 						aria-label="navigation-menu"
 						className={styles.navToggle}
 						onClick={toggleLinks}
-						onBlur={toggleLinks}
 					>
 						{showLinks ? <FaTimes /> : <FaBars />}
 					</button>
@@ -102,7 +101,7 @@ function Navigation({ }: Props): ReactElement {
 						href="/project-underdog"
 						passHref
 					>
-						<p onClick={() => setShowLinks(false)}>Project Underdog</p>
+						<a onClick={() => setShowLinks(false)}>Project Underdog</a>
 					</Link>
 					{/* commented out until we have testimonial data to display */}
 					{/* <Link
@@ -115,13 +114,13 @@ function Navigation({ }: Props): ReactElement {
 						href="/donate"
 						passHref
 					>
-						<p onClick={() => setShowLinks(false)}>Donate</p>
+						<a onClick={() => setShowLinks(false)}>Donate</a>
 					</Link>
 					<Link
 						href="/signup"
 						passHref
 					>
-						<p onClick={() => setShowLinks(false)}>Contact Us</p>
+						<a onClick={() => setShowLinks(false)}>Contact Us</a>
 					</Link>
 				</nav>
 			</div>
