@@ -23,9 +23,9 @@ const SpotlightUpload = () => {
 							<input id="mentee-name" type="text" />
 						</div>
 						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="">Photo Upload</label>
+							<label className={styles.labels} htmlFor="upload">Photo Upload</label>
 							<div className={styles.upload}>
-								<input type="text" />
+								<input id="upload" type="text" />
 								<button className={styles.button}>Upload</button>
 							</div>
 						</div>
@@ -95,7 +95,6 @@ const SpotlightUpload = () => {
 						<input
 							className={styles.button}
 							type="submit"
-							id="sendBtn"
 							value="Send"
 						/>
 					</div>
