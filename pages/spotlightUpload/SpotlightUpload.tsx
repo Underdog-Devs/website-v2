@@ -1,111 +1,103 @@
+import Link from 'next/link';
 import React from 'react';
+import { FaChevronLeft } from 'react-icons/fa';
 import styles from './spotlightUpload.module.scss';
 
 const SpotlightUpload = () => {
 	return (
 		<>
 			<div className={styles.container}>
-
 				<section className={styles.leftCol}>
 					<p className={styles.instruction}>Instructions to upload mentee spotlight information.</p>
 				</section>
-
 				<section className={styles.rightCol}>
-					<div className={styles.topInput}>
-						<button href="#" className={styles.backButton}>&lt; Back</button>
-						<br />
-						<label className={styles.labels} htmlFor="">Mentee Name<sup>*</sup></label>
-						<br />
-						<input type="text" placeholder="enter mentee name" />
-						<br />
-						<label className={styles.labels} htmlFor="">Photo Upload</label>
-						<br />
-						<input type="text" placeholder="mentee photo" />
-						<button className={styles.uploadButton}>UPLOAD</button>
+					<div className={styles.back}>
+						<Link href="/" passHref>
+							<button className={styles.backButton}><FaChevronLeft /> Back </button>
+						</Link>
 					</div>
-
-					<div className={styles.inputDiv}>
-						<div className={styles.inputRow}>
-							<div className={styles.inputColumn1}>
-								<label className={styles.labels} htmlFor="menteePortfolio">Mentee Portfolio</label>
-								<br />
-								<input
-									type="text"
-									id="menteePortfolio"
-									name="menteePortfolio"
-									placeholder="portfolio"
-								/>
-								<br />
-
-								<label className={styles.labels} htmlFor="facebook">Facebook</label>
-								<br />
-								<input
-									type="text"
-									id="facebook"
-									name="facebook"
-									placeholder="facebook"
-								/>
-
-								<br />
-								<label className={styles.labels} htmlFor="instagram">Instagram</label>
-								<br />
-								<input
-									type="text"
-									id="instagram"
-									name="instagram"
-									placeholder="instagram"
-								/>
-							</div>
-
-							<div className={styles.inputColumn2}>
-								<label className={styles.labels} htmlFor="twitter">Twitter</label>
-								<br />
-								<input
-									type="text"
-									id="twitter"
-									name="twitter"
-									placeholder="twitter"
-								/>
-								<br />
-
-								<label className={styles.labels} htmlFor="linkedin">LinkedIn</label>
-								<br />
-								<input
-									type="text"
-									id="linkedin"
-									name="linkedin"
-									placeholder="linkedin"
-								/>
-
-								<br />
-								<label className={styles.labels} htmlFor="youtube">YouTube</label>
-								<br />
-								<input
-									type="text"
-									id="youtube"
-									name="youtube"
-									placeholder="youtube"
-								/>
-							</div>
-							<br />
-
+					<div className={styles.topInput}>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="mentee-name">Mentee Name
+							</label>
+							<input id="mentee-name" type="text" />
 						</div>
-						<label className={styles.labels}>Mentee Blurb<sup>*</sup></label
-						><br />
-						<input
-							type="text"
-							className={styles.menteeBlurb}
-							name="menteeBlurb"
-							placeholder="enter mentee blurb"
-						/><br />
-
-						<div className={styles.sendBtnDiv}>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="">Photo Upload</label>
+							<div className={styles.upload}>
+								<input type="text" />
+								<button className={styles.button}>Upload</button>
+							</div>
+						</div>
+					</div>
+					<div className={styles.socialsContainer}>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="menteePortfolio">Mentee Portfolio</label>
 							<input
-								type="submit"
-								id="sendBtn"
-								value="Send"
+								type="text"
+								id="menteePortfolio"
+								name="menteePortfolio"
 							/>
 						</div>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="facebook">Facebook</label>
+							<input
+								type="text"
+								id="facebook"
+								name="facebook"
+							/>
+						</div>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="instagram">Instagram</label>
+							<input
+								type="text"
+								id="instagram"
+								name="instagram"
+							/>
+						</div>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="twitter">Twitter</label>
+							<input
+								type="text"
+								id="twitter"
+								name="twitter"
+							/>
+						</div>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="linkedin">LinkedIn</label>
+							<input
+								type="text"
+								id="linkedin"
+								name="linkedin"
+							/>
+						</div>
+						<div className={styles.input}>
+							<label className={styles.labels} htmlFor="youtube">YouTube</label>
+							<input
+								type="text"
+								id="youtube"
+								name="youtube"
+							/>
+						</div>
+					</div>
+					<div className={styles.textArea}>
+						<div className={styles.input}>
+							<label htmlFor="menteeBlurb" className={styles.labels}>Mentee Blurb</label>
+							<textarea
+								className={styles.menteeBlurb}
+								name="menteeBlurb"
+								rows={6}
+								id="menteeBlurb"
+							/>
+						</div>
+					</div>
+					<div className={styles.sendButton}>
+						<input
+							className={styles.button}
+							type="submit"
+							id="sendBtn"
+							value="Send"
+						/>
 					</div>
 				</section>
 			</div>
