@@ -1,0 +1,59 @@
+@import '../../styles/globals.scss';
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $space-xl 0;
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 34px;
+        background-color: $udSecondaryOrange;
+        padding-bottom: $space-lg;
+        .title{
+            font-family: $primaryHeaderFont;
+            color: white;
+            padding: $space-lg 0;
+        }
+        .form{
+            display:flex;
+            flex-direction: column;
+            padding: 0 $space-xxl;
+            gap: $space-md;
+            .formField{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                font-family: $secondaryTextFont;
+                .formInput{
+                    border-radius: 5px;
+                    border: none;
+                    font-size: $f5;
+                    padding: $space-xs;
+                }
+                .formLabel{
+                    padding: $space-xxs 0;
+                    font-size: $subtitle;
+                    color: white;
+                }
+            }
+            .formActions{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $space-lg 0;
+                .formButton{
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-family: $linkFont;
+                    font-size: $f5;
+                }
+            }
+        }
+    }
+}

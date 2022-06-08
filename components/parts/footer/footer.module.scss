@@ -1,191 +1,185 @@
 @import '../../../styles/globals.scss';
 
 .container {
-    background-color: $udDarkGrey;
-    color: $udOrange;
-    font-family: $linkFont;
-    display: flex;
-    flex-direction: column;
+	background-color: $udDarkGrey;
+	color: $udOrange;
+	font-family: $linkFont;
+	display: flex;
+	flex-direction: column;
 
-			@include for-phone-only {
-				height: 500px;
-        padding: 0 $space-xxxs;
-			}
+	@include for-phone-only {
+		height: 500px;
+		padding: 0 $space-xxxs;
+	}
 
-			@include for-tablet-up {
-        padding: 0 $space-xxs;
-			}
+	@include for-tablet-up {
+		padding: 0 $space-xxs;
+	}
 
-			@include for-desktop-up {
-        padding: 0 $space-xl;
-			}
+	@include for-desktop-up {
+		padding: 0 $space-xl;
+	}
 }
 
 .content {
 	height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: $space-xxl $space-xl;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: $space-xxl $space-xl;
 
-  @include for-phone-only {
-    width: 100%;
-    flex-direction: column;
+	@include for-phone-only {
+		width: 100%;
+		flex-direction: column;
 		justify-content: space-around;
-    align-items: center;
-    padding: 0 0 $space-xl 0;
-  }
+		align-items: center;
+		padding: 0 0 $space-xl 0;
+	}
 
-  @include for-tablet-up {
-    width: 100%;
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: $space-xxl 0;
-    }
-  @include for-desktop-up {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: $space-xxl 0;
-    }
+	@include for-tablet-up {
+		width: 100%;
+		flex-direction: column-reverse;
+		align-items: center;
+		padding: $space-xxl 0;
+	}
+	@include for-desktop-up {
+		flex-direction: row;
+		align-items: flex-start;
+		padding: $space-xxl 0;
+	}
 }
 
 .social {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  align-items: flex-start;
-  
-  @include for-phone-only {
-    width: 100%;
-    align-items: center;
-  }
-  
-  @include for-tablet-up {
-    width: 100%;
-    align-items: center;
-  }
-  
-  @include for-desktop-up {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	align-items: flex-start;
+
+	@include for-phone-only {
+		width: 100%;
+		align-items: center;
+	}
+
+	@include for-tablet-up {
+		width: 100%;
+		align-items: center;
+	}
+
+	@include for-desktop-up {
 		width: 40%;
-    align-items: flex-start;
+		align-items: flex-start;
 		margin-left: $space-xxl;
-  }
+	}
 
-  .logo {
-    padding-left: $space-xs;
-    height: 60px;
-    width: 60px;
-    align-self: flex-start;
-    margin-bottom: $space-lg;
-    
-    @include for-phone-only {
-      align-self: center;
-      margin-left: -80px;
-    }
-    
-    @include for-tablet-up {
-      align-self: center;
-      margin-left: -60px;
-    }
-    
-    @include for-desktop-up {
-      margin: $space-lg;
-      align-self: flex-start;
-    }
-  
-  
+	.logo {
+		padding-left: $space-xs;
+		height: 60px;
+		width: 60px;
+		align-self: flex-start;
+		margin-bottom: $space-lg;
 
-    img {
-      height: 150px;
-      width: 150px;
-    }
-  }
+		@include for-phone-only {
+			align-self: center;
+			margin-left: -80px;
+		}
 
-  .icons {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+		@include for-tablet-up {
+			align-self: center;
+			margin-left: -60px;
+		}
 
-    @include for-phone-only {
-      width: 80%;
-    }
-    
-    @include for-tablet-up {
-      width: 60%;
-    }
-    
+		@include for-desktop-up {
+			margin: $space-lg;
+			align-self: flex-start;
+		}
 
-    .icon {
-      background-color: $udSecondaryOrange;
-      color: $textBlack;
-      padding: $space-xs $space-sm $space-xxxs;
-      border-radius: 25px;
-    }
-  }
+		img {
+			height: 150px;
+			width: 150px;
+		}
+	}
 
-  p {
-    margin: $space-md 0;
-  }
+	.icons {
+		width: 60%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		@include for-phone-only {
+			width: 80%;
+		}
+
+		@include for-tablet-up {
+			width: 60%;
+		}
+
+		.icon {
+			background-color: $udSecondaryOrange;
+			color: $textBlack;
+			padding: $space-xs $space-sm $space-xxxs;
+			border-radius: 25px;
+		}
+	}
+
+	p {
+		margin: $space-md 0;
+	}
 }
 
 .navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 40%;
 
-  @include for-phone-only {
-    width: 90%;
-    justify-content: space-between;
-    height: 60px;
-  }
-      
-  @include for-tablet-up {
-    width: 60%;
+	@include for-phone-only {
+		width: 90%;
+		justify-content: space-between;
+		height: 60px;
+	}
+
+	@include for-tablet-up {
+		width: 60%;
 		margin-top: $space-xl;
-  }
+	}
 
-  .navSect {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	.navSect {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-    @include for-phone-only {
-      width: 100%;
-    }
-    
-    @include for-tablet-up {
-      width: 100%;
-    }
-    
-    @include for-desktop-up {
-      width: 40%;
-      align-items: flex-start;
-    }
-  
-  
+		@include for-phone-only {
+			width: 100%;
+		}
 
-    h4 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: $space-sm;
-    }
+		@include for-tablet-up {
+			width: 100%;
+		}
 
-    a {
-        margin: $space-xs 0;
-        color: $udSecondaryOrange;
-        text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+		@include for-desktop-up {
+			width: 40%;
+			align-items: flex-start;
+		}
 
-  }
+		h4 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-bottom: $space-sm;
+		}
+
+		a {
+			margin: $space-xs 0;
+			color: $udSecondaryOrange;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .copyright {
-    align-self: center;
-    padding-bottom: $space-lg;
+	align-self: center;
+	padding-bottom: $space-lg;
 }

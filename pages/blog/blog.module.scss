@@ -1,0 +1,105 @@
+@import '../../styles/globals.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $space-md $space-xxxl;
+	margin-bottom: $space-xxl;
+
+	header {
+		position: relative;
+		width: 60%;
+		margin-bottom: $space-lg;
+
+		h3 {
+			font-family: $secondaryHeaderFont;
+			font-size: $f3;
+			margin-bottom: $space-xs;
+		}
+
+		.socialContainer {
+			position: absolute;
+			left: -$space-xxl;
+			text-align: center;
+			margin: 0;
+
+			li {
+				margin: $space-md 0;
+				list-style-type: none;
+			}
+		}
+	}
+
+	.blog {
+		display: inline-block;
+
+		.thumbNailContainer {
+			float: right;
+			margin: $space-md;
+		}
+
+		.blogThumbnail {
+			width: 272px;
+			background-size: cover;
+		}
+
+		p {
+			line-height: 1.5rem;
+			font-family: $primaryTextFont;
+		}
+	}
+
+	.blogMain {
+		width: 60%;
+
+		.blogImage {
+			padding: $space-md;
+			object-fit: cover;
+		}
+
+		.blogTitle {
+			font-family: $secondaryHeaderFont;
+			font-size: $f3;
+			text-align: center;
+			padding: $space-sm 0;
+		}
+
+		.blogSubTitle {
+			font-family: $secondaryHeaderFont;
+			font-size: $f4;
+			padding: $space-sm 0;
+		}
+
+		p {
+			line-height: 1.5rem;
+			font-family: $primaryTextFont;
+		}
+	}
+
+	.blogInfo {
+		border-top: 1px solid $textBlack;
+		border-bottom: 1px solid $textBlack;
+		margin-top: $space-md;
+		padding: $space-sm 0 $space-sm $space-lg;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		p {
+			font-size: $space-unit;
+		}
+
+		.blogAuthor {
+			&Name {
+				font-weight: bold;
+			}
+
+			&Title {
+				font-style: italic;
+			}
+		}
+	}
+}
