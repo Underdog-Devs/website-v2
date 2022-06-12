@@ -71,6 +71,14 @@ p {
   font-size: $f5;
 }
 
+input, select, textarea {
+	border-radius: 5px;
+	border: 1px solid $udGrey;
+	background-color: white;
+	padding: $space-sm;
+	box-sizing: border-box;
+}
+
 #border_type1 {
   position: absolute;
   margin-left: $space-sm;
