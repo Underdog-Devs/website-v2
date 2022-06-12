@@ -15,15 +15,15 @@ export function Featured(props: Props) {
 				<h3>{title}</h3>
 				<p>{text}</p>
 				<div className={styles.info}>
-					<span>Read More...</span>
+					<span className={styles.readMoreLink}>Read More...</span>
 					<div className={styles.right}>
-						<span>{author}</span>
-						<span>{date}</span>
+						<span className={styles.authorName}>{author}</span>
+						<span className={styles.published}>{date}</span>
 					</div>
 				</div>
 			</div>
 			<img
-				className={styles.image}
+				className={styles.postImage}
 				src={img}
 				alt="Card"
 				height={400}
