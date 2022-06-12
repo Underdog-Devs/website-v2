@@ -1,0 +1,107 @@
+@import '../../styles/globals.scss';
+
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: $space-sm 0;
+
+	.leftCol {
+		width: 40%;
+		display: flex;
+		align-items: center;
+		padding: 0 $space-xl;
+		background-color: $menteeBlue;
+
+		.instruction {
+			font-size: $f4;
+			color: white;
+		}
+	}
+	.rightCol {
+		width: 60%;
+		padding: $space-sm;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 $space-md;
+
+		.back {
+			.backButton {
+				font-family: $linkFont;
+				background: white;
+				color: $subTextBlack;
+				border: none;
+				font-weight: 600;
+				font-size: $subtitle;
+				display: flex;
+				align-items: center;
+				padding: 0;
+				margin: $space-sm 0 $space-xs 0;
+				cursor: pointer;
+			}
+		}
+
+		.topInput {
+			margin-bottom: $space-lg;
+		}
+
+		.input {
+			display: flex;
+			flex-direction: column;
+			margin: $space-sm 0;
+
+			label {
+				font-size: $label;
+				color: $subTextBlack;
+				font-family: $primaryHeaderFont;
+				padding-bottom: $space-xxs;
+			}
+
+			input {
+				width: 250px;
+				border-radius: 5px;
+				border: 1px solid $udGrey;
+				padding: $space-sm;
+			}
+
+			.upload {
+				display: flex;
+			}
+
+			textarea {
+				overflow-y: auto;
+				padding: $space-sm;
+			}
+		}
+
+		.socialsContainer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.button {
+			background-color: $involvedBlue;
+			color: white;
+			padding: $space-sm $space-lg;
+			margin-left: $space-sm;
+			border-radius: $space-xxs;
+			border: none;
+			cursor: pointer;
+
+			&:active {
+				transform: scale(0.98);
+			}
+		}
+
+		.sendButton {
+			display: flex;
+			justify-content: center;
+
+			.button {
+				align-self: center;
+				width: 250px;
+			}
+		}
+	}
+}

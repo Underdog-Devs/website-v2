@@ -1,0 +1,45 @@
+@import '../../styles/globals.scss';
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	font-family: $primaryTextFont;
+	color: $textBlack;
+	height: 250px;
+	padding: $space_xxl;
+	.post {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: $space_lg;
+		padding-right: $space_lg;
+
+		h3 {
+			font-family: $primaryHeaderFont;
+			font-weight: bold;
+		}
+		p {
+			font-family: $primaryTextFont;
+			color: $subTextBlack;
+			line-height: $space-lg;
+		}
+		.info {
+			display: flex;
+			justify-content: space-between;
+			font-weight: bold;
+			.right {
+				display: flex;
+				gap: $space-lg;
+			}
+			.published {
+				font-weight: 400;
+				color: $subTextBlack;
+			}
+			padding-right: $space-xl;
+		}
+	}
+	.postImage {
+		height: 250px;
+		width: 300px;
+	}
+}
