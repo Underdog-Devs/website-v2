@@ -26,5 +26,7 @@
 	textarea {
 		overflow-y: auto;
 		padding: $space-sm;
+		border-radius: 5px;
+		border: 1px solid $udGrey;
 	}
 }
