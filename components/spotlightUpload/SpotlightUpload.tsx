@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
+import { Input } from '../input';
 import styles from './spotlightUpload.module.scss';
 
 const SpotlightUpload = () => {
@@ -17,79 +18,69 @@ const SpotlightUpload = () => {
 						</Link>
 					</div>
 					<div className={styles.topInput}>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="mentee-name">Mentee Name
-							</label>
+						<Input labelFor="mentee-name" labelText="Mentee Name">
 							<input id="mentee-name" type="text" />
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="upload">Photo Upload</label>
+						</Input>
+						<Input labelFor="upload" labelText="Photo Upload">
 							<div className={styles.upload}>
 								<input id="upload" type="text" />
 								<button className={styles.button}>Upload</button>
 							</div>
-						</div>
+						</Input>
 					</div>
 					<div className={styles.socialsContainer}>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="menteePortfolio">Mentee Portfolio</label>
+						<Input labelFor="menteePortfolio" labelText="Mentee Portfolio">
 							<input
 								type="text"
 								id="menteePortfolio"
 								name="menteePortfolio"
 							/>
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="facebook">Facebook</label>
+						</Input>
+						<Input labelFor="facebook" labelText="Facebook">
 							<input
 								type="text"
 								id="facebook"
 								name="facebook"
 							/>
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="instagram">Instagram</label>
+						</Input>
+						<Input labelFor="instagram" labelText="Instagram">
 							<input
 								type="text"
 								id="instagram"
 								name="instagram"
 							/>
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="twitter">Twitter</label>
+						</Input>
+						<Input labelFor="twitter" labelText="Twitter">
 							<input
 								type="text"
 								id="twitter"
 								name="twitter"
 							/>
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="linkedin">LinkedIn</label>
+						</Input>
+						<Input labelFor="linkedin" labelText="LinkedIn">
 							<input
 								type="text"
 								id="linkedin"
 								name="linkedin"
 							/>
-						</div>
-						<div className={styles.input}>
-							<label className={styles.labels} htmlFor="youtube">YouTube</label>
+						</Input>
+						<Input labelFor="youtube" labelText="YouTube">
 							<input
 								type="text"
 								id="youtube"
 								name="youtube"
 							/>
-						</div>
+						</Input>
 					</div>
 					<div className={styles.textArea}>
-						<div className={styles.input}>
-							<label htmlFor="menteeBlurb" className={styles.labels}>Mentee Blurb</label>
+						<Input labelFor="menteeBlurb" labelText="Mentee Blurb">
 							<textarea
 								className={styles.menteeBlurb}
 								name="menteeBlurb"
 								rows={6}
 								id="menteeBlurb"
 							/>
-						</div>
+						</Input>
 					</div>
 					<div className={styles.sendButton}>
 						<input
