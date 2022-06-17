@@ -12,13 +12,22 @@
 		padding-bottom: $space-xxs;
 	}
 
-	input {
+	input,
+	select {
 		width: 250px;
+		box-sizing: border-box;
 		border-radius: 5px;
 		border: 1px solid $udGrey;
 		padding: $space-sm;
 	}
 
+	select {
+		width: 250px;
+		box-sizing: border-box;
+		border: none;
+		outline: 1px solid $udGrey;
+		border-right: 16px solid transparent;
+	}
 	.upload {
 		display: flex;
 	}

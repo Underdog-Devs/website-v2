@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
+import { Input } from '../input';
 import styles from './testimonialUploadForm.module.scss';
 
 function TestimonialUploadForm() {
@@ -15,46 +16,30 @@ function TestimonialUploadForm() {
 					</Link>
 				</div>
 				<div className={styles.topInput}>
-					<div className={styles.input}>
-						<label className={styles.labels} htmlFor="name">
-							Name
-						</label>
+					<Input labelFor="name" labelText="Name">
 						<input id="name" type="text" />
-					</div>
-					<div className={styles.input}>
-						<label className={styles.labels} htmlFor="upload">
-							Photo Upload
-						</label>
+					</Input>
+					<Input labelFor="upload" labelText="Photo Upload">
 						<div className={styles.upload}>
 							<input id="upload" type="text" />
 							<button className={styles.button}>Upload</button>
 						</div>
-					</div>
+					</Input>
 				</div>
-
-				<div className={styles.dropdown}>
-					<div className={styles.input}>
-						<label htmlFor="dropdown">Choose Type</label>
-						<select name="dropdown" id="dropdown">
-							<option value="mentee">mentee testimonial</option>
-							<option value="mentor">mentor testimonial</option>
-						</select>
-					</div>
-				</div>
-
-				<div className={styles.textArea}>
-					<div className={styles.input}>
-						<label htmlFor="testimonialText" className={styles.labels}>
-							Testimonial Text
-						</label>
-						<textarea
-							className={styles.testimonialText}
-							name="testimonialText"
-							rows={6}
-							id="testimonialText"
-						/>
-					</div>
-				</div>
+				<Input labelFor="dropdown" labelText="Choose Type">
+					<select name="dropdown" id="dropdown">
+						<option value="mentee">mentee testimonial</option>
+						<option value="mentor">mentor testimonial</option>
+					</select>
+				</Input>
+				<Input labelFor="testimonialText" labelText="Testimonial Text">
+					<textarea
+						className={styles.testimonialText}
+						name="testimonialText"
+						rows={6}
+						id="testimonialText"
+					/>
+				</Input>
 				<div className={styles.sendButton}>
 					<input className={styles.button} type="submit" value="Send" />
 				</div>
