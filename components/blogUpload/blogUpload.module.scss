@@ -1,9 +1,41 @@
 @import "../../styles/globals.scss";
 
+// currently left un-nested for development
+.back {
+  .backButton {
+    font-family: $linkFont;
+    background: white;
+    color: $subTextBlack;
+    border: none;
+    font-weight: 600;
+    font-size: $subtitle;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: $space-sm 0 $space-xs 0;
+    cursor: pointer;
+  }
+}
+// currently left un-nested for development
+.sendButton {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    background-color: #1565d8;
+    color: white;
+    padding: $space-sm $space-lg;
+    margin-left: $space-sm;
+    border-radius: $space-xxs;
+    border: none;
+    cursor: pointer;
+  }
+}
+
 .container {
   display: flex;
   height: 100vh; // temp for development
-  padding: 1rem;
+  padding: $space-lg;
   width: 100%;
   font-family: $linkFont;
 
@@ -11,7 +43,7 @@
     display: flex;
     align-items: center;
     background-color: $involvedBlue;
-    padding: 3rem;
+    padding: $space-lg;
     width: 20%;
     margin: $space-lg;
 
@@ -24,20 +56,17 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 $space-lg;
     font-family: $linkFont;
     color: $subTextBlack;
     border: none;
     font-weight: 600;
 
-    .headerAndInput {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
       .header {
         display: flex;
         align-items: center;
 
+        
         h4 {
           width: 100%;
           text-align: center;
@@ -45,41 +74,17 @@
       }
       .blogTitleInput {
         width: 90%;
-        padding: 0.6;
-        padding-left: 2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: $space-sm $space-lg;
         overflow-y: auto;
-        padding: $space-sm;
       }
-    }
-    .textAreaAndButton {
+    .textAreaWrapper {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
 
       .blogTextArea {
-        width: 90%;
-        padding: 1rem 0rem 10rem 2rem;
-      }
-      .sendButtonWrapper {
-        display: flex;
-        justify-content: center;
-        width: 90%;
-
-        .sendButton {
-          width: 18rem;
-          height: 3rem;
-          background-color: $involvedBlue;
-          color: $udGrey;
-          border-radius: 0.2rem;
-          border: none;
-          padding: 0.4rem;
-          font-size: 1rem;
-          font-weight: 600;
-          font-family: $linkFont;
-        }
+        padding-bottom: $space-lg;
       }
     }
+    
   }
 }

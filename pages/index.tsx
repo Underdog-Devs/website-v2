@@ -15,7 +15,6 @@ import BlogUpload from '../components/blogUpload';
 
 // import Testimonials from '../components/landing/testimonials/Testimonials';
 
-
 const Home: NextPage = () => (
 	<>
 		<div>
