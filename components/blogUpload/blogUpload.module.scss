@@ -1,0 +1,85 @@
+@import "../../styles/globals.scss";
+
+.container {
+  display: flex;
+  height: 100vh; // temp for development
+  padding: 1rem;
+  width: 100%;
+  font-family: $linkFont;
+
+  .instructionsWrapper {
+    display: flex;
+    align-items: center;
+    background-color: $involvedBlue;
+    padding: 3rem;
+    width: 20%;
+    margin: $space-lg;
+
+    .instructionsText {
+      color: $udGrey;
+    }
+  }
+  .uploadForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 0 1rem;
+    font-family: $linkFont;
+    color: $subTextBlack;
+    border: none;
+    font-weight: 600;
+
+    .headerAndInput {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .header {
+        display: flex;
+        align-items: center;
+
+        h4 {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .blogTitleInput {
+        width: 90%;
+        padding: 0.6;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        overflow-y: auto;
+        padding: $space-sm;
+      }
+    }
+    .textAreaAndButton {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .blogTextArea {
+        width: 90%;
+        padding: 1rem 0rem 10rem 2rem;
+      }
+      .sendButtonWrapper {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+
+        .sendButton {
+          width: 18rem;
+          height: 3rem;
+          background-color: $involvedBlue;
+          color: $udGrey;
+          border-radius: 0.2rem;
+          border: none;
+          padding: 0.4rem;
+          font-size: 1rem;
+          font-weight: 600;
+          font-family: $linkFont;
+        }
+      }
+    }
+  }
+}

@@ -11,7 +11,10 @@ import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
 import Hero from '../components/landing/hero';
+import BlogUpload from '../components/blogUpload';
+
 // import Testimonials from '../components/landing/testimonials/Testimonials';
+
 
 const Home: NextPage = () => (
 	<>
@@ -20,6 +23,7 @@ const Home: NextPage = () => (
 			<Recidivism />
 			<Mentee />
 			<Mentor />
+			<BlogUpload />
 			{/* commented out until we have testimonials to display */}
 			{/* <div className={styles.testimonialsBanner}>
 				<Testimonials content={3} />
