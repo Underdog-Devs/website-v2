@@ -115,6 +115,7 @@ function Footer({ }: Props): ReactElement {
 						<Link href="/signup" passHref>
 							Contact Us
 						</Link>
+						<a href="https://cottonbureau.com/people/underdog-devs" target="_blank" rel="noreferrer"> Merchandise </a>
 					</div>
 				</div>
 			</div>

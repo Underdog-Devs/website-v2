@@ -57,6 +57,7 @@ function Navigation({ }: Props): ReactElement {
 						<Link href="/signup" passHref>
 							<a>Contact Us</a>
 						</Link>
+						<a href="https://cottonbureau.com/people/underdog-devs" target="_blank" rel="noreferrer"> Merchandise </a>
 					</div>
 
 				</nav>
@@ -122,6 +123,13 @@ function Navigation({ }: Props): ReactElement {
 					>
 						<a onClick={() => setShowLinks(false)}>Contact Us</a>
 					</Link>
+					<a
+						onClick={() => setShowLinks(false)}
+						href="https://cottonbureau.com/people/underdog-devs"
+						target="_blank"
+						rel="noreferrer"
+					> Merchandise
+					</a>
 				</nav>
 			</div>
 		</div>
