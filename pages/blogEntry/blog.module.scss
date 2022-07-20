@@ -7,6 +7,20 @@
 	padding: $space-md $space-xxxl;
 	margin-bottom: $space-xxl;
 
+	@include for-phone-only {
+		padding: $space_md 0;
+		text-align: justify;
+	}
+
+	@include for-tablet-up {
+		padding: $space_md 0;
+		text-align: justify;
+	}
+	
+	@include for-desktop-up {
+		text-align: justify;
+}
+
 	header {
 		position: relative;
 		width: 60%;
@@ -16,7 +30,17 @@
 			font-family: $secondaryHeaderFont;
 			font-size: $f3;
 			margin-bottom: $space-xs;
+
+			@include for-phone-only {
+				font-size: $f5; 
+				text-align: center; 
+			}
+			
+			@include for-tablet-up {
+				font-size: $f4; 
+			}
 		}
+
 
 		.socialContainer {
 			position: absolute;
@@ -24,11 +48,27 @@
 			text-align: center;
 			margin: 0;
 
+			@include for-phone-only {
+				display: flex; 
+				align-items: center;
+				justify-content: center;
+				left: 0; 
+				position: relative; 
+			}
+		
+			@include for-tablet-up {
+				position: absolute; 
+				left: -$space-xxl;
+				text-align: center;
+				margin: 0;
+			}
+
 			li {
 				margin: $space-md 0;
 				list-style-type: none;
 			}
 		}
+		
 	}
 
 	.blog {
@@ -37,16 +77,41 @@
 		.thumbNailContainer {
 			float: right;
 			margin: $space-md;
+
+			@include for-phone-only {
+				float: none; 
+			}
+			
+			@include for-tablet-up {
+				float: none; 
+			}
 		}
 
 		.blogThumbnail {
 			width: 272px;
 			background-size: cover;
+			
+			@include for-phone-only {
+				width: 100%; 
+			}
+			
+			@include for-tablet-up {
+				width: 100%; 
+			}
+
 		}
 
 		p {
 			line-height: 1.5rem;
 			font-family: $primaryTextFont;
+
+			@include for-phone-only {
+				display: inline-block; 
+			}
+			
+			@include for-tablet-up {
+				display: inline-block; 
+			}
 		}
 	}
 
@@ -54,8 +119,17 @@
 		width: 60%;
 
 		.blogImage {
-			padding: $space-md;
+			// padding: $space-md;
 			object-fit: cover;
+
+			@include for-phone-only {
+				width: 100%; 
+			}
+			
+			@include for-tablet-up {
+				display: flex;  
+				width: 100%; 
+			}
 		}
 
 		.blogTitle {
@@ -87,12 +161,24 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		
+		@include for-phone-only {
+			display: block;
+		}
+		
+			@include for-tablet-up {
+			display: block; 
+		}
 
 		p {
 			font-size: $space-unit;
+			@include for-phone-only {
+				font-size: $space-sm; 
+			}	
 		}
 
 		.blogAuthor {
+			
 			&Name {
 				font-weight: bold;
 			}
@@ -100,6 +186,7 @@
 			&Title {
 				font-style: italic;
 			}
+			
 		}
 	}
 }
