@@ -17,6 +17,12 @@
             color: $textBlack;
             font-weight: bold;
             margin-bottom: $space-xs;
+						cursor: pointer;
+
+						a {
+							text-decoration: none;
+							color: $textBlack;
+						}
         }
 
         .text{

@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { GetServerSideProps } from 'next';
+
 import styles from './blog.module.scss';
 
 export const Blog = () => {
@@ -108,6 +110,14 @@ export const Blog = () => {
 			</div>
 		</div>
 	);
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	const id = context.params?.id as string;
+	console.log(id);
+	return {
+		props: { id },
+	};
 };
 
 export default Blog;

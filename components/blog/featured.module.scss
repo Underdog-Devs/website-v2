@@ -2,12 +2,13 @@
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 300px;
+	grid-template-columns: 2fr 1fr;
 	font-family: $primaryTextFont;
 	color: $textBlack;
-	height: 250px;
-	margin-bottom: 50px;
-	
+	height: 210px;
+	margin: 20px 0;
+	gap: 60px;
+
 	.post {
 		display: flex;
 		flex-direction: column;
@@ -40,7 +41,7 @@
 		}
 	}
 	.postImage {
-		height: 250px;
-		width: 300px;
+		height: 100%;
+		width: 100%;
 	}
 }
