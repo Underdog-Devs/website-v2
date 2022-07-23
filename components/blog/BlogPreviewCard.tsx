@@ -16,12 +16,10 @@ export function BlogPreviewCard(props: Props) {
 				className={styles.image}
 				src={img}
 				alt="Featured"
-				height={300}
-				width={300}
 				loading="lazy"
 			/>
 			<div className={styles.cardTextContainer}>
-				<h3 className={styles.title}>{title}</h3>
+				<h4 className={styles.title}>{title}</h4>
 				<p className={styles.text}>{text}</p>
 				<div className={styles.info}>
 					<span className={styles.author}>{author}</span>

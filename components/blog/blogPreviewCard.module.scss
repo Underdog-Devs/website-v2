@@ -6,7 +6,9 @@
     gap: $space-md;
     border-radius: 5px;
     box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.10);
-    width: 300px;
+		img{
+			width: 100%;
+		}
     .cardTextContainer{
         padding: 0 $space-md;
 
