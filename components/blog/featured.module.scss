@@ -6,7 +6,8 @@
 	font-family: $primaryTextFont;
 	color: $textBlack;
 	height: 250px;
-	padding: $space_xxl;
+	margin-bottom: 50px;
+	
 	.post {
 		display: flex;
 		flex-direction: column;

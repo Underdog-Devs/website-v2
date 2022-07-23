@@ -7,8 +7,9 @@ type Props = {
 	author: string;
 	date: string;
 };
+
 export function Featured(props: Props) {
-	const { img, title, text, author, date } = props;
+	const { img = '/images/collab.jpg', title = 'Future of Work', author = 'Johanna Murry', text = 'Majority of peole will work in jobs that don’t exist today.', date = '02 May' } = props;
 	return (
 		<div className={styles.container}>
 			<div className={styles.post}>
