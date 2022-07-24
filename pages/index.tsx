@@ -11,6 +11,7 @@ import Mentee from '../components/landing/mentee';
 import SocialMedia from '../components/landing/socialMedia';
 import GetInvolved from '../components/landing/getInvolved';
 import Hero from '../components/landing/hero';
+
 // import Testimonials from '../components/landing/testimonials/Testimonials';
 
 const Home: NextPage = () => (
