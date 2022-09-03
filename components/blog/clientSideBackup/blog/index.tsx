@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlogPreviewCard, Featured } from '../../components/blog';
+import { BlogPreviewCard, Featured } from '../..';
 import styles from './index.module.scss';
 
 export const Blog = () => {
