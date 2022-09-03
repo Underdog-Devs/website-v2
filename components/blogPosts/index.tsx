@@ -20,6 +20,7 @@ const BlogPage = () => {
 					return (
 						<div key={index}>
 							<BlogPreviewCard
+								id={123}
 								img="/images/collab.jpg"
 								title="Lorem Ipsum"
 								text="Some dummy text some dummy text"
