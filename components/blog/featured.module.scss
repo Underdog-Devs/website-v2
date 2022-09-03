@@ -2,11 +2,13 @@
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 300px;
+	grid-template-columns: 2fr 1fr;
 	font-family: $primaryTextFont;
 	color: $textBlack;
-	height: 250px;
-	padding: $space_xxl;
+	height: 210px;
+	margin: 20px 0;
+	gap: 60px;
+
 	.post {
 		display: flex;
 		flex-direction: column;
@@ -17,6 +19,9 @@
 		h3 {
 			font-family: $primaryHeaderFont;
 			font-weight: bold;
+			a {
+				color: $subTextBlack;
+			}
 		}
 		p {
 			font-family: $primaryTextFont;
@@ -27,9 +32,15 @@
 			display: flex;
 			justify-content: space-between;
 			font-weight: bold;
+			.readMoreLink {
+				cursor: pointer;
+			}
 			.right {
 				display: flex;
 				gap: $space-lg;
+				.authorName {
+					cursor: pointer;
+				}
 			}
 			.published {
 				font-weight: 400;
@@ -39,7 +50,7 @@
 		}
 	}
 	.postImage {
-		height: 250px;
-		width: 300px;
+		height: 100%;
+		width: 100%;
 	}
 }
