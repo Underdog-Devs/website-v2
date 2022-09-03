@@ -17,9 +17,9 @@ export function Featured(props: Props) {
 				<h3 className={styles.title}><Link href={`/blog/${id}`}><a>{title}</a></Link></h3>
 				<p>{text}</p>
 				<div className={styles.info}>
-					<Link href={`/blog/${id}`}><span className={styles.readMoreLink}>Read More...</span></Link>
+					<Link href={`/blog/${id}`} passHref><span className={styles.readMoreLink}>Read More...</span></Link>
 					<div className={styles.right}>
-						<Link href={`/blog/author/${id}`}><span className={styles.authorName}>{author}</span></Link>
+						<Link href={`/blog/author/${id}`} passHref><span className={styles.authorName}>{author}</span></Link>
 						<span className={styles.published}>{date}</span>
 					</div>
 				</div>

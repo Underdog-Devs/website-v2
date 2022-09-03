@@ -26,7 +26,7 @@ export function BlogPreviewCard(props: Props) {
 				<h4 className={styles.title}><Link href={`/blog/${id}`}><a>{title}</a></Link></h4>
 				<p className={styles.text}>{text}</p>
 				<div className={styles.info}>
-					<Link href={`/blog/author/${id}`}><span className={styles.author}>{author}</span></Link>
+					<Link href={`/blog/author/${id}`} passHref><span className={styles.author}>{author}</span></Link>
 					<span className={styles.date}>{date}</span>
 				</div>
 			</div>
