@@ -1,0 +1,27 @@
+@import '../../styles/globals.scss';
+
+.container {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+
+	button {
+		width: 150px;
+		height: 40px;
+		background-color: transparent;
+		color: $udSecondaryOrange;
+		font-weight: 600;
+		border: 2px solid $udSecondaryOrange;
+		border-radius: 5px;
+		margin: 50px 0;
+		cursor: pointer;
+		transition: all .3s;
+		&:hover {
+			background-color: $udSecondaryOrange;
+			color: white;
+		}
+	}
+}
