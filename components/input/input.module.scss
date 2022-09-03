@@ -1,0 +1,41 @@
+@import '../../styles/globals.scss';
+
+.input {
+	display: flex;
+	flex-direction: column;
+	margin: $space-sm 0;
+
+	label {
+		font-size: $label;
+		color: $subTextBlack;
+		font-family: $primaryHeaderFont;
+		padding-bottom: $space-xxs;
+	}
+
+	input,
+	select {
+		width: 250px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 1px solid $udGrey;
+		padding: $space-sm;
+	}
+
+	select {
+		width: 250px;
+		box-sizing: border-box;
+		border: none;
+		outline: 1px solid $udGrey;
+		border-right: 16px solid transparent;
+	}
+	.upload {
+		display: flex;
+	}
+
+	textarea {
+		overflow-y: auto;
+		padding: $space-sm;
+		border-radius: 5px;
+		border: 1px solid $udGrey;
+	}
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import SiteHead from '../../components/siteHead';
-import Spotlight from '../../components/meet/spotlight';
-import SpotlightHeader from '../../components/meet/spotlightHeader';
+import SiteHead from '../siteHead';
+import Spotlight from '../meet/spotlight';
+import SpotlightHeader from '../meet/spotlightHeader';
 
 interface Props {
 

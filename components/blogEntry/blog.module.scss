@@ -1,105 +1,201 @@
-@import '../../styles/globals.scss';
+@import "../../styles/globals.scss";
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: $space-md $space-xxxl;
-	margin-bottom: $space-xxl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-md $space-xxxl;
+  margin-bottom: $space-xxl;
 
-	header {
-		position: relative;
-		width: 60%;
-		margin-bottom: $space-lg;
+  @include for-phone-only {
+    padding: $space_md;
+    text-align: justify;
+  }
 
-		h3 {
-			font-family: $secondaryHeaderFont;
-			font-size: $f3;
-			margin-bottom: $space-xs;
-		}
+  @include for-tablet-up {
+    padding: $space_md 0;
+    text-align: justify;
+  }
 
-		.socialContainer {
-			position: absolute;
-			left: -$space-xxl;
-			text-align: center;
-			margin: 0;
+  @include for-desktop-up {
+    text-align: justify;
+  }
 
-			li {
-				margin: $space-md 0;
-				list-style-type: none;
-			}
-		}
-	}
+  header {
+    position: relative;
+    width: 60%;
+    margin-bottom: $space-lg;
 
-	.blog {
-		display: inline-block;
+    h3 {
+      font-family: $secondaryHeaderFont;
+      font-size: $f3;
+      margin-bottom: $space-xs;
 
-		.thumbNailContainer {
-			float: right;
-			margin: $space-md;
-		}
+      @include for-phone-only {
+        font-size: $f5;
+        text-align: center;
+      }
 
-		.blogThumbnail {
-			width: 272px;
-			background-size: cover;
-		}
+      @include for-tablet-up {
+        font-size: $f4;
+      }
+    }
 
-		p {
-			line-height: 1.5rem;
-			font-family: $primaryTextFont;
-		}
-	}
+    .socialContainer {
+      position: absolute;
+      left: -$space-xxl;
+      text-align: center;
+      margin: 0;
 
-	.blogMain {
-		width: 60%;
+      @include for-phone-only {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        position: relative;
+        margin-top: $space-lg;
+      }
 
-		.blogImage {
-			padding: $space-md;
-			object-fit: cover;
-		}
+      @include for-tablet-up {
+        position: absolute;
+        left: -$space-xxl;
+        text-align: center;
+        margin: 0;
+      }
 
-		.blogTitle {
-			font-family: $secondaryHeaderFont;
-			font-size: $f3;
-			text-align: center;
-			padding: $space-sm 0;
-		}
+      p {
+        @include for-phone-only {
+          position: absolute;
+          margin-bottom: $space-xl;
+          color: $involvedBlue;
+        }
+      }
 
-		.blogSubTitle {
-			font-family: $secondaryHeaderFont;
-			font-size: $f4;
-			padding: $space-sm 0;
-		}
+      li {
+        margin: $space-md 0;
+        list-style-type: none;
 
-		p {
-			line-height: 1.5rem;
-			font-family: $primaryTextFont;
-		}
-	}
+        @include for-phone-only {
+          margin: $space-md $space-sm;
+          color: $involvedBlue;
+        }
+      }
+    }
+  }
 
-	.blogInfo {
-		border-top: 1px solid $textBlack;
-		border-bottom: 1px solid $textBlack;
-		margin-top: $space-md;
-		padding: $space-sm 0 $space-sm $space-lg;
+  .blog {
+    display: inline-block;
 
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+    .thumbNailContainer {
+      float: right;
+      margin: $space-md;
 
-		p {
-			font-size: $space-unit;
-		}
+      @include for-phone-only {
+        float: none;
+      }
 
-		.blogAuthor {
-			&Name {
-				font-weight: bold;
-			}
+      @include for-tablet-up {
+        float: none;
+      }
+    }
 
-			&Title {
-				font-style: italic;
-			}
-		}
-	}
+    .blogThumbnail {
+      width: 272px;
+      background-size: cover;
+
+      @include for-phone-only {
+        width: 100%;
+      }
+
+      @include for-tablet-up {
+        width: 100%;
+      }
+    }
+
+    p {
+      line-height: 1.5rem;
+      font-family: $primaryTextFont;
+
+      @include for-phone-only {
+        display: inline-block;
+      }
+
+      @include for-tablet-up {
+        display: inline-block;
+      }
+    }
+  }
+
+  .blogMain {
+    width: 60%;
+
+    .blogImage {
+      // padding: $space-md;
+      object-fit: cover;
+
+      @include for-phone-only {
+        width: 100%;
+      }
+
+      @include for-tablet-up {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    .blogTitle {
+      font-family: $secondaryHeaderFont;
+      font-size: $f3;
+      text-align: center;
+      padding: $space-sm 0;
+    }
+
+    .blogSubTitle {
+      font-family: $secondaryHeaderFont;
+      font-size: $f4;
+      padding: $space-sm 0;
+    }
+
+    p {
+      line-height: 1.5rem;
+      font-family: $primaryTextFont;
+    }
+  }
+
+  .blogInfo {
+    border-top: 1px solid $textBlack;
+    border-bottom: 1px solid $textBlack;
+    margin-top: $space-md;
+    padding: $space-sm 0 $space-sm $space-lg;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-phone-only {
+      display: block;
+    }
+
+    @include for-tablet-up {
+      display: block;
+    }
+
+    p {
+      font-size: $space-unit;
+      @include for-phone-only {
+        font-size: $space-sm;
+      }
+    }
+
+    .blogAuthor {
+      &Name {
+        font-weight: bold;
+      }
+
+      &Title {
+        font-style: italic;
+      }
+    }
+  }
 }
