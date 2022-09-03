@@ -7,6 +7,7 @@ const BlogPage = () => {
 		<div className={styles.container}>
 			<div className={styles.featured}>
 				<Featured
+					id={123}
 					img="/images/collab.jpg"
 					title="Lorem Ipsum"
 					text="Some dummy text some dummy text"
