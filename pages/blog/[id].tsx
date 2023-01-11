@@ -1,7 +1,8 @@
 import React from 'react';
+// TODO: Fix icons import issues
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { GetServerSideProps } from 'next';
-
+import prisma from '../../lib/prisma';
 import styles from './blog.module.scss';
 
 export const Blog = () => {
@@ -114,9 +115,28 @@ export const Blog = () => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	const id = context.params?.id as string;
-	console.log(id);
+
+	// Fetch all posted jobs and include related items from Company table
+	const post = await prisma.blog.findUnique({
+		where: {
+			id,
+		},
+		include: {
+			author: {
+				select: {
+					email: true,
+				},
+			},
+		},
+	});
+	console.log(post);
 	return {
-		props: { id },
+		props: {
+			post: {
+				...post,
+				date: post?.date.toISOString(),
+			},
+		},
 	};
 };
 
