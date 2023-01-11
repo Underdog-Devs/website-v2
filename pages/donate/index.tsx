@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaCcPaypal } from 'react-icons/fa';
 import { IoLogoVenmo } from 'react-icons/io5';
@@ -11,7 +12,7 @@ const Donate = () => {
 					<h3>We appreciate your commitment to helping us combat recidivism</h3>
 					<p>Your donation will directly help supply mentees in our program with much needed equipment to aid them in their learning and help fund Project Underdog.</p>
 				</div>
-				<img
+				<Image
 					className={styles.together}
 					src="/images/together.jpg"
 					alt="dice spelling out: together is the way"
@@ -53,7 +54,7 @@ const Donate = () => {
 					</div>
 					<div className={styles.option}>
 						<p className={styles.donateText}> Donate Directly</p>
-						<img
+						<Image
 							className={styles.icon}
 							src="/images/icon-01.png"
 							height={40}

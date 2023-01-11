@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './blogPreviewCard.module.scss';
 
 type Props = {
@@ -12,7 +13,7 @@ export function BlogPreviewCard(props: Props) {
 	const { img = '/images/collab.jpg', title = 'Future of Work', author = 'Johanna Murry', text = 'Majority of peole will work in jobs that don’t exist today.', date = '02 May' } = props;
 	return (
 		<div className={styles.container}>
-			<img
+			<Image
 				className={styles.image}
 				src={img}
 				alt="Featured"

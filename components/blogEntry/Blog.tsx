@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import styles from './blog.module.scss';
@@ -26,7 +27,7 @@ export const Blog = () => {
 
 				<article className={styles.blog}>
 					<div className={styles.thumbNailContainer}>
-						<img
+						<Image
 							className={styles.blogThumbnail}
 							src="/images/meeting.jpg"
 							alt="A friendly group meeting around a table"
@@ -48,7 +49,7 @@ export const Blog = () => {
 			</header>
 
 			<div className={styles.blogMain}>
-				<img
+				<Image
 					className={styles.blogImage}
 					src="/images/collab.jpg"
 					alt="A meeting of people on their laptops"

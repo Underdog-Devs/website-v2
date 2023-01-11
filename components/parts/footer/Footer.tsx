@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
 import {
@@ -19,7 +20,7 @@ function Footer({ }: Props): ReactElement {
 			<div className={styles.content}>
 				<div className={styles.social}>
 					<div className={styles.logo}>
-						<img
+						<Image
 							src="/images/underdogdevs-01.png" // Route of the image file
 							height={150} // Desired size with correct aspect ratio
 							width={150} // Desired size with correct aspect ratio

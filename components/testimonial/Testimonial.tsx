@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './Testimonial.module.scss';
 
@@ -5,7 +6,7 @@ export const Testimonial = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<img
+				<Image
 					className={styles.quotation_mark}
 					src="/images/quotation-mark.svg"
 					alt="Large quotation mark"
@@ -19,7 +20,7 @@ export const Testimonial = () => {
 			</p>
 
 			<div className={styles.author}>
-				<img
+				<Image
 					className={styles.authorImage}
 					src="/images/pair.jpg"
 					alt="Profile of mentee"

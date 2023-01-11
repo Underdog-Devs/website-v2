@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './projectUnderdog.module.scss';
 
@@ -39,7 +40,7 @@ const ProjectUnderdog = () => {
 					</ul>
 				</div>
 				<div className={styles.aboutImage}>
-					<img
+					<Image
 						className={styles.together}
 						src="/images/success.jpg"
 						alt="climbing the stairs of success"

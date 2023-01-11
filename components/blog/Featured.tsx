@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './featured.module.scss';
 
 type Props = {
@@ -22,7 +23,7 @@ export function Featured(props: Props) {
 					</div>
 				</div>
 			</div>
-			<img
+			<Image
 				className={styles.postImage}
 				src={img}
 				alt="Card"

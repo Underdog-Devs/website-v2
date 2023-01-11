@@ -1,6 +1,7 @@
 import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Image from 'next/image';
 import styles from './navigation.module.scss';
 
 interface Props { }
@@ -28,7 +29,7 @@ function Navigation({ }: Props): ReactElement {
 			<div className={styles.desktopNav}>
 				<Link href="/" passHref>
 					<div>
-						<img
+						<Image
 							onClick={() => setShowLinks(false)}
 							className={styles.image}
 							src="/images/underdogdevs-01.png"
@@ -65,7 +66,7 @@ function Navigation({ }: Props): ReactElement {
 			<div className={styles.mobileNav}>
 				<div className={styles.navHeader}>
 					<Link href="/" passHref>
-						<img
+						<Image
 							onClick={() => setShowLinks(false)}
 							className={styles.image}
 							src="/images/icon-01.png"

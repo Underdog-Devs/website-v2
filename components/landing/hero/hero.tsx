@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './hero.module.scss';
 
@@ -11,7 +12,7 @@ const Hero: React.FC<Props> = ({ }) => {
 			<div className={styles.aboutText}>
 				<div className={styles.heading}>
 					<div className={styles.logoContainer}>
-						<img
+						<Image
 							className={styles.logo}
 							src="/images/icon-03.png"
 							alt="Your Name"
@@ -33,7 +34,7 @@ const Hero: React.FC<Props> = ({ }) => {
 			<div
 				className={styles.aboutImage}
 			>
-				<img
+				<Image
 					className={styles.imageLogo}
 					src="/images/underdogdevs-03.png"
 					alt="Your Name"
