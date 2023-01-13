@@ -22,7 +22,7 @@ const Donate = () => {
 				/>
 			</div>
 			<div className={styles.donate}>
-				<h2>Ways to Donate</h2>
+				<h2>Ways to Donate.</h2>
 				<div className={styles.options}>
 					<div className={styles.option}>
 						<div className={styles.paypalContainer}>
