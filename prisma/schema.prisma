@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+}
+model User {
+  id           String   @id @default(cuid())
+  name         String?
+  email        String   @unique
+  image        String?
+  userType     String
+  password     String
+  twitterUrl   String?
+  facebookUrl  String?
+  linkedinUrl  String?
+  instagramUrl String?
+  youtubeUrl   String?
+  posts        Blog[]
+  token        String?  @unique
+  createdAt    DateTime @default(now()) @map(name: "created_at")
+  updatedAt    DateTime @updatedAt @map(name: "updated_at")
+
+  @@map(name: "users")
+}
+
+model Spotlight {
+  id           String  @id @default(cuid())
+  menteeName   String
+  portfolioUrl String?
+  twitterUrl   String?
+  facebookUrl  String?
+  linkedinUrl  String?
+  instagramUrl String?
+  youtubeUrl   String?
+  imageUrl     String
+  about        String
+}
+
+model Blog {
+  id       String   @id @default(cuid())
+  author   User     @relation(fields: [authorId], references: [id])
+  authorId String
+  title    String
+  entry    Json
+  date     DateTime @default(now())
+}

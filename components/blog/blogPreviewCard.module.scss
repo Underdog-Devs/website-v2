@@ -1,13 +1,15 @@
 @import '../../styles/globals.scss';
 
 .container{
-    display: flex;
-    flex-direction: column;
-    gap: $space-md;
+    // display: flex;
+    // flex-direction: column;
+    // gap: $space-md;
+		max-width: 313px;
     border-radius: 5px;
     box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.10);
 		img{
 			width: 100%;
+			object-fit: cover;
 		}
     .cardTextContainer{
         padding: 0 $space-md;
