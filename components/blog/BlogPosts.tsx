@@ -10,7 +10,7 @@ type BlogPostsProps = Pick<
 	posts: BlogPost[];
 };
 
-interface BlogPost{
+interface BlogPost {
 	id: string;
 	img: string;
 	title: string;
@@ -23,24 +23,14 @@ interface BlogPost{
 
 export const BlogPosts = ({
 	posts,
-	// isLoading,
-	// loadMoreCallback,
-	// isLastPage,
-}: BlogPostsProps) => {
+}: // isLoading,
+// loadMoreCallback,
+// isLastPage,
+BlogPostsProps) => {
 	return (
-		<main
-			style={{
-				display: 'grid',
-				gap: 30,
-				gridTemplateRows: 'masonry',
-				gridTemplateColumns:
-					'fit-content(33%) fit-content(33%) fit-content(33%)',
-			}}
-		>
+		<main className={styles.main}>
 			{posts.map((post) => (
-				<div className={styles.container}>
-					<BlogPreviewCard post={post} />
-				</div>
+				<BlogPreviewCard post={post} />
 			))}
 		</main>
 	);

@@ -1,47 +1,67 @@
 @import '../../styles/globals.scss';
 
 .container {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
 	font-family: $primaryTextFont;
 	color: $textBlack;
 	height: 210px;
-	margin: 20px 0;
-	gap: 60px;
+	margin: 0 0 $space-lg;
+	// gap: 60px;
 
 	.post {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		gap: $space_lg;
-		padding-right: $space_lg;
+		gap: $space_sm;
+		width: 50%;
 
 		h3 {
 			font-family: $primaryHeaderFont;
 			font-weight: bold;
+			margin-bottom: $space-xxs;
+
+			a {
+				text-decoration: none;
+				color: $udBlack;
+			}
 		}
 		p {
 			font-family: $primaryTextFont;
 			color: $subTextBlack;
 			line-height: $space-lg;
 		}
-		.info {
+
+		.right {
 			display: flex;
+			flex-direction: row;
 			justify-content: space-between;
-			font-weight: bold;
-			.right {
-				display: flex;
-				gap: $space-lg;
+
+			.authorName {
+				font-weight: 600;
+				color: $udDarkGrey;
 			}
+
 			.published {
 				font-weight: 400;
 				color: $subTextBlack;
 			}
-			padding-right: $space-xl;
+		}
+		.readMoreLink {
+			font-weight: 600;
+			color: $textBlack;
 		}
 	}
-	.postImage {
-		height: 100%;
-		width: 100%;
+
+	.imageContainer {
+		width: 40%;
+		// height:
+
+		.postImage {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
 	}
 }

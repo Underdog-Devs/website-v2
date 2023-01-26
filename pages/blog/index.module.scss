@@ -1,11 +1,11 @@
 @import '../../styles/globals.scss';
 
 .container {
-	max-width: 1000px;
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0 auto;
+	margin: $space-xl auto;
 	align-items: center;
 
 	button {
@@ -18,7 +18,7 @@
 		border-radius: 5px;
 		margin: 50px 0;
 		cursor: pointer;
-		transition: all .3s;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $udSecondaryOrange;
 			color: white;
