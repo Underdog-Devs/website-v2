@@ -1,32 +1,67 @@
-import React, { useMemo } from 'react';
+import React from 'react';
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Highlight from '@tiptap/extension-highlight';
+import BulletList from '@tiptap/extension-bullet-list';
+import Typography from '@tiptap/extension-typography';
+import CodeBlock from '@tiptap/extension-code-block';
+import Blockquote from '@tiptap/extension-blockquote';
+import Image from '@tiptap/extension-image';
+import ListItem from '@tiptap/extension-list-item';
+import OrderedList from '@tiptap/extension-ordered-list';
+import TextAlign from '@tiptap/extension-text-align';
+
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { GetServerSideProps } from 'next';
-import { generateHTML } from '@tiptap/html';
-import Document from '@tiptap/extension-document';
-import Paragraph from '@tiptap/extension-paragraph';
-import Heading from '@tiptap/extension-heading';
-import Text from '@tiptap/extension-text';
+// import { generateHTML } from '@tiptap/html';
+// import Document from '@tiptap/extension-document';
+// import Paragraph from '@tiptap/extension-paragraph';
+// import Heading from '@tiptap/extension-heading';
+// import Text from '@tiptap/extension-text';
 import prisma from '../../lib/prisma';
 import styles from './blog.module.scss';
 
 type Props = {
 	entry: any;
-}
+};
 
 export const Blog = (props: Props) => {
 	const { entry } = props;
-	const output = useMemo(() => {
-		return generateHTML(entry, [
-			Document,
-			Paragraph,
-			Heading.configure({
-				levels: [1, 2, 3],
+	const editor = useEditor({
+		editable: false,
+		content: entry,
+		extensions: [
+			StarterKit,
+			Highlight,
+			Typography,
+			Image,
+			BulletList,
+			OrderedList,
+			CodeBlock,
+			Blockquote,
+			ListItem,
+			TextAlign.configure({
+				types: ['heading', 'paragraph'],
 			}),
-			Text,
-			// Bold,
-			// other extensions …
-		]);
-	}, [entry]);
+		],
+	});
+
+	if (!editor) {
+		return null;
+	}
+
+	// const output = useMemo(() => {
+	// 	return generateHTML(entry, [
+	// 		Document,
+	// 		Paragraph,
+	// 		Heading.configure({
+	// 			levels: [1, 2, 3],
+	// 		}),
+	// 		Text,
+	// 		// Bold,
+	// 		// other extensions …
+	// 	]);
+	// }, [entry]);
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
@@ -48,9 +83,13 @@ export const Blog = (props: Props) => {
 					</li>
 				</ul>
 
-				<pre>
-					<code><div dangerouslySetInnerHTML={{ __html: output }} /></code>
-				</pre>
+				<EditorContent editor={editor} />
+
+				{/* <pre>
+					<code>
+						<div dangerouslySetInnerHTML={{ __html: output }} />
+					</code>
+				</pre> */}
 			</header>
 
 			<div className={styles.blogMain}>
