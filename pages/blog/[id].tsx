@@ -13,20 +13,21 @@ import TextAlign from '@tiptap/extension-text-align';
 
 import { BsTwitter, BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { GetServerSideProps } from 'next';
-// import { generateHTML } from '@tiptap/html';
-// import Document from '@tiptap/extension-document';
-// import Paragraph from '@tiptap/extension-paragraph';
-// import Heading from '@tiptap/extension-heading';
-// import Text from '@tiptap/extension-text';
 import prisma from '../../lib/prisma';
 import styles from './blog.module.scss';
 
 type Props = {
 	entry: any;
+	date: string;
+	title: string;
+	author: { name: string };
 };
 
 export const Blog = (props: Props) => {
-	const { entry } = props;
+	const { entry, author, title, date } = props;
+	const name = author.name ? author.name : 'Name Holder';
+	const displayDate = date.substring(0, 10);
+
 	const editor = useEditor({
 		editable: false,
 		content: entry,
@@ -50,22 +51,10 @@ export const Blog = (props: Props) => {
 		return null;
 	}
 
-	// const output = useMemo(() => {
-	// 	return generateHTML(entry, [
-	// 		Document,
-	// 		Paragraph,
-	// 		Heading.configure({
-	// 			levels: [1, 2, 3],
-	// 		}),
-	// 		Text,
-	// 		// Bold,
-	// 		// other extensions …
-	// 	]);
-	// }, [entry]);
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
-				<h3>Lorem ipsum dolor sit amet vorit consectetur...</h3>
+				<h3>{title}</h3>
 
 				<ul className={styles.socialContainer}>
 					<p>Share</p>
@@ -82,23 +71,17 @@ export const Blog = (props: Props) => {
 						<BsInstagram />
 					</li>
 				</ul>
-
-				<EditorContent editor={editor} />
-
-				{/* <pre>
-					<code>
-						<div dangerouslySetInnerHTML={{ __html: output }} />
-					</code>
-				</pre> */}
 			</header>
+
+			<EditorContent className={styles.blogText} editor={editor} />
 
 			<div className={styles.blogMain}>
 				<section className={styles.blogInfo}>
 					<div className={styles.blogAuthor}>
-						<p className={styles.blogAuthorName}>Viola Manisa</p>
+						<p className={styles.blogAuthorName}>{name}</p>
 						<p className={styles.blogAuthorTitle}>☑ Verified writer</p>
 					</div>
-					<p>PUBLISHED ON MAY, 2 2019</p>
+					<p>PUBLISHED ON {displayDate}</p>
 				</section>
 			</div>
 		</div>
@@ -119,6 +102,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 			},
 		},
 	});
+
 	return {
 		props: {
 			...post,

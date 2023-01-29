@@ -4,22 +4,22 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: $space-md $space-xxxl;
-	margin-bottom: $space-xxl;
+	max-width: 1200px;
+	margin: $space-xl auto;
+	// padding: $space-md $space-xxxl;
+	// margin-bottom: $space-xxl;
 
 	@include for-phone-only {
-		padding: $space_md 0;
 		text-align: justify;
 	}
 
-	@include for-tablet-up {
-		padding: $space_md 0;
-		text-align: justify;
-	}
-	
-	@include for-desktop-up {
-		text-align: justify;
-}
+	// @include for-tablet-up {
+	// 	text-align: justify;
+	// }
+
+	// @include for-desktop-up {
+	// 	text-align: justify;
+	// }
 
 	header {
 		position: relative;
@@ -27,20 +27,24 @@
 		margin-bottom: $space-lg;
 
 		h3 {
-			font-family: $secondaryHeaderFont;
+			font-family: $primaryHeaderFont;
+			font-weight: bold;
 			font-size: $f3;
 			margin-bottom: $space-xs;
 
 			@include for-phone-only {
-				font-size: $f5; 
-				text-align: center; 
+				font-size: $f5;
+				text-align: center;
 			}
-			
+
 			@include for-tablet-up {
-				font-size: $f4; 
+				font-size: $f4;
+			}
+
+			@include for-desktop-up {
+				font-size: $f3;
 			}
 		}
-
 
 		.socialContainer {
 			position: absolute;
@@ -49,15 +53,15 @@
 			margin: 0;
 
 			@include for-phone-only {
-				display: flex; 
+				display: flex;
 				align-items: center;
 				justify-content: center;
-				left: 0; 
-				position: relative; 
+				left: 0;
+				position: relative;
 			}
-		
+
 			@include for-tablet-up {
-				position: absolute; 
+				position: absolute;
 				left: -$space-xxl;
 				text-align: center;
 				margin: 0;
@@ -68,7 +72,15 @@
 				list-style-type: none;
 			}
 		}
-		
+	}
+
+	.blogText {
+		max-width: 60%;
+
+		p {
+			font-size: 1.25rem;
+			line-height: 1.6rem;
+		}
 	}
 
 	.blog {
@@ -79,26 +91,25 @@
 			margin: $space-md;
 
 			@include for-phone-only {
-				float: none; 
+				float: none;
 			}
-			
+
 			@include for-tablet-up {
-				float: none; 
+				float: none;
 			}
 		}
 
 		.blogThumbnail {
 			width: 272px;
 			background-size: cover;
-			
+
 			@include for-phone-only {
-				width: 100%; 
-			}
-			
-			@include for-tablet-up {
-				width: 100%; 
+				width: 100%;
 			}
 
+			@include for-tablet-up {
+				width: 100%;
+			}
 		}
 
 		p {
@@ -106,11 +117,11 @@
 			font-family: $primaryTextFont;
 
 			@include for-phone-only {
-				display: inline-block; 
+				display: inline-block;
 			}
-			
+
 			@include for-tablet-up {
-				display: inline-block; 
+				display: inline-block;
 			}
 		}
 	}
@@ -123,12 +134,12 @@
 			object-fit: cover;
 
 			@include for-phone-only {
-				width: 100%; 
+				width: 100%;
 			}
-			
+
 			@include for-tablet-up {
-				display: flex;  
-				width: 100%; 
+				display: flex;
+				width: 100%;
 			}
 		}
 
@@ -161,24 +172,23 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		
+
 		@include for-phone-only {
 			display: block;
 		}
-		
-			@include for-tablet-up {
-			display: block; 
+
+		@include for-tablet-up {
+			display: block;
 		}
 
 		p {
 			font-size: $space-unit;
 			@include for-phone-only {
-				font-size: $space-sm; 
-			}	
+				font-size: $space-sm;
+			}
 		}
 
 		.blogAuthor {
-			
 			&Name {
 				font-weight: bold;
 			}
@@ -186,7 +196,6 @@
 			&Title {
 				font-style: italic;
 			}
-			
 		}
 	}
 }
