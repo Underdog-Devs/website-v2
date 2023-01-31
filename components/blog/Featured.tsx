@@ -3,7 +3,7 @@ import styles from './featured.module.scss';
 
 type Props = {
 	id: string;
-	img: string;
+	image: string;
 	title: string;
 	text: string;
 	author: string;

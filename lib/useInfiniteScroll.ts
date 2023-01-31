@@ -13,7 +13,7 @@ export interface UseInfiniteScroll {
 
 interface BlogPost {
 	id: string;
-	img: string;
+	image: string;
 	title: string;
 	name: string;
 	text: string;

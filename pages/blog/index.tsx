@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 
 export interface BlogPost {
 	id: string;
-	img: string;
+	image: string;
 	title: string;
 	text: string;
 	author: string;
@@ -42,7 +42,7 @@ export async function getServerSideProps() {
 
 export const Blog = (props: HomeProps) => {
 	const { posts } = props;
-
+	console.log(posts);
 	const {
 		isLoading,
 		loadMoreCallback,
@@ -54,7 +54,7 @@ export const Blog = (props: HomeProps) => {
 	return (
 		<div className={styles.container}>
 			<Featured
-				img="/images/collab.jpg"
+				image="/images/collab.jpg"
 				id="1337"
 				title="Future of Work"
 				author="Johanna Murry"

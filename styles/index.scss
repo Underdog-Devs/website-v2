@@ -71,6 +71,35 @@ p {
   font-size: $f5;
 }
 
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 10px 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+pre {
+  font-family: Consolas,"courier new";
+  color: white;
+  background-color: #333333;
+	border-radius: 5px;
+  padding: 15px;
+}
+
 #border_type1 {
   position: absolute;
   margin-left: $space-sm;
