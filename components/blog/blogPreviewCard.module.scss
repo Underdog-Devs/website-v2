@@ -1,53 +1,64 @@
 @import '../../styles/globals.scss';
 
-.container{
-    // display: flex;
-    // flex-direction: column;
-    // gap: $space-md;
-		max-width: 313px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.10);
-		img{
-			width: 100%;
-			object-fit: cover;
-		}
-    .cardTextContainer{
-        padding: 0 $space-md;
-
-        .title{
-            font-family: $primaryHeaderFont;
-            color: $textBlack;
-            font-weight: bold;
-            margin-bottom: $space-xs;
-						cursor: pointer;
-
-						a {
-							text-decoration: none;
-							color: $textBlack;
-						}
-        }
-
-        .text{
-            font-family: $primaryTextFont;
-            color: $subTextBlack;
-            line-height: 30px;
-        }
-
-        .info{
-            display: flex;
-            justify-content: space-between;
-            font-family: $primaryTextFont;
-            color: $textBlack;
-            margin: $space-md 0;
-
-            .author{
-                font-weight: bold;
-            }
-            
-            .date{
-                color: $subTextBlack;
-            }
-        }        
-    }
+.main {
+	margin: $space-xl 0;
+	gap: $space-lg;
+	display: grid;
+	// grid-template-rows: masonry;
+	grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
 }
 
+.container {
+	// display: flex;
+	// flex-direction: column;
+	// gap: $space-md;
+	max-width: 350px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.cardTextContainer {
+		padding: $space-md;
+
+		.title {
+			font-family: $primaryHeaderFont;
+			color: $textBlack;
+			font-weight: bold;
+			margin-bottom: $space-sm;
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+				color: $textBlack;
+			}
+		}
+
+		.textContent {
+			font-family: $primaryTextFont;
+			color: $subTextBlack;
+			max-height: 100px;
+			line-height: 1.5rem;
+			overflow: hidden;
+		}
+
+		.info {
+			display: flex;
+			justify-content: space-between;
+			font-family: $primaryTextFont;
+			color: $textBlack;
+			margin: $space-md 0 0;
+
+			.author {
+				font-weight: bold;
+			}
+
+			.date {
+				color: $subTextBlack;
+			}
+		}
+	}
+}

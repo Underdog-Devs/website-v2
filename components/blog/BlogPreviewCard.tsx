@@ -1,11 +1,23 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { useMemo } from 'react';
-import { generateHTML } from '@tiptap/html';
-import Document from '@tiptap/extension-document';
-import Paragraph from '@tiptap/extension-paragraph';
-import Heading from '@tiptap/extension-heading';
-import Text from '@tiptap/extension-text';
+
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Highlight from '@tiptap/extension-highlight';
+import BulletList from '@tiptap/extension-bullet-list';
+import Typography from '@tiptap/extension-typography';
+import CodeBlock from '@tiptap/extension-code-block';
+import Blockquote from '@tiptap/extension-blockquote';
+import Image from '@tiptap/extension-image';
+import ListItem from '@tiptap/extension-list-item';
+import OrderedList from '@tiptap/extension-ordered-list';
+import TextAlign from '@tiptap/extension-text-align';
+
+// import { useMemo } from 'react';
+// import { generateHTML } from '@tiptap/html';
+// import Document from '@tiptap/extension-document';
+// import Paragraph from '@tiptap/extension-paragraph';
+// import Heading from '@tiptap/extension-heading';
+// import Text from '@tiptap/extension-text
 import styles from './blogPreviewCard.module.scss';
 
 type Props = {
@@ -35,18 +47,41 @@ export function BlogPreviewCard(props: Props) {
 		},
 	} = props;
 
-	const output = useMemo(() => {
-		return generateHTML(entry, [
-			Document,
-			Paragraph,
-			Heading.configure({
-				levels: [1, 2, 3],
+	const editor = useEditor({
+		editable: false,
+		content: entry,
+		extensions: [
+			StarterKit,
+			Highlight,
+			Typography,
+			Image,
+			BulletList,
+			OrderedList,
+			CodeBlock,
+			Blockquote,
+			ListItem,
+			TextAlign.configure({
+				types: ['heading', 'paragraph'],
 			}),
-			Text,
-			// Bold,
-			// other extensions …
-		]);
-	}, [entry]);
+		],
+	});
+
+	if (!editor) {
+		return null;
+	}
+
+	// const output = useMemo(() => {
+	// 	return generateHTML(entry, [
+	// 		Document,
+	// 		Paragraph,
+	// 		Heading.configure({
+	// 			levels: [1, 2, 3],
+	// 		}),
+	// 		Text,
+	// 		// Bold,
+	// 		// other extensions …
+	// 	]);
+	// }, [entry]);
 
 	const dateObj = new Date(date);
 	const month = dateObj.getUTCMonth() + 1;
@@ -72,11 +107,17 @@ export function BlogPreviewCard(props: Props) {
 						<a>{title}</a>
 					</Link>
 				</h4>
-				<pre>
-					<code>
-						<div dangerouslySetInnerHTML={{ __html: output }} />
+
+				<EditorContent className={styles.textContent} editor={editor} />
+
+				{/* <pre>
+					<code className={styles.text}>
+						<div
+							className={styles.text}
+							dangerouslySetInnerHTML={{ __html: output }}
+						/>
 					</code>
-				</pre>
+				</pre> */}
 				<div className={styles.info}>
 					<span className={styles.author}>{name}</span>
 					<span className={styles.date}>{newdate}</span>
