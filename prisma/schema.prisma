@@ -48,6 +48,7 @@ model Blog {
   author   User     @relation(fields: [authorId], references: [id])
   authorId String
   title    String
+	image    String?
   entry    Json
   date     DateTime @default(now())
 }

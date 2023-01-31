@@ -12,7 +12,7 @@ type BlogPostsProps = Pick<
 
 interface BlogPost{
 	id: string;
-	img: string;
+	image: string;
 	title: string;
 	name: string;
 	text: string;

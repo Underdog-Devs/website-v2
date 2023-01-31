@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useMemo } from 'react';
 import { generateHTML } from '@tiptap/html';
 import Document from '@tiptap/extension-document';
@@ -13,7 +14,7 @@ type Props = {
 
 interface Post {
 	id: string;
-	img: string;
+	image: string;
 	title: string;
 	name: string;
 	text: string;
@@ -25,11 +26,12 @@ interface Post {
 export function BlogPreviewCard(props: Props) {
 	const {
 		post: {
-			id = '1337',
-			title = 'Future of Work',
-			name = 'Johanna Murry',
-			date = '02 May',
+			id,
+			title,
+			name,
+			date,
 			entry,
+			image,
 		},
 	} = props;
 
@@ -50,16 +52,20 @@ export function BlogPreviewCard(props: Props) {
 	const month = dateObj.getUTCMonth() + 1;
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
-	const newdate = `${year}/${month}/${day}`;
+	const newdate = `${month}/${day}/${year}`;
 
 	return (
 		<div className={styles.container}>
-			<img
-				className={styles.img}
-				src="https://picsum.photos/500"
-				alt="Featured"
-				loading="lazy"
-			/>
+			{image
+				?(
+					<img
+						className={styles.img}
+						src={image}
+						alt="Featured"
+						loading="lazy"
+					/>
+				)
+				:<Image src="/images/fallback.png" width="313" height="243" />}
 			<div className={styles.cardTextContainer}>
 				<h4 className={styles.title}>
 					<Link href={`/blog/${id}`}>
