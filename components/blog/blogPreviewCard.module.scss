@@ -1,11 +1,12 @@
 @import '../../styles/globals.scss';
 
 .main {
-	margin: $space-xl 0;
-	gap: $space-lg;
+	margin: 0 0 $space-xl 0;
+	justify-content: space-between;
 	display: grid;
-	// grid-template-rows: masonry;
-	grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	gap: 80px;
+	max-width: 1200px;
 }
 
 .container {
@@ -15,10 +16,23 @@
 	max-width: 350px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
-
+	@supports (grid-template-rows: masonry) {
+		.container {
+		  display: grid;
+		  grid-template-columns: repeat(var(--masonry-columns), 1fr);
+		  grid-gap: var(--masonry-gap);
+		  grid-template-rows: masonry;
+		}
+	    
+		.container > * {
+		  margin-bottom: 0;
+		}
+	    }
 	img {
 		width: 100%;
 		object-fit: cover;
+		max-height: 480px;
+		cursor: pointer;
 	}
 
 	.cardTextContainer {
@@ -40,9 +54,9 @@
 		.textContent {
 			font-family: $primaryTextFont;
 			color: $subTextBlack;
-			max-height: 100px;
 			line-height: 1.5rem;
 			overflow: hidden;
+			
 		}
 
 		.info {

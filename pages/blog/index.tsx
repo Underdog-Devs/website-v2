@@ -7,18 +7,19 @@ import prisma from '../../lib/prisma';
 import styles from './index.module.scss';
 
 export interface BlogPost {
-	id: string;
-	image: string;
-	title: string;
-	text: string;
-	author: string;
-	date: string;
-	name: string;
-	entry: any;
+  id: string;
+  image: string;
+  title: string;
+  firstParagraph: string;
+  text: string;
+  author: string;
+  date: string;
+  name: string;
+  entry: any;
 }
 
 export interface HomeProps {
-	posts: BlogPost[];
+  posts: BlogPost[];
 }
 
 export async function getServerSideProps() {
@@ -29,12 +30,20 @@ export async function getServerSideProps() {
 				date: 'desc',
 			},
 		],
+		include: {
+			author: {
+				select: {
+					name: true,
+				},
+			},
+		},
 	});
 	return {
 		props: {
 			posts: result.map((post) => ({
 				...post,
 				date: post.date.toISOString(),
+				author: post.author.name,
 			})),
 		},
 	};
@@ -50,19 +59,19 @@ export const Blog = (props: HomeProps) => {
 		dynamicPosts,
 		isLastPage,
 	} = useInfiniteScroll(posts);
-
+	const firstPosts = posts.slice(1, posts.length);
 	return (
 		<div className={styles.container}>
 			<Featured
-				image="/images/collab.jpg"
-				id="1337"
-				title="Future of Work"
-				author="Johanna Murry"
-				text="Majority of peole will work in jobs that don’t exist today."
-				date="02 May"
+				image={posts[0].image}
+				id={posts[0].id}
+				title={posts[0].title}
+				firstParagraph={posts[0].firstParagraph}
+				author={posts[0].author}
+				date={posts[0].date}
 			/>
 			<BlogPosts
-				posts={hasDynamicPosts ? dynamicPosts : posts}
+				posts={hasDynamicPosts ? dynamicPosts : firstPosts}
 				isLoading={isLoading}
 				loadMoreCallback={loadMoreCallback}
 				isLastPage={isLastPage}

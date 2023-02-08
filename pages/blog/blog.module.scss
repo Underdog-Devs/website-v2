@@ -51,7 +51,7 @@
 			left: -$space-xxl;
 			text-align: center;
 			margin: 0;
-
+			
 			@include for-phone-only {
 				display: flex;
 				align-items: center;
@@ -81,6 +81,19 @@
 			font-size: 1.25rem;
 			line-height: 1.6rem;
 		}
+
+		ul, ol {
+			margin-left:$space-md;
+		    }
+		  
+		    ul {
+			margin-top: $space-sm;
+			list-style:disc;
+		    }
+		  
+		    ol {
+			list-style:decimal;
+		    }
 	}
 
 	.blog {

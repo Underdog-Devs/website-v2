@@ -15,6 +15,7 @@ interface BlogPost {
 	id: string;
 	image: string;
 	title: string;
+	firstParagraph: string;
 	name: string;
 	text: string;
 	author: string;

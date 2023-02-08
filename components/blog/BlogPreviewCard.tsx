@@ -1,50 +1,36 @@
 import Link from 'next/link';
-
-import { EditorContent, useEditor } from '@tiptap/react';
+import Image from 'next/image';
+import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
 import BulletList from '@tiptap/extension-bullet-list';
 import Typography from '@tiptap/extension-typography';
 import CodeBlock from '@tiptap/extension-code-block';
 import Blockquote from '@tiptap/extension-blockquote';
-import Image from '@tiptap/extension-image';
+import { Image as TipTapImage } from '@tiptap/extension-image';
 import ListItem from '@tiptap/extension-list-item';
 import OrderedList from '@tiptap/extension-ordered-list';
 import TextAlign from '@tiptap/extension-text-align';
-
-// import { useMemo } from 'react';
-// import { generateHTML } from '@tiptap/html';
-// import Document from '@tiptap/extension-document';
-// import Paragraph from '@tiptap/extension-paragraph';
-// import Heading from '@tiptap/extension-heading';
-// import Text from '@tiptap/extension-text
 import styles from './blogPreviewCard.module.scss';
 
 type Props = {
-	post: Post;
+  post: Post;
 };
 
 interface Post {
-	id: string;
-	image: string;
-	title: string;
-	name: string;
-	text: string;
-	author: string;
-	date: string;
-	entry: any;
+  id: string;
+  image: string;
+  title: string;
+  firstParagraph: string;
+  text: string;
+  author: string;
+  date: string;
+  entry: any;
 }
 
 export function BlogPreviewCard(props: Props) {
 	const {
-		post: {
-			id,
-			title,
-			name,
-			date,
-			entry,
-			image,
-		},
+		post: { id, title, firstParagraph, author, date, entry, image },
 	} = props;
 
 	const editor = useEditor({
@@ -54,7 +40,7 @@ export function BlogPreviewCard(props: Props) {
 			StarterKit,
 			Highlight,
 			Typography,
-			Image,
+			TipTapImage,
 			BulletList,
 			OrderedList,
 			CodeBlock,
@@ -70,57 +56,38 @@ export function BlogPreviewCard(props: Props) {
 		return null;
 	}
 
-	// const output = useMemo(() => {
-	// 	return generateHTML(entry, [
-	// 		Document,
-	// 		Paragraph,
-	// 		Heading.configure({
-	// 			levels: [1, 2, 3],
-	// 		}),
-	// 		Text,
-	// 		// Bold,
-	// 		// other extensions …
-	// 	]);
-	// }, [entry]);
-
 	const dateObj = new Date(date);
 	const month = dateObj.getUTCMonth() + 1;
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
-	const newdate = `${month}/${day}/${year}`;
+	const parsedDate = `${month}/${day}/${year}`;
 
 	return (
 		<div className={styles.container}>
-			{image
-				?(
+			<Link href={`/blog/${id}`}>
+				{image ? (
 					<img
 						className={styles.img}
 						src={image}
 						alt="Featured"
 						loading="lazy"
 					/>
-				)
-				:<Image src="/images/fallback.png" width="313" height="243" />}
+				) : (
+					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+						<Image src="/images/fallback.png" width="313" height="243" />
+					</div>
+				)}
+			</Link>
 			<div className={styles.cardTextContainer}>
 				<h4 className={styles.title}>
 					<Link href={`/blog/${id}`}>
 						<a>{title}</a>
 					</Link>
 				</h4>
-
-				<EditorContent className={styles.textContent} editor={editor} />
-
-				{/* <pre>
-					<code className={styles.text}>
-						<div
-							className={styles.text}
-							dangerouslySetInnerHTML={{ __html: output }}
-						/>
-					</code>
-				</pre> */}
+				<p className={styles.textContent}>{firstParagraph}</p>
 				<div className={styles.info}>
-					<span className={styles.author}>{name}</span>
-					<span className={styles.date}>{newdate}</span>
+					<span>By <span className={styles.author}>{author}</span></span>
+					<span>{parsedDate}</span>
 				</div>
 			</div>
 		</div>

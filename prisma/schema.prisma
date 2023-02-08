@@ -10,6 +10,7 @@ generator client {
 generator erd {
   provider = "prisma-erd-generator"
 }
+
 model User {
   id           String   @id @default(cuid())
   name         String?
@@ -44,11 +45,12 @@ model Spotlight {
 }
 
 model Blog {
-  id       String   @id @default(cuid())
-  author   User     @relation(fields: [authorId], references: [id])
-  authorId String
-  title    String
-	image    String?
-  entry    Json
-  date     DateTime @default(now())
+  id             String   @id @default(cuid())
+  author         User     @relation(fields: [authorId], references: [id])
+  authorId       String
+  title          String
+  image          String?
+  entry          Json
+  firstParagraph String
+  date           DateTime @default(now())
 }

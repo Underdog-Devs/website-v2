@@ -24,7 +24,7 @@
 
 			a {
 				text-decoration: none;
-				color: $udBlack;
+				color: $textBlack;
 			}
 		}
 		p {
@@ -33,14 +33,20 @@
 			line-height: $space-lg;
 		}
 
+		.read {
+			color: $textBlack;
+			font-weight: 600;
+			text-decoration: none;
+		}
+
 		.right {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			gap: 20px;
 
 			.authorName {
 				font-weight: 600;
-				color: $udDarkGrey;
+				color: $textBlack;
 			}
 
 			.published {
