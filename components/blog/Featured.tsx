@@ -3,12 +3,12 @@ import Image from 'next/image';
 import styles from './featured.module.scss';
 
 type Props = {
-  id: string;
-  image: string;
-  title: string;
-  firstParagraph: string;
-  author: string;
-  date: string;
+	id: string;
+	image: string;
+	title: string;
+	firstParagraph: string;
+	author: string;
+	date: string;
 };
 
 export function Featured(props: Props) {
@@ -42,6 +42,7 @@ export function Featured(props: Props) {
 					</Link>
 				</div>
 			</div>
+
 			<div className={styles.imageContainer}>
 				{image ? (
 					<img
