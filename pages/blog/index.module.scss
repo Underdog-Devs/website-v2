@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: $space-xl auto;
+	margin: $space-xl calc($space-xxs + 5%);
 	align-items: center;
 
 	button {

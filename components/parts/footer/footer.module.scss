@@ -92,11 +92,20 @@
 		@include for-desktop-up {
 			margin: $space-lg;
 			align-self: flex-start;
+			height: 225px;
+			width: 225px;
+			margin: 0;
+			padding: 0;
 		}
 
 		img {
 			height: 150px;
 			width: 150px;
+
+			@include for-desktop-up {
+				height: 225px;
+				width: 225px;
+			}
 		}
 	}
 
