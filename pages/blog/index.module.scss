@@ -5,8 +5,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: $space-xl calc($space-xxs + 5%);
+	margin: $space-xl clamp($space-unit, 5vw, $space-xl);
 	align-items: center;
+
+	@include for-xlarge-up {
+		margin: $space-xl auto;
+	}
 
 	button {
 		width: 150px;
