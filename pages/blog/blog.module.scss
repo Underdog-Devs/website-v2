@@ -6,20 +6,18 @@
 	align-items: center;
 	max-width: 1200px;
 	margin: $space-xl auto;
-	// padding: $space-md $space-xxxl;
-	// margin-bottom: $space-xxl;
 
 	@include for-phone-only {
 		text-align: justify;
 	}
 
-	// @include for-tablet-up {
-	// 	text-align: justify;
-	// }
-
-	// @include for-desktop-up {
-	// 	text-align: justify;
-	// }
+	.return {
+		font-family: $primaryHeaderFont;
+		font-size: $f5;
+		text-decoration: none;
+		align-self: flex-start;
+		color: $udBlack;
+	}
 
 	header {
 		position: relative;
@@ -30,7 +28,7 @@
 			font-family: $primaryHeaderFont;
 			font-weight: bold;
 			font-size: $f3;
-			margin-bottom: $space-xs;
+			margin: $space-xs 0;
 
 			@include for-phone-only {
 				font-size: $f5;
@@ -51,7 +49,7 @@
 			left: -$space-xxl;
 			text-align: center;
 			margin: 0;
-			
+
 			@include for-phone-only {
 				display: flex;
 				align-items: center;
@@ -82,18 +80,19 @@
 			line-height: 1.6rem;
 		}
 
-		ul, ol {
-			margin-left:$space-md;
-		    }
-		  
-		    ul {
+		ul,
+		ol {
+			margin-left: $space-md;
+		}
+
+		ul {
 			margin-top: $space-sm;
-			list-style:disc;
-		    }
-		  
-		    ol {
-			list-style:decimal;
-		    }
+			list-style: disc;
+		}
+
+		ol {
+			list-style: decimal;
+		}
 	}
 
 	.blog {

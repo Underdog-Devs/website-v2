@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { EditorContent, useEditor } from '@tiptap/react';
 import Image from 'next/image';
 import StarterKit from '@tiptap/starter-kit';
@@ -18,11 +19,11 @@ import styles from './blog.module.scss';
 
 type Props = {
 	id: string;
-  entry: any;
-  date: string;
-  title: string;
-  image: string;
-  author: string;
+	entry: any;
+	date: string;
+	title: string;
+	image: string;
+	author: string;
 };
 
 export const Blog = (props: Props) => {
@@ -50,7 +51,7 @@ export const Blog = (props: Props) => {
 	if (!editor) {
 		return null;
 	}
-	const text = (postTitle:string, postId:string) => {
+	const text = (postTitle: string, postId: string) => {
 		return `${postTitle} \n
 		http://www.underdogdevs.org/blog/${postId}
 		`;
@@ -58,12 +59,15 @@ export const Blog = (props: Props) => {
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
+				<Link passHref href="/blog">
+					<a className={styles.return}>Back</a>
+				</Link>
+
 				<h3>{title}</h3>
 
 				<ul className={styles.socialContainer}>
 					<p>Share</p>
 					<li>
-
 						<a
 							href={`https://twitter.com/intent/tweet?text=${text(title, id)}`}
 						>
