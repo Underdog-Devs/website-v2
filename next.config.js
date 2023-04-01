@@ -3,8 +3,9 @@
 module.exports = {
 	reactStrictMode: true,
 	output: 'standalone',
-	images: {
-		loader: 'akamai',
-		path: '',
+	experimental: {
+		images: {
+			allowFutureImage: true,
+		},
 	},
 };
