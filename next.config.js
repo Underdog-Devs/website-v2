@@ -3,9 +3,7 @@
 module.exports = {
 	reactStrictMode: true,
 	output: 'standalone',
-	experimental: {
-		images: {
-			allowFutureImage: true,
-		},
+	images: {
+		unoptimized: true,
 	},
 };
