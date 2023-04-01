@@ -2,9 +2,7 @@
 
 module.exports = {
 	reactStrictMode: true,
-	experimental: {
-		images: {
-			unoptimized: true,
-		},
+	images: {
+		unoptimized: true,
 	},
 };
