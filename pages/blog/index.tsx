@@ -51,7 +51,7 @@ export async function getServerSideProps() {
 
 export const Blog = (props: HomeProps) => {
 	const { posts } = props;
-	console.log(posts);
+
 	const {
 		isLoading,
 		loadMoreCallback,

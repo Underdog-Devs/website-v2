@@ -24,7 +24,7 @@ export function Featured(props: Props) {
 		<div className={styles.container}>
 			<div className={styles.post}>
 				<h3 className={styles.title}>
-					<Link href={`/blog/${id}`}>
+					<Link href={`/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`}>
 						<a>{title}</a>
 					</Link>
 				</h3>
@@ -37,7 +37,7 @@ export function Featured(props: Props) {
 
 				<p>{firstParagraph}</p>
 				<div>
-					<Link href={`/blog/${id}`}>
+					<Link href={`/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`}>
 						<a className={styles.read}>Read article...</a>
 					</Link>
 				</div>
