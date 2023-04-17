@@ -59,7 +59,9 @@ export const Blog = (props: HomeProps) => {
 		dynamicPosts,
 		isLastPage,
 	} = useInfiniteScroll(posts);
+
 	const firstPosts = posts.slice(1, posts.length);
+
 	return (
 		<div className={styles.container}>
 			<Featured
@@ -71,7 +73,7 @@ export const Blog = (props: HomeProps) => {
 				date={posts[0].date}
 			/>
 			<BlogPosts
-				posts={hasDynamicPosts ? dynamicPosts : firstPosts}
+				posts={hasDynamicPosts ? dynamicPosts.slice(1, dynamicPosts.length) : firstPosts}
 				isLoading={isLoading}
 				loadMoreCallback={loadMoreCallback}
 				isLastPage={isLastPage}

@@ -14,8 +14,8 @@ import OrderedList from '@tiptap/extension-ordered-list';
 import TextAlign from '@tiptap/extension-text-align';
 import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs';
 import { GetServerSideProps } from 'next';
-import prisma from '../../lib/prisma';
-import styles from './blog.module.scss';
+import prisma from '../../../lib/prisma';
+import styles from '../blog.module.scss';
 
 type Props = {
 	id: string;

@@ -56,12 +56,12 @@ export const useInfiniteScroll = (posts: BlogPost[]): UseInfiniteScroll => {
 						},
 					}).then((resp) => {
 						setPage(page + 1);
-						const newPosts = resp?.data;
+						const newPosts = resp?.data.posts;
 
 						if (newPosts?.length) {
 							const newDynamicPosts = [...dynamicPosts, ...newPosts];
 							setDynamicPosts(newDynamicPosts);
-							setIsLastPage(newDynamicPosts?.length === resp?.data.total);
+							setIsLastPage(newDynamicPosts?.length === resp?.data.count);
 							setHasDynamicPosts(true);
 							setIsLoading(false);
 						}
