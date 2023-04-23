@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build:dev": "next build",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -31,10 +31,11 @@
     "@tiptap/starter-kit": "^2.0.0-beta.209",
     "axios": "^1.2.3",
     "emailjs-com": "^3.2.0",
-    "next": "^12.1.6",
+    "next": "^12.3.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
+    "react-masonry-css": "^1.0.16",
     "responsive-loader": "^2.3.0",
     "sass": "^1.44.0"
   },

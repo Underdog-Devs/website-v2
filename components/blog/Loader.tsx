@@ -13,7 +13,7 @@ export const Loader = ({
 }: LoaderProps) => {
 	if (isLoading) return <p>Loading...</p>;
 
-	if (isLastPage) return <p>End of content</p>;
+	if (isLastPage) return <p>End of posts</p>;
 
 	return <div ref={loadMoreCallback}>load more callback</div>;
 };

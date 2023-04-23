@@ -48,7 +48,7 @@ export const useInfiniteScroll = (posts: BlogPost[]): UseInfiniteScroll => {
 				loadMoreTimeoutRef.current = setTimeout(() => {
 					axios({
 						method: 'post',
-						url: 'https://middleware-for-blogs.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
+						url: 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
 						headers: {},
 						data: {
 							skip: 2*page, // This is the body part
@@ -56,12 +56,12 @@ export const useInfiniteScroll = (posts: BlogPost[]): UseInfiniteScroll => {
 						},
 					}).then((resp) => {
 						setPage(page + 1);
-						const newPosts = resp?.data;
+						const newPosts = resp?.data.posts;
 
 						if (newPosts?.length) {
 							const newDynamicPosts = [...dynamicPosts, ...newPosts];
 							setDynamicPosts(newDynamicPosts);
-							setIsLastPage(newDynamicPosts?.length === resp?.data.total);
+							setIsLastPage(newDynamicPosts?.length === resp?.data.count);
 							setHasDynamicPosts(true);
 							setIsLoading(false);
 						}
