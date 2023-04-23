@@ -109,6 +109,9 @@ function Footer({}: Props): ReactElement {
 						>
 							Testimonials
 						</Link> */}
+						<Link href="/blog" passHref>
+							Blog
+						</Link>
 						<Link href="/donate" passHref>
 							Donate
 						</Link>

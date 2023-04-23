@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import Link from 'next/link';
 import { EditorContent, useEditor } from '@tiptap/react';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ import { Image as TipTapImage } from '@tiptap/extension-image';
 import ListItem from '@tiptap/extension-list-item';
 import OrderedList from '@tiptap/extension-ordered-list';
 import TextAlign from '@tiptap/extension-text-align';
-import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs';
+import { BsTwitter, BsFacebook } from 'react-icons/bs';
 import { GetServerSideProps } from 'next';
 import prisma from '../../../lib/prisma';
 import styles from '../blog.module.scss';
@@ -27,6 +27,8 @@ type Props = {
 };
 
 export const Blog = (props: Props) => {
+	const [imageHeight, setImageHeight] = useState(0);
+	const [imageWidth, setImageWidth] = useState(0);
 	const { id, entry, author, title, date, image } = props;
 	const displayDate = date.substring(0, 10);
 	const editor = useEditor({
@@ -56,6 +58,12 @@ export const Blog = (props: Props) => {
 		http://www.underdogdevs.org/blog/${postId}
 		`;
 	};
+
+	const handleImageLoad = (event: SyntheticEvent<HTMLImageElement, Event>) => {
+		// Do whatever you want here
+		setImageHeight(event.currentTarget.naturalHeight);
+		setImageWidth(event.currentTarget.naturalWidth);
+	};
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
@@ -81,17 +89,17 @@ export const Blog = (props: Props) => {
 							<BsFacebook style={{ color: '#1B74E4', cursor: 'pointer' }} />
 						</a>
 					</li>
-					<li>
+					{/* <li>
 						<a
 							href={`https://www.linkedin.com/shareArticle?mini=true&url=http://www.underdogdevs.org/blog/${id}`}
 						>
 							<BsLinkedin style={{ color: '#0A66C2', cursor: 'pointer' }} />
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</header>
 			{image ? (
-				<img className={styles.img} src={image} alt="Featured" loading="lazy" />
+				<img className={styles.img} src={image} onLoad={handleImageLoad} style={imageHeight > imageWidth ? { maxHeight: '600px' } : { maxHeight: '100%' }} alt="Featured" loading="lazy" />
 			) : (
 				<Image src="/images/fallback.png" height="230" width="320" />
 			)}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { SyntheticEvent, useState } from 'react';
 import styles from './featured.module.scss';
 
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
 };
 
 export function Featured(props: Props) {
+	const [imageHeight, setImageHeight] = useState(0);
+	const [imageWidth, setImageWidth] = useState(0);
 	const { image, id, title, firstParagraph, author, date } = props;
 
 	const dateObj = new Date(date);
@@ -19,7 +22,11 @@ export function Featured(props: Props) {
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
-
+	const handleImageLoad = (event: SyntheticEvent<HTMLImageElement, Event>) => {
+		// Do whatever you want here
+		setImageHeight(event.currentTarget.naturalHeight);
+		setImageWidth(event.currentTarget.naturalWidth);
+	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.post}>
@@ -48,8 +55,10 @@ export function Featured(props: Props) {
 					<img
 						className={styles.img}
 						src={image}
+						style={imageHeight > imageWidth ? { maxHeight: '300px' } : { maxHeight: '100%' }}
 						alt="Featured"
 						loading="lazy"
+						onLoad={handleImageLoad}
 					/>
 				) : (
 					<Image src="/images/fallback.png" width="313" height="243" />

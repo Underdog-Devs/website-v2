@@ -1,6 +1,6 @@
 import React from 'react';
+import Masonry from 'react-masonry-css';
 import { UseInfiniteScroll } from '../../lib/useInfiniteScroll';
-import styles from './blogPreviewCard.module.scss';
 import { BlogPreviewCard } from './BlogPreviewCard';
 
 type BlogPostsProps = Pick<
@@ -28,10 +28,17 @@ export const BlogPosts = ({
 // isLastPage,
 BlogPostsProps) => {
 	return (
-		<main className={styles.main}>
+
+		<Masonry
+			breakpointCols={3}
+			className="masonry-grid"
+			columnClassName="masonry-grid_column"
+		>
+
 			{posts.map((post) => (
 				<BlogPreviewCard post={post} />
 			))}
-		</main>
+
+		</Masonry>
 	);
 };

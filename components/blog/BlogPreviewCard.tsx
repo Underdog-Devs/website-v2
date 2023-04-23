@@ -64,7 +64,7 @@ export function BlogPreviewCard(props: Props) {
 
 	return (
 		<div className={styles.container}>
-			<Link href={`/blog/${id}`}>
+			<Link href={`/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`}>
 				{image ? (
 					<img
 						className={styles.img}
