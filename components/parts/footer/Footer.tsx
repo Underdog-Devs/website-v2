@@ -11,9 +11,9 @@ import { ImInstagram } from 'react-icons/im';
 // styles
 import styles from './footer.module.scss';
 
-interface Props { }
+interface Props {}
 
-function Footer({ }: Props): ReactElement {
+function Footer({}: Props): ReactElement {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
@@ -109,6 +109,9 @@ function Footer({ }: Props): ReactElement {
 						>
 							Testimonials
 						</Link> */}
+						<Link href="/blog" passHref>
+							Blog
+						</Link>
 						<Link href="/donate" passHref>
 							Donate
 						</Link>
