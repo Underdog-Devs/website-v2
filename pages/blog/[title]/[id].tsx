@@ -89,13 +89,6 @@ export const Blog = (props: Props) => {
 							<BsFacebook style={{ color: '#1B74E4', cursor: 'pointer' }} />
 						</a>
 					</li>
-					{/* <li>
-						<a
-							href={`https://www.linkedin.com/shareArticle?mini=true&url=http://www.underdogdevs.org/blog/${id}`}
-						>
-							<BsLinkedin style={{ color: '#0A66C2', cursor: 'pointer' }} />
-						</a>
-					</li> */}
 				</ul>
 			</header>
 			{image ? (
