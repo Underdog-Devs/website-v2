@@ -61,14 +61,24 @@ export function BlogPreviewCard(props: Props) {
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
+	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
 
+	function splitCharactersUntilDot(string: string) {
+		const dotIndex = string.lastIndexOf('.');
+		if (dotIndex !== -1) {
+			const firstPiece = string.substring(0, dotIndex);
+			const secondPiece = string.substring(dotIndex);
+			return `${firstPiece}-small${secondPiece}`;
+		}
+		return ''; // Return the original string as the only piece if there's no dot
+	}
 	return (
 		<div className={styles.container}>
-			<Link href={`/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`}>
+			<Link href={postLink}>
 				{image ? (
 					<img
 						className={styles.img}
-						src={image}
+						src={splitCharactersUntilDot(image)}
 						alt="Featured"
 						loading="lazy"
 					/>
@@ -80,11 +90,13 @@ export function BlogPreviewCard(props: Props) {
 			</Link>
 			<div className={styles.cardTextContainer}>
 				<h4 className={styles.title}>
-					<Link href={`/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`}>
+					<Link href={postLink}>
 						<a>{title}</a>
 					</Link>
 				</h4>
-				<p className={styles.textContent}>{firstParagraph}</p>
+				<Link href={postLink} passHref>
+					<p className={styles.textContent}>{firstParagraph}</p>
+				</Link>
 				<div className={styles.info}>
 					<span>By <span className={styles.author}>{author}</span></span>
 					<span>{parsedDate}</span>
