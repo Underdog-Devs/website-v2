@@ -1,7 +1,8 @@
 {
 	"extends": ["next/core-web-vitals", "airbnb"],
 	"env": {
-		"node": true
+		"node": true,
+		"jest": true
 	},
 	"rules": {
 		"react/prop-types": "off",
@@ -16,7 +17,7 @@
 		"jsx-a11y/click-events-have-key-events": "off",
 		"jsx-a11y/no-static-element-interactions": "off",
 		"jsx-a11y/no-noninteractive-element-interactions": "off",
-    "jsx-a11y/anchor-is-valid": 0,
+		"jsx-a11y/anchor-is-valid": 0,
 		"import/named": "off",
 		"import/no-named-as-default": "off",
 		"guard-for-in": "off",
@@ -57,7 +58,6 @@
 		"@next/next/no-img-element": "off",
 		"linebreak-style": "off",
 		"@next/next/no-document-import-in-page": "off",
-		"no-lonely-if": "off",
-		"import/export": 0
+		"no-lonely-if": "off"
 	}
 }
