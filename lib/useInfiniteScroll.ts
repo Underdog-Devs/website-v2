@@ -23,7 +23,7 @@ interface BlogPost {
 	entry: any;
 }
 
-export const useInfiniteScroll = (posts: BlogPost[]): UseInfiniteScroll => {
+export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null | undefined): UseInfiniteScroll => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [page, setPage] = useState(1);
 	const [hasDynamicPosts, setHasDynamicPosts] = useState(false);
@@ -43,16 +43,16 @@ export const useInfiniteScroll = (posts: BlogPost[]): UseInfiniteScroll => {
 			if (target.isIntersecting) {
 				setIsLoading(true);
 				clearTimeout(loadMoreTimeoutRef.current);
-
 				// this timeout debounces the intersection events
 				loadMoreTimeoutRef.current = setTimeout(() => {
 					axios({
 						method: 'post',
-						url: 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
+						url: postAuthor ? 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/authors-posts' : 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
 						headers: {},
 						data: {
 							skip: 2*page, // This is the body part
 							take: 2,
+							postAuthor,
 						},
 					}).then((resp) => {
 						setPage(page + 1);

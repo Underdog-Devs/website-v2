@@ -58,7 +58,7 @@ export const Blog = (props: HomeProps) => {
 		hasDynamicPosts,
 		dynamicPosts,
 		isLastPage,
-	} = useInfiniteScroll(posts);
+	} = useInfiniteScroll(posts, null);
 
 	const firstPosts = posts.slice(1, posts.length);
 
