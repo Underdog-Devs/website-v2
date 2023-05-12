@@ -22,7 +22,9 @@ export function Featured(props: Props) {
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
-	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+	const postLink = `/blog/${title
+		.replace(/\s+/g, '-')
+		.replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
 
 	const handleImageLoad = (event: SyntheticEvent<HTMLImageElement, Event>) => {
 		// Do whatever you want here
@@ -67,13 +69,22 @@ export function Featured(props: Props) {
 					<img
 						className={styles.img}
 						src={splitCharactersUntilDot(image)}
-						style={imageHeight > imageWidth ? { maxHeight: '300px' } : { maxHeight: '100%' }}
+						style={
+							imageHeight > imageWidth
+								? { maxHeight: '300px' }
+								: { maxHeight: '100%' }
+						}
 						alt="Featured"
 						loading="lazy"
 						onLoad={handleImageLoad}
 					/>
 				) : (
-					<Image src="/images/fallback.png" width="313" height="243" />
+					<Image
+						src="/images/fallback.png"
+						alt="Underdog Devs logo"
+						width="313"
+						height="243"
+					/>
 				)}
 			</div>
 		</div>
