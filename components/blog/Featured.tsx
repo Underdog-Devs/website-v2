@@ -2,15 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SyntheticEvent, useState } from 'react';
 import styles from './featured.module.scss';
-
-type Props = {
-	id: string;
-	image: string;
-	title: string;
-	firstParagraph: string;
-	author: string;
-	date: string;
-};
+import type { Props } from '../../types/Props';
 
 export function Featured(props: Props) {
 	const [imageHeight, setImageHeight] = useState(0);

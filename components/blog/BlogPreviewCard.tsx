@@ -14,18 +14,18 @@ import TextAlign from '@tiptap/extension-text-align';
 import styles from './blogPreviewCard.module.scss';
 
 type Props = {
-  post: Post;
+	post: Post;
 };
 
 interface Post {
-  id: string;
-  image: string;
-  title: string;
-  firstParagraph: string;
-  text: string;
-  author: string;
-  date: string;
-  entry: any;
+	id: string;
+	image: string;
+	title: string;
+	firstParagraph: string;
+	text: string;
+	author: string;
+	date: string;
+	entry: any;
 }
 
 export function BlogPreviewCard(props: Props) {
@@ -61,7 +61,9 @@ export function BlogPreviewCard(props: Props) {
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
-	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+	const postLink = `/blog/${title
+		.replace(/\s+/g, '-')
+		.replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
 
 	function splitCharactersUntilDot(string: string) {
 		const dotIndex = string.lastIndexOf('.');
@@ -72,6 +74,7 @@ export function BlogPreviewCard(props: Props) {
 		}
 		return ''; // Return the original string as the only piece if there's no dot
 	}
+
 	return (
 		<div className={styles.container}>
 			<Link href={postLink}>
@@ -83,7 +86,9 @@ export function BlogPreviewCard(props: Props) {
 						loading="lazy"
 					/>
 				) : (
-					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+					<div
+						style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+					>
 						<Image src="/images/fallback.png" width="313" height="243" />
 					</div>
 				)}
@@ -98,7 +103,9 @@ export function BlogPreviewCard(props: Props) {
 					<p className={styles.textContent}>{firstParagraph}</p>
 				</Link>
 				<div className={styles.info}>
-					<span>By <span className={styles.author}>{author}</span></span>
+					<span>
+						By <span className={styles.author}>{author}</span>
+					</span>
 					<span>{parsedDate}</span>
 				</div>
 			</div>

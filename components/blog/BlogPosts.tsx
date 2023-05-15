@@ -28,17 +28,14 @@ export const BlogPosts = ({
 // isLastPage,
 BlogPostsProps) => {
 	return (
-
 		<Masonry
 			breakpointCols={3}
 			className="masonry-grid"
 			columnClassName="masonry-grid_column"
 		>
-
 			{posts.map((post) => (
 				<BlogPreviewCard post={post} key={post.id} />
 			))}
-
 		</Masonry>
 	);
 };
