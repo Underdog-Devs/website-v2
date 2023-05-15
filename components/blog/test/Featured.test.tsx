@@ -67,4 +67,13 @@ describe('Featured', () => {
 			})
 		).toBeInTheDocument();
 	});
+
+	it('Should render a Read more... link', () => {
+		render(<Featured {...testProps} />);
+		expect(
+			screen.getByRole('link', {
+				name: /read more\.\.\./i,
+			})
+		);
+	});
 });
