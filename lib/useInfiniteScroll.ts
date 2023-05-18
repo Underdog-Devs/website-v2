@@ -3,8 +3,6 @@ import axios from 'axios';
 // useInfiniteScroll.ts
 export interface UseInfiniteScroll {
 	isLoading: boolean;
-	//! MUST FIX THIS
-	// eslint-disable-next-line no-unused-vars
 	loadMoreCallback: (el: HTMLDivElement) => void;
 	hasDynamicPosts: boolean;
 	dynamicPosts: BlogPost[];
@@ -30,12 +28,10 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 	const [dynamicPosts, setDynamicPosts] = useState<BlogPost[]>(posts);
 	const [isLastPage, setIsLastPage] = useState(false);
 	const observerRef = useRef<IntersectionObserver>();
-	//! MUST FIX THIS
-	// eslint-disable-next-line no-undef
 	const loadMoreTimeout: NodeJS.Timeout = setTimeout(() => null, 500);
-	//! MUST FIX THIS
-	// eslint-disable-next-line no-undef
 	const loadMoreTimeoutRef = useRef<NodeJS.Timeout>(loadMoreTimeout);
+
+	
 
 	const handleObserver = useCallback(
 		(entries: any[]) => {
@@ -77,9 +73,7 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 			if (isLoading) return;
 			if (observerRef.current) observerRef.current.disconnect();
 
-			//! MUST FIX THIS
-			// eslint-disable-next-line no-undef
-			const option: IntersectionObserverInit = {
+			const option =  {
 				root: null,
 				rootMargin: '0px',
 				threshold: 1.0,
