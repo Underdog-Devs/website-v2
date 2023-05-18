@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	};
 };
 
-export const Blog = (props: HomeProps) => {
+const Blog = (props: HomeProps) => {
 	const { posts, postAuthor } = props;
 
 	const {
