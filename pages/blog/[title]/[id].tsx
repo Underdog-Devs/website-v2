@@ -26,7 +26,7 @@ type Props = {
 	author: string;
 };
 
-export const Blog = (props: Props) => {
+const Blog = (props: Props) => {
 	const [imageHeight, setImageHeight] = useState(0);
 	const [imageWidth, setImageWidth] = useState(0);
 	const { id, entry, author, title, date, image } = props;
