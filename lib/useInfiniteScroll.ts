@@ -3,7 +3,6 @@ import axios from 'axios';
 // useInfiniteScroll.ts
 export interface UseInfiniteScroll {
 	isLoading: boolean;
-	//! MUST FIX THIS
 	// eslint-disable-next-line no-unused-vars
 	loadMoreCallback: (el: HTMLDivElement) => void;
 	hasDynamicPosts: boolean;
@@ -30,11 +29,7 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 	const [dynamicPosts, setDynamicPosts] = useState<BlogPost[]>(posts);
 	const [isLastPage, setIsLastPage] = useState(false);
 	const observerRef = useRef<IntersectionObserver>();
-	//! MUST FIX THIS
-	// eslint-disable-next-line no-undef
 	const loadMoreTimeout: NodeJS.Timeout = setTimeout(() => null, 500);
-	//! MUST FIX THIS
-	// eslint-disable-next-line no-undef
 	const loadMoreTimeoutRef = useRef<NodeJS.Timeout>(loadMoreTimeout);
 
 	const handleObserver = useCallback(
@@ -47,11 +42,11 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 				loadMoreTimeoutRef.current = setTimeout(() => {
 					axios({
 						method: 'post',
-						url: postAuthor ? 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/authors-posts' : 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
+						url: postAuthor ? `${process.env.NEXT_PUBLIC_BACKEND_URL}api/blog/authors-posts` : `${process.env.NEXT_PUBLIC_BACKEND_URL}api/blog/get-all-entries`,
 						headers: {},
 						data: {
-							skip: 2*page, // This is the body part
-							take: 2,
+							skip: 6*page, // This is the body part
+							take: 6,
 							postAuthor,
 						},
 					}).then((resp) => {
@@ -77,9 +72,7 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 			if (isLoading) return;
 			if (observerRef.current) observerRef.current.disconnect();
 
-			//! MUST FIX THIS
-			// eslint-disable-next-line no-undef
-			const option: IntersectionObserverInit = {
+			const option = {
 				root: null,
 				rootMargin: '0px',
 				threshold: 1.0,
