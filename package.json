@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build:dev": "next build",
-    "build": "next build && next start",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
