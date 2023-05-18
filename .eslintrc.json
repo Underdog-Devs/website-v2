@@ -1,7 +1,7 @@
 {
 	"extends": ["next/core-web-vitals", "airbnb"],
 	"globals": {
-		"NodeJS": true,
+		"NodeJS": true
 	},
 	"env": {
 		"node": true
@@ -34,7 +34,6 @@
 		"semi-style": ["error", "last"],
 		"quotes": ["error", "single"],
 		"jsx-quotes": ["error", "prefer-double"],
-		"import/export": 0,
 		"import/extensions": [
 			"error",
 			"ignorePackages",
@@ -60,7 +59,6 @@
 		"@next/next/no-img-element": "off",
 		"linebreak-style": "off",
 		"@next/next/no-document-import-in-page": "off",
-		"no-lonely-if": "off",
-		"import/export": 0
+		"no-lonely-if": "off"
 	}
 }

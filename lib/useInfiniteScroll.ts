@@ -3,6 +3,7 @@ import axios from 'axios';
 // useInfiniteScroll.ts
 export interface UseInfiniteScroll {
 	isLoading: boolean;
+	// eslint-disable-next-line no-unused-vars
 	loadMoreCallback: (el: HTMLDivElement) => void;
 	hasDynamicPosts: boolean;
 	dynamicPosts: BlogPost[];
@@ -30,8 +31,6 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 	const observerRef = useRef<IntersectionObserver>();
 	const loadMoreTimeout: NodeJS.Timeout = setTimeout(() => null, 500);
 	const loadMoreTimeoutRef = useRef<NodeJS.Timeout>(loadMoreTimeout);
-
-	
 
 	const handleObserver = useCallback(
 		(entries: any[]) => {
@@ -73,7 +72,7 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 			if (isLoading) return;
 			if (observerRef.current) observerRef.current.disconnect();
 
-			const option =  {
+			const option = {
 				root: null,
 				rootMargin: '0px',
 				threshold: 1.0,
