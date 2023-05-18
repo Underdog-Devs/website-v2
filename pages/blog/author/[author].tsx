@@ -22,34 +22,40 @@ export interface BlogPost {
 export interface HomeProps {
   posts: BlogPost[];
   postAuthor: string;
+  count: number;
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	const author = context.params?.author as string;
 
-	const result = await prisma.blog.findMany({
-		take: 6,
-		where: {
-			author: {
-				name: author,
-			},
-		},
-		orderBy: [
-			{
-				date: 'desc',
-			},
-		],
-		include: {
-			author: {
-				select: {
-					name: true,
+	const response = await prisma.$transaction([
+		prisma.blog.count(),
+		prisma.blog.findMany({
+			take: 6,
+			where: {
+				author: {
+					name: author,
 				},
 			},
-		},
-	});
+			orderBy: [
+				{
+					date: 'desc',
+				},
+			],
+			include: {
+				author: {
+					select: {
+						name: true,
+					},
+				},
+			},
+		}),
+	]);
+
 	return {
 		props: {
-			posts: result.map((post) => ({
+			count: response[0],
+			posts: response[1].map((post: any) => ({
 				...post,
 				date: post.date.toISOString(),
 				author: post.author.name,
@@ -60,7 +66,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 export const Blog = (props: HomeProps) => {
-	const { posts, postAuthor } = props;
+	const { count, posts, postAuthor } = props;
 
 	const {
 		isLoading,
@@ -88,11 +94,13 @@ export const Blog = (props: HomeProps) => {
 				loadMoreCallback={loadMoreCallback}
 				isLastPage={isLastPage}
 			/>
-			<Loader
-				isLoading={isLoading}
-				isLastPage={isLastPage}
-				loadMoreCallback={loadMoreCallback}
-			/>
+			{count > 6 ?(
+				<Loader
+					isLoading={isLoading}
+					isLastPage={isLastPage}
+					loadMoreCallback={loadMoreCallback}
+				/>
+			) : null}
 		</div>
 	);
 };

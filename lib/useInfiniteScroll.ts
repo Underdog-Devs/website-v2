@@ -47,11 +47,11 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 				loadMoreTimeoutRef.current = setTimeout(() => {
 					axios({
 						method: 'post',
-						url: postAuthor ? 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/authors-posts' : 'https://blog.d3k2s157tk6ob5.amplifyapp.com/api/blog/get-all-entries',
+						url: postAuthor ? `${process.env.NEXT_PUBLIC_BACKEND_URL}api/blog/authors-posts` : `${process.env.NEXT_PUBLIC_BACKEND_URL}api/blog/get-all-entries`,
 						headers: {},
 						data: {
-							skip: 2*page, // This is the body part
-							take: 2,
+							skip: 6*page, // This is the body part
+							take: 6,
 							postAuthor,
 						},
 					}).then((resp) => {
