@@ -39,12 +39,21 @@ export function Featured(props: Props) {
 		}
 		return ''; // Return the original string as the only piece if there's no dot
 	}
+
+	function truncateString(postTitle: string) {
+		let shortendTitle;
+		if (postTitle.length > 120) {
+			shortendTitle = `${postTitle.slice(0, 120)}...`;
+			return shortendTitle;
+		}
+		return postTitle;
+	}
 	return (
 		<div className={styles.container}>
 			<div className={styles.post}>
 				<h3 className={styles.title}>
 					<Link href={postLink}>
-						<a>{title}</a>
+						<a>{truncateString(title)}</a>
 					</Link>
 				</h3>
 				<div className={styles.right}>

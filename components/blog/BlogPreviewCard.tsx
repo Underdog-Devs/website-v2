@@ -33,6 +33,15 @@ export function BlogPreviewCard(props: Props) {
 		post: { id, title, firstParagraph, author, date, entry, image },
 	} = props;
 
+	function truncateString(postTitle: string) {
+		let shortendTitle;
+		if (postTitle.length > 70) {
+			shortendTitle = `${postTitle.slice(0, 70)}...`;
+			return shortendTitle;
+		}
+		return postTitle;
+	}
+
 	const editor = useEditor({
 		editable: false,
 		content: entry,
@@ -91,7 +100,7 @@ export function BlogPreviewCard(props: Props) {
 			<div className={styles.cardTextContainer}>
 				<h4 className={styles.title}>
 					<Link href={postLink}>
-						<a>{title}</a>
+						<a>{truncateString(title)}</a>
 					</Link>
 				</h4>
 				<Link href={postLink} passHref>

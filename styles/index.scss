@@ -190,3 +190,10 @@ pre {
   margin-bottom: 30px;
   
 }
+
+// Width for the images inside of TipTap editor
+.ProseMirror {
+  img {
+    width: 500px;
+  }
+}
