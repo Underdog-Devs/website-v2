@@ -6,18 +6,7 @@ import { Loader } from '../../../components/blog/Loader';
 import { useInfiniteScroll } from '../../../lib/useInfiniteScroll';
 import prisma from '../../../lib/prisma';
 import styles from '../index.module.scss';
-
-export interface BlogPost {
-  id: string;
-  image: string;
-  title: string;
-  firstParagraph: string;
-  text: string;
-  author: string;
-  date: string;
-  name: string;
-  entry: any;
-}
+import { BlogPost } from '../index';
 
 export interface HomeProps {
   posts: BlogPost[];
@@ -89,12 +78,16 @@ export const Blog = (props: HomeProps) => {
 				date={posts[0].date}
 			/>
 			<BlogPosts
-				posts={hasDynamicPosts ? dynamicPosts.slice(1, dynamicPosts.length) : firstPosts}
+				posts={
+					hasDynamicPosts
+						? dynamicPosts.slice(1, dynamicPosts.length)
+						: firstPosts
+				}
 				isLoading={isLoading}
 				loadMoreCallback={loadMoreCallback}
 				isLastPage={isLastPage}
 			/>
-			{count > 6 ?(
+			{count > 6 ? (
 				<Loader
 					isLoading={isLoading}
 					isLastPage={isLastPage}
