@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEditor } from '@tiptap/react';
+import { Content, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
 import BulletList from '@tiptap/extension-bullet-list';
@@ -25,7 +25,7 @@ interface Post {
   text: string;
   author: string;
   date: string;
-  entry: any;
+  entry: Content;
 }
 
 export function BlogPreviewCard(props: Props) {
@@ -70,7 +70,9 @@ export function BlogPreviewCard(props: Props) {
 	const day = dateObj.getUTCDate();
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
-	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+	const postLink = `/blog/${title
+		.replace(/\s+/g, '-')
+		.replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
 
 	function splitCharactersUntilDot(string: string) {
 		const dotIndex = string.lastIndexOf('.');
@@ -92,7 +94,9 @@ export function BlogPreviewCard(props: Props) {
 						loading="lazy"
 					/>
 				) : (
-					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+					<div
+						style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+					>
 						<Image src="/images/fallback.png" width="313" height="243" />
 					</div>
 				)}
@@ -107,7 +111,9 @@ export function BlogPreviewCard(props: Props) {
 					<p className={styles.textContent}>{firstParagraph}</p>
 				</Link>
 				<div className={styles.info}>
-					<span>By <span className={styles.author}>{author}</span></span>
+					<span>
+						By <span className={styles.author}>{author}</span>
+					</span>
 					<span>{parsedDate}</span>
 				</div>
 			</div>

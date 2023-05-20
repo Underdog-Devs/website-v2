@@ -1,4 +1,5 @@
 import React from 'react';
+import { Content } from '@tiptap/react';
 import { Featured } from '../../components/blog';
 import { BlogPosts } from '../../components/blog/BlogPosts';
 import { Loader } from '../../components/blog/Loader';
@@ -7,20 +8,20 @@ import prisma from '../../lib/prisma';
 import styles from './index.module.scss';
 
 export interface BlogPost {
-	id: string;
-	image: string;
-	title: string;
-	firstParagraph: string;
-	text: string;
-	author: string;
-	date: string;
-	name: string;
-	entry: any;
+  id: string;
+  image: string;
+  title: string;
+  firstParagraph: string;
+  text: string;
+  author: string;
+  date: string;
+  name: string;
+  entry: Content;
 }
 
 export interface HomeProps {
-	posts: BlogPost[];
-	count: number;
+  posts: BlogPost[];
+  count: number;
 }
 
 export async function getServerSideProps() {
@@ -43,13 +44,14 @@ export async function getServerSideProps() {
 		}),
 	]);
 
+	console.log('response[1]', response[1]);
 	return {
 		props: {
 			count: response[0],
 			posts: response[1].map((post: any) => ({
 				...post,
 				date: post.date.toISOString(),
-				author: post.author.name,
+				author: post.author.name || 'UD Admin',
 			})),
 		},
 	};
@@ -88,7 +90,7 @@ export const Blog = (props: HomeProps) => {
 				loadMoreCallback={loadMoreCallback}
 				isLastPage={isLastPage}
 			/>
-			{count > 6 ?(
+			{count > 6 ? (
 				<Loader
 					isLoading={isLoading}
 					isLastPage={isLastPage}

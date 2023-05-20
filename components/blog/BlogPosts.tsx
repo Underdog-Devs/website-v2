@@ -1,24 +1,25 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
+import { Content } from '@tiptap/react';
 import { UseInfiniteScroll } from '../../lib/useInfiniteScroll';
 import { BlogPreviewCard } from './BlogPreviewCard';
 
 type BlogPostsProps = Pick<
-	UseInfiniteScroll,
-	'isLoading' | 'loadMoreCallback' | 'isLastPage'
+  UseInfiniteScroll,
+  'isLoading' | 'loadMoreCallback' | 'isLastPage'
 > & {
-	posts: BlogPost[];
+  posts: BlogPost[];
 };
 
 interface BlogPost {
-	id: string;
-	image: string;
-	title: string;
-	firstParagraph: string;
-	text: string;
-	author: string;
-	date: string;
-	entry: any;
+  id: string;
+  image: string;
+  title: string;
+  firstParagraph: string;
+  text: string;
+  author: string;
+  date: string;
+  entry: Content;
 }
 
 export const BlogPosts = ({
@@ -28,17 +29,14 @@ export const BlogPosts = ({
 // isLastPage,
 BlogPostsProps) => {
 	return (
-
 		<Masonry
 			breakpointCols={3}
 			className="masonry-grid"
 			columnClassName="masonry-grid_column"
 		>
-
 			{posts.map((post) => (
 				<BlogPreviewCard post={post} key={post.id} />
 			))}
-
 		</Masonry>
 	);
 };

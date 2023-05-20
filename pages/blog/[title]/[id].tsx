@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import Link from 'next/link';
-import { EditorContent, useEditor } from '@tiptap/react';
+import { Content, EditorContent, useEditor } from '@tiptap/react';
 import Image from 'next/image';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
@@ -18,12 +18,12 @@ import prisma from '../../../lib/prisma';
 import styles from '../blog.module.scss';
 
 type Props = {
-	id: string;
-	entry: any;
-	date: string;
-	title: string;
-	image: string;
-	author: string;
+  id: string;
+  entry: Content;
+  date: string;
+  title: string;
+  image: string;
+  author: string;
 };
 
 const Blog = (props: Props) => {
@@ -92,7 +92,18 @@ const Blog = (props: Props) => {
 				</ul>
 			</header>
 			{image ? (
-				<img className={styles.img} src={image} onLoad={handleImageLoad} style={imageHeight > imageWidth ? { maxHeight: '600px' } : { maxHeight: '100%' }} alt="Featured" loading="lazy" />
+				<img
+					className={styles.img}
+					src={image}
+					onLoad={handleImageLoad}
+					style={
+						imageHeight > imageWidth
+							? { maxHeight: '600px' }
+							: { maxHeight: '100%' }
+					}
+					alt="Featured"
+					loading="lazy"
+				/>
 			) : (
 				<Image src="/images/fallback.png" height="230" width="320" />
 			)}
