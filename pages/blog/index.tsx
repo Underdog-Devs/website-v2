@@ -44,7 +44,6 @@ export async function getServerSideProps() {
 		}),
 	]);
 
-	console.log('response[1]', response[1]);
 	return {
 		props: {
 			count: response[0],
