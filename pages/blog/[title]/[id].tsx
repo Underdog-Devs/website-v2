@@ -1,5 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import { EditorContent, useEditor } from '@tiptap/react';
 import Image from 'next/image';
 import StarterKit from '@tiptap/starter-kit';
@@ -26,6 +27,7 @@ const Blog = (props: Props) => {
 	const [imageWidth, setImageWidth] = useState(0);
 	const { id, entry, author, title, date, image } = props;
 	const displayDate = date.substring(0, 10);
+	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
 	const editor = useEditor({
 		editable: false,
 		content: entry,
@@ -43,7 +45,7 @@ const Blog = (props: Props) => {
 	if (!editor) {
 		return null;
 	}
-	const text = (postTitle: string, postId: string) => {
+	const twitterText = (postTitle: string, postId: string) => {
 		return `${postTitle} \n
 		http://www.underdogdevs.org/blog/${postId}
 		`;
@@ -54,8 +56,30 @@ const Blog = (props: Props) => {
 		setImageHeight(event.currentTarget.naturalHeight);
 		setImageWidth(event.currentTarget.naturalWidth);
 	};
+
 	return (
+
 		<div className={styles.container}>
+			<Head>
+				<title>{title}</title>
+				<meta property="og:title" content={title} />
+				<meta property="og:image" content={image || 'https://www.underdogdevs.org/images/fallback.png'} />
+				<meta property="og:description" content="UnderdogDevs is a group of software engineers supporting formerly incarcerated and disadvantaged aspiring developers" />
+				<meta property="og:url" content={`http://www.underdogdevs.org${postLink}`} />
+				<meta property="og:type" content="article" />
+				<meta property="og:site_name" content="UnderdogDevs" />
+				<meta property="article:published_time" content={date} />
+				<meta property="article:author" content={author} />
+				<meta property="article:section" content="Technology" />
+				<meta property="article:tag" content="Technology" />
+				<meta property="article:tag" content="Software Engineering" />
+				<meta property="article:tag" content="Software Development" />
+				<meta property="article:tag" content="Software" />
+				<meta property="article:tag" content="Programming" />
+				<meta property="article:tag" content="Programming Languages" />
+				<meta property="article:tag" content="Web Development" />
+				<meta property="article:tag" content="Web Developer" />
+			</Head>
 			<header className={styles.header}>
 				<Link passHref href="/blog">
 					<a className={styles.return}>Back</a>
@@ -67,7 +91,7 @@ const Blog = (props: Props) => {
 					<p>Share</p>
 					<li>
 						<a
-							href={`https://twitter.com/intent/tweet?text=${text(title, id)}`}
+							href={`https://twitter.com/intent/tweet?text=${twitterText(title, id)}`}
 						>
 							<BsTwitter style={{ color: '#1D9BF0', cursor: 'pointer' }} />
 						</a>
