@@ -84,7 +84,7 @@ export function BlogPreviewCard(props: Props) {
 					/>
 				) : (
 					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-						<Image src="/images/fallback.png" width="313" height="243" />
+						<Image src="/images/fallback.png" width="313" height="243" priority={true} />
 					</div>
 				)}
 			</Link>

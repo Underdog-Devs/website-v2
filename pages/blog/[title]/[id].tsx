@@ -84,7 +84,7 @@ const Blog = (props: Props) => {
 			{image ? (
 				<img className={styles.img} src={image} onLoad={handleImageLoad} style={imageHeight > imageWidth ? { maxHeight: '600px' } : { maxHeight: '100%' }} alt="Featured" loading="lazy" />
 			) : (
-				<Image src="/images/fallback.png" height="230" width="320" />
+				<Image src="/images/fallback.png" height="230" width="320" priority={true} />
 			)}
 			<EditorContent className={styles.blogText} editor={editor} />
 

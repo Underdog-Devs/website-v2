@@ -83,7 +83,7 @@ export function Featured(props: Props) {
 						onLoad={handleImageLoad}
 					/>
 				) : (
-					<Image src="/images/fallback.png" width="313" height="243" />
+					<Image src="/images/fallback.png" width="313" height="243" priority={true} />
 				)}
 			</div>
 		</div>
