@@ -31,7 +31,6 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 	const observerRef = useRef<IntersectionObserver>();
 	const loadMoreTimeout: NodeJS.Timeout = setTimeout(() => null, 500);
 	const loadMoreTimeoutRef = useRef<NodeJS.Timeout>(loadMoreTimeout);
-
 	const handleObserver = useCallback(
 		(entries: any[]) => {
 			const target = entries[0];

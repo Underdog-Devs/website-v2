@@ -23,6 +23,7 @@ export function Featured(props: Props) {
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
 	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+	const authorLink = author?.replace(/\s/g, '-');
 
 	const handleImageLoad = (event: SyntheticEvent<HTMLImageElement, Event>) => {
 		// Do whatever you want here
@@ -58,7 +59,7 @@ export function Featured(props: Props) {
 				</h3>
 				<div className={styles.right}>
 					<span>
-						Written by <span className={styles.authorName}>{author}</span>
+						Written by <Link href={`/blog/author/${authorLink}`} passHref><span className={styles.authorName}>{author}</span></Link>
 					</span>
 					<span className={styles.published}>{parsedDate}</span>
 				</div>

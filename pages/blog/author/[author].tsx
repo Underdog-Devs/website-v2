@@ -27,14 +27,20 @@ export interface HomeProps {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	const author = context.params?.author as string;
-
+	const name = author.replace(/-/g, ' ');
 	const response = await prisma.$transaction([
-		prisma.blog.count(),
+		prisma.blog.count({
+			where: {
+				author: {
+					name,
+				},
+			},
+		}),
 		prisma.blog.findMany({
 			take: 6,
 			where: {
 				author: {
-					name: author,
+					name,
 				},
 			},
 			orderBy: [
@@ -60,14 +66,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 				date: post.date.toISOString(),
 				author: post.author.name,
 			})),
-			postAuthor: author,
+			postAuthor: name,
 		},
 	};
 };
 
 export const Blog = (props: HomeProps) => {
 	const { count, posts, postAuthor } = props;
-
+	console.log(count);
 	const {
 		isLoading,
 		loadMoreCallback,

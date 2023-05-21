@@ -61,6 +61,7 @@ export function BlogPreviewCard(props: Props) {
 	const year = dateObj.getUTCFullYear();
 	const parsedDate = `${month}/${day}/${year}`;
 	const postLink = `/blog/${title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+	const authorLink = author?.replace(/\s/g, '-');
 
 	function splitCharactersUntilDot(string: string) {
 		const dotIndex = string.lastIndexOf('.');
@@ -97,7 +98,7 @@ export function BlogPreviewCard(props: Props) {
 					<p className={styles.textContent}>{firstParagraph}</p>
 				</Link>
 				<div className={styles.info}>
-					<span>By <span className={styles.author}>{author}</span></span>
+					<span>By <Link href={`/blog/author/${authorLink}`} passHref><span className={styles.author}>{author}</span></Link></span>
 					<span>{parsedDate}</span>
 				</div>
 			</div>
