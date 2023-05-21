@@ -51,9 +51,9 @@ function Navigation({ }: Props): ReactElement {
 						{/* <Link href="/testimonials" passHref>
 							<p className={styles.getInvolvedButton}>Testimonials</p>
 						</Link> */}
-						<Link href="/blog" passHref>
+						{/* <Link href="/blog" passHref>
 							<a>Blog</a>
-						</Link>
+						</Link> */}
 						<Link href="/donate" passHref>
 							<a>Donate</a>
 						</Link>

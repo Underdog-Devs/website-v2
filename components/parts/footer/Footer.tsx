@@ -109,15 +109,22 @@ function Footer({}: Props): ReactElement {
 						>
 							Testimonials
 						</Link> */}
-						<Link href="/blog" passHref>
+						{/* <Link href="/blog" passHref>
 							Blog
-						</Link>
+						</Link> */}
 						<Link href="/donate" passHref>
 							Donate
 						</Link>
 						<Link href="/signup" passHref>
 							Contact Us
 						</Link>
+						<a
+							href="https://cottonbureau.com/people/underdog-devs"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Merchandise
+						</a>
 					</div>
 				</div>
 			</div>

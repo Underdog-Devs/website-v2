@@ -73,6 +73,18 @@
 			display: flex;
 			flex-direction: column;
 			color: $subTextBlack;
+			span {
+				margin-bottom: $space-xs;
+				@include for-phone-only {
+					margin-bottom: 0px;
+				}
+				@include for-tablet-up {
+					margin-bottom: 0px;
+				}
+				@include for-desktop-up {
+					margin-bottom: $space-xs;
+				}
+			}
 
 			h2 {
 				color: $udSecondaryOrange;
