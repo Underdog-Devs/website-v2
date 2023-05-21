@@ -24,6 +24,10 @@
 		width: 60%;
 		margin-bottom: $space-lg;
 
+		@include for-phone-only {
+			width: 80%;
+		}
+
 		h3 {
 			font-family: $primaryHeaderFont;
 			font-weight: bold;
@@ -56,6 +60,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				gap: 15px;
 				left: 0;
 				position: relative;
 			}
@@ -75,7 +80,7 @@
 	}
 
 	.blogText {
-		max-width: 60%;
+		max-width: 85%;
 		p {
 			font-size: 1.25rem;
 			line-height: 1.6rem;
@@ -144,7 +149,7 @@
 	}
 
 	.blogMain {
-		width: 60%;
+		width: 80%;
 
 		.blogImage {
 			// padding: $space-md;

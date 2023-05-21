@@ -3,13 +3,8 @@ import Image from 'next/image';
 import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
-import BulletList from '@tiptap/extension-bullet-list';
 import Typography from '@tiptap/extension-typography';
-import CodeBlock from '@tiptap/extension-code-block';
-import Blockquote from '@tiptap/extension-blockquote';
 import { Image as TipTapImage } from '@tiptap/extension-image';
-import ListItem from '@tiptap/extension-list-item';
-import OrderedList from '@tiptap/extension-ordered-list';
 import TextAlign from '@tiptap/extension-text-align';
 import styles from './blogPreviewCard.module.scss';
 
@@ -50,11 +45,6 @@ export function BlogPreviewCard(props: Props) {
 			Highlight,
 			Typography,
 			TipTapImage,
-			BulletList,
-			OrderedList,
-			CodeBlock,
-			Blockquote,
-			ListItem,
 			TextAlign.configure({
 				types: ['heading', 'paragraph'],
 			}),

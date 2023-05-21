@@ -179,6 +179,18 @@ pre {
   display: flex;
   margin-left: -30px;
   width: 1200px;
+  @include for-phone-only{
+      width: 400px;
+  }
+  @include for-tablet-up{
+      width: 700px;
+  }
+  @include for-desktop-up{
+      width: 900px;
+  }
+  @include for-large-up{
+      width: 1200px;
+  }
 }
 
 .masonry-grid_column {

@@ -20,7 +20,9 @@
 		flex-direction: column;
 		gap: $space_sm;
 		width: 50%;
-
+		@include for-phone-only{
+			width: 90%;
+		}
 		@include for-tablet-up {
 			order: unset;
 		}

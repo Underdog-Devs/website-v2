@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Masonry from 'react-masonry-css';
 import { UseInfiniteScroll } from '../../lib/useInfiniteScroll';
 import { BlogPreviewCard } from './BlogPreviewCard';
@@ -24,13 +24,41 @@ interface BlogPost {
 export const BlogPosts = ({
 	posts,
 }: // isLoading,
-// loadMoreCallback,
-// isLastPage,
-BlogPostsProps) => {
+	// loadMoreCallback,
+	// isLastPage,
+	BlogPostsProps) => {
+	const [screenWidth, setScreenWidth] = useState<number>(0);
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const handleResize = () => {
+				setScreenWidth(window.innerWidth);
+			};
+
+			window.addEventListener('resize', handleResize);
+
+			// Initial screen width
+			setScreenWidth(window.innerWidth);
+
+			return () => {
+				window.removeEventListener('resize', handleResize);
+			};
+		}
+	}, []);
+
+	const setGridColumns = () => {
+		if (screenWidth < 768) {
+			return 1;
+		} if (screenWidth < 992) {
+			return 2;
+		}
+		return 3;
+	};
+
 	return (
 
 		<Masonry
-			breakpointCols={3}
+			breakpointCols={setGridColumns()}
 			className="masonry-grid"
 			columnClassName="masonry-grid_column"
 		>
