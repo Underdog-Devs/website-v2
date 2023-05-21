@@ -52,11 +52,10 @@ const Blog = (props: Props) => {
 	};
 
 	const handleImageLoad = (event: SyntheticEvent<HTMLImageElement, Event>) => {
-		// Do whatever you want here
 		setImageHeight(event.currentTarget.naturalHeight);
 		setImageWidth(event.currentTarget.naturalWidth);
 	};
-
+	console.log(`http://www.underdogdevs.org${postLink}`);
 	return (
 
 		<div className={styles.container}>

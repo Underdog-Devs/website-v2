@@ -73,7 +73,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 export const Blog = (props: HomeProps) => {
 	const { count, posts, postAuthor } = props;
-	console.log(count);
 	const {
 		isLoading,
 		loadMoreCallback,

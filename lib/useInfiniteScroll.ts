@@ -63,7 +63,7 @@ export const useInfiniteScroll = (posts: BlogPost[], postAuthor: string | null |
 				}, 500);
 			}
 		},
-		[loadMoreTimeoutRef, setIsLoading, page, dynamicPosts],
+		[postAuthor, page, dynamicPosts],
 	);
 
 	const loadMoreCallback = useCallback(
