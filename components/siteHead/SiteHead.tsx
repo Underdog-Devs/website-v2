@@ -19,6 +19,25 @@ const SiteHead: React.FC<Props> = ({ title, description, urlPath }) => {
 			<meta property="title" content={title} key="title" />
 			<meta property="title" content={title} key="title" />
 			<meta charSet="utf-8" />
+
+			{/* Google / Search Engine Tags */}
+			<meta itemProp="name" content={title} />
+			<meta itemProp="description" content={description} />
+			<meta itemProp="image" content="https://www.underdogdevs.org/images/ud-tag-bg.jpg" />
+
+			{/* Facebook Meta Tags */}
+			<meta property="og:url" content="https://www.underdogdevs.org" />
+			<meta property="og:type" content="website" />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={description} />
+			<meta property="og:image" content="https://www.underdogdevs.org/images/ud-tag-bg.jpg" />
+
+			{/* Twitter Meta Tags */}
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:title" content={title} />
+			<meta name="twitter:description" content={description} />
+			<meta name="twitter:image" content="https://www.underdogdevs.org/images/ud-tag-bg.jpg" />
+
 			<link
 				rel="apple-touch-icon"
 				sizes="120x120"

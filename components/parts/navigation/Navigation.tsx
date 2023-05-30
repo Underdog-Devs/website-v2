@@ -112,13 +112,13 @@ function Navigation({ }: Props): ReactElement {
 						passHref
 					>
 						<p onClick={() => setShowLinks(false)}>Testimonials</p>
-					</Link> */}
+					</Link>
 					<Link
 						href="/blog"
 						passHref
 					>
 						<a onClick={() => setShowLinks(false)}>Blog</a>
-					</Link>
+					</Link> */}
 					<Link
 						href="/donate"
 						passHref
