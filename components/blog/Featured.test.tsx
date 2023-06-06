@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Featured } from './Featured';
-import type { Props } from '../../types/Props';
+import type { Props } from './FeaturedProps';
 
 describe('Featured', () => {
 	let testProps: Props;
