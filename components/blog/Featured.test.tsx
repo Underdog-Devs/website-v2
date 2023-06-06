@@ -1,7 +1,6 @@
-/* eslint-disable comma-dangle */
 import { render, screen } from '@testing-library/react';
-import { Featured } from '../Featured';
-import type { Props } from '../../../types/Props';
+import { Featured } from './Featured';
+import type { Props } from '../../types/Props';
 
 describe('Featured', () => {
 	let testProps: Props;
@@ -20,7 +19,7 @@ describe('Featured', () => {
 	it('Renders Featured', () => {
 		render(<Featured {...testProps} />);
 		expect(
-			screen.getByRole('heading', { name: /Blog title/i })
+			screen.getByRole('heading', { name: /Blog title/i }),
 		).toBeInTheDocument();
 	});
 
@@ -41,7 +40,7 @@ describe('Featured', () => {
 	it('Should render the blog text', () => {
 		render(<Featured {...testProps} />);
 		expect(
-			screen.getByText(/lorem ipsum dolor sit amet, consectetur/i)
+			screen.getByText(/lorem ipsum dolor sit amet, consectetur/i),
 		).toBeInTheDocument();
 	});
 
@@ -55,7 +54,7 @@ describe('Featured', () => {
 		expect(
 			screen.getByRole('img', {
 				name: /featured/i,
-			})
+			}),
 		).toBeInTheDocument();
 	});
 
@@ -64,16 +63,31 @@ describe('Featured', () => {
 		expect(
 			screen.getByRole('img', {
 				name: /underdog devs logo/i,
-			})
+			}),
 		).toBeInTheDocument();
 	});
 
-	it('Should render a Read more... link', () => {
+	it('Should render a read more link with the correct href', () => {
 		render(<Featured {...testProps} />);
-		expect(
-			screen.getByRole('link', {
-				name: /read more\.\.\./i,
-			})
-		);
+		const { title, id } = testProps;
+
+		const url = `/blog/${title
+			.replace(/\s+/g, '-')
+			.replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+
+		const linkElement = screen.getByRole('link', { name: /read more\.\.\./i });
+		expect(linkElement).toHaveAttribute('href', url);
+	});
+
+	it('Should render a link in the header with the correct href', () => {
+		render(<Featured {...testProps} />);
+		const { title, id } = testProps;
+
+		const url = `/blog/${title
+			.replace(/\s+/g, '-')
+			.replace(/[^a-zA-Z0-9\s-]/g, '')}/${id}`;
+
+		const linkElement = screen.getByRole('link', { name: title });
+		expect(linkElement).toHaveAttribute('href', url);
 	});
 });
